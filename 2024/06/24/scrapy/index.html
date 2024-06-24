@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="scrapy1.scrapy12(1)scrapy是什么?		Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。  1234567891011121314151617181920212223242526(2)安装scrapy:			pip install scrapy	安装过程中出错:				如果安装有错误!!!!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/06/24/scrapy/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="scrapy1.scrapy12(1)scrapy是什么?		Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。  1234567891011121314151617181920212223242526(2)安装scrapy:			pip install scrapy	安装过程中出错:				如果安装有错误!!!!">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="article:published_time" content="2024-06-24T10:22:36.241Z">
+<meta property="article:modified_time" content="2024-02-23T07:31:51.316Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/404.jpg">
+
+
+<title >Hexo</title>
+
+<!-- Favicon -->
+
+    <link href='/img/favicon.svg?v=2.2.2' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/favicon.svg?v=2.2.2' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"John Doe","root":"/","typed_text":null,"theme_version":"2.2.2","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-02-23 15:31:51"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.2" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+
+ 
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/favicon.svg">
+    
+    
+        <div class="trm-logo-text">
+            Async<span>Theme</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/img/banner.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2024
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/img/avatar.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        ThemeAsync
+    </h5>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                Residence:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            06/24
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            18:22
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            John Doe
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="scrapy"><a href="#scrapy" class="headerlink" title="scrapy"></a>scrapy</h1><h2 id="1-scrapy"><a href="#1-scrapy" class="headerlink" title="1.scrapy"></a>1.scrapy</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(1)scrapy是什么?</span><br><span class="line">		Scrapy是一个为了爬取网站数据，提取结构性数据而编写的应用框架。可以应用在包括数据挖掘，信息处理或存储历史数据等一系列的程序中。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">2</span>)安装scrapy:</span><br><span class="line">			pip install scrapy</span><br><span class="line">	安装过程中出错:</span><br><span class="line">				如果安装有错误!!!!</span><br><span class="line">				pip install scrapy</span><br><span class="line">				building <span class="string">&quot;twisted.test.raiser&#x27;extension</span></span><br><span class="line"><span class="string">				error: Microsoft Visual C++ 14.0 is required. Get it with &quot;</span>Microsoft VisualBuild Tools<span class="string">&quot;:http://landinghub.visualstudio.com/visual-cpp-build-tools</span></span><br><span class="line"><span class="string">	解决方案:</span></span><br><span class="line"><span class="string">			http://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted</span></span><br><span class="line"><span class="string">			下载twisted对应版本的wh1文件(如我的Twisted-17.5.0-cp36-cp36m-win_amd64.whl)，cp</span></span><br><span class="line"><span class="string">后面是python版本，amd64代表64位，运行命令:</span></span><br><span class="line"><span class="string">			pip install C:\Usersl...\Twisted-17.5.0-cp36-cp36m-win amd64.whl</span></span><br><span class="line"><span class="string">        	pip install scrapy</span></span><br><span class="line"><span class="string">	如果再报错</span></span><br><span class="line"><span class="string">			python -m pip install --upgrade pip</span></span><br><span class="line"><span class="string">	如果再报错		win32</span></span><br><span class="line"><span class="string">    解决办法:</span></span><br><span class="line"><span class="string">    		pip install pipiwin32</span></span><br><span class="line"><span class="string">    再报错:	使用anaconda</span></span><br><span class="line"><span class="string">    		使用步骤:</span></span><br><span class="line"><span class="string">            	打开anaconda</span></span><br><span class="line"><span class="string">                点击environments</span></span><br><span class="line"><span class="string">                点击not installed</span></span><br><span class="line"><span class="string">                输入scrapy</span></span><br><span class="line"><span class="string">                apply</span></span><br><span class="line"><span class="string">                在pycharm中选择anaconda的环境</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-scrapy项目的创建以及运行"><a href="#1-scrapy项目的创建以及运行" class="headerlink" title="1.scrapy项目的创建以及运行"></a>1.scrapy项目的创建以及运行</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>创建scrapy项目：</span><br><span class="line">		windows的cmd终端中输入 scrapy startproject	项目名称</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2.</span>项目组成:</span><br><span class="line">			spiders</span><br><span class="line">				__init__.py</span><br><span class="line">				自定义的爬虫文件.Py		  ---》由我们自己创建，是实现爬虫核心功能的文件</span><br><span class="line">			__init__.py</span><br><span class="line">			items .py					---》定义数据结构的地方，是一个继承自scrapy.Item的类</span><br><span class="line">			middlewares .py				---》中间件		代理</span><br><span class="line">			pipelines.pv				---》管道文件，里面只有一个类，用于外理下载数据默认是											<span class="number">308</span>优先级，值越小优先级越高(<span class="number">1</span>-<span class="number">1000</span>)</span><br><span class="line">			settings.py				   ---》配置文件比如:是否遵守robots协议，User-Agent定义等</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.</span>创建爬虫文件:</span><br><span class="line">    	(<span class="number">1</span>)跳转到spiders文件夹cd 目录名字/目录名字/spiders</span><br><span class="line">    	(<span class="number">2</span>)scrapy genspider 爬虫名字 网页的域名</span><br><span class="line">  爬虫文件的基本组成:</span><br><span class="line">		继承scrapy.spider类</span><br><span class="line">				name = <span class="string">&quot;baidu&quot;</span>		---》运行爬虫文件时使用的名字</span><br><span class="line">            	allowed domains		---》爬虫允许的域名，在爬取的时候，如果不是此域名之下的会被过										滤掉url.</span><br><span class="line">                </span><br><span class="line">                start urls			---》声明了爬虫的起始地址，可以写多个ur1，一般是一个</span><br><span class="line">				parse(self，response)---》解析数据的回调函数</span><br><span class="line">				response.text		---》响应的是字符串</span><br><span class="line">				response.body		---》响应的是二进制文件</span><br><span class="line">				response.xpath()	---》xpath方法的返回值类型是selector列表</span><br><span class="line">                extract()			---》提取的是selector对象的是data</span><br><span class="line">                extract_first()		---》踢球的selector列表中的第一个数据</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4.</span>运行爬虫文件:</span><br><span class="line">			scrapy	crawl	爬虫名称</span><br><span class="line">			注意： 应在spiders文件夹内执行</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3-scrapy架构组成"><a href="#3-scrapy架构组成" class="headerlink" title="3.scrapy架构组成"></a>3.scrapy架构组成</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">1</span>)引擎					 ---》自动运行，无需关注，会自动组织所有的请求对象，分发给下载器</span><br><span class="line">(<span class="number">2</span>)下载器					---》从引擎处获取到请求对象后，请求数据</span><br><span class="line">   (<span class="number">3</span>)spiders			  	  ---》spider类定义了如何爬取某个(或某些)网站。包括了爬取的动作(例如:是否跟进链接)以及如何从网页的内容中提取结构化数据(爬取item)。 换句话说，spider就是您定义爬取的动作及分析某个网页(或者是有些网页)的地方。</span><br><span class="line">   (<span class="number">4</span>)调度器					---》有自己的调度规则，无需关注</span><br><span class="line">   (<span class="number">5</span>)管道(Item pipeline)	 ---》最终处理数据的管道，会预留接口供我们处理数据</span><br><span class="line">   当Item在spider中被收集之后，它将会被传递到Item Pipeline，一些组件会按照一定的顺序执行对Item的处理,每个item pipeline组件(有时称之为“Item pipeline”)是实现了简单方法的Python类。他们接收到Item并通过它执行一些行为，同时也决定此Item是否继续通过pipeline，或是被丢弃而不再进行处理。</span><br><span class="line"></span><br><span class="line">以下是item pipeline的一些典型应用:</span><br><span class="line"><span class="number">1</span>。清理HTML数据</span><br><span class="line"><span class="number">2.</span>验证爬取的数据(检查item包含某些字段)</span><br><span class="line"><span class="number">3.</span>查重(井丢弃)</span><br><span class="line"><span class="number">4.</span>将爬取结果保存到数据库中</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-scrapy工作原理"><a href="#4-scrapy工作原理" class="headerlink" title="4.scrapy工作原理!"></a>4.scrapy工作原理!</h3><p>![](D:\Windows_data\Pictures\Screenshots\屏幕截图 2023-11-29 214259.png)<img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240223144149761.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>案例:1.汽车之家</p>
+<h2 id="2-scrapy-shell"><a href="#2-scrapy-shell" class="headerlink" title="2.scrapy shell"></a>2.scrapy shell</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>什么是scrapy shell?</span><br><span class="line">	Scrapy终端，是一个交互终端，供您在未启动spider的情况下尝试及调试您的爬取代码。 其本意是用来测试提取数据的代码，不过您可以将其作为正常的Python终端，在上面测试任何的Python代码。该终端是用来测试xPath或css表达式，查看他们的工作方式及从爬取的网页中提取的数据。在编写您的spider时，该终端提供了交互性测试您的表达式代码的功能，免去了每次修改后运行spider的麻烦。-旦熟悉了scrapy终端后，您会发现其在开发和调试spider时发挥的巨大作用。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2.</span>安装ipython</span><br><span class="line">		安装:pip install ipython</span><br><span class="line">		简介:如果您安装了 IPythonScrapy终端将使用 IPython(替代标准Pthon终端)。IPython 终端与其他相比更为强大，提供智能的自动补全，高亮输出，及其他特性。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.</span>应用:  (<span class="number">1</span>)scrapy shell www.baidu.com</span><br><span class="line">		(<span class="number">2</span>)scrapy shell http://www.baidu.com</span><br><span class="line">		(<span class="number">3</span>)scrapy shell <span class="string">&quot;http://www.baidu.com&quot;</span></span><br><span class="line">		(<span class="number">4</span>)scrapy shell <span class="string">&quot;www.baidu.com&quot;</span></span><br><span class="line">语法:</span><br><span class="line">		(<span class="number">1</span>)response对象:</span><br><span class="line">				response.bodyresponse.text</span><br><span class="line">				response.url</span><br><span class="line">				response.status</span><br><span class="line">		(<span class="number">2</span>)response的解析:</span><br><span class="line">				response.xpath()(常用)</span><br><span class="line">						使用xpath路径查询特定元素，返回一个selector列表对象</span><br><span class="line">                    	获取内容:response,css(<span class="string">&#x27;#su::text&#x27;</span>).extract first()</span><br><span class="line">                        获取属性:response.css(<span class="string">&#x27;#su::attr(“value”)&#x27;</span>).extract first()				(<span class="number">3</span>)selector对象(通过xpath方法调用返回的是seletor列表)</span><br><span class="line">					extract()</span><br><span class="line">							提取selector对象的值</span><br><span class="line">                        	如果提取不到值 那么会报错</span><br><span class="line">                            使用xpath请求到的对象是一个selector对象，需要进一步使用extract()方							法拆包，转换为unicode字符串</span><br><span class="line">					extract first()</span><br><span class="line">                    		提取seletor列表中的第一个值</span><br><span class="line">							如果提取不到值 会返回一个空值</span><br><span class="line">							返回第一个解析到的值，如果列表为空，此种方法也不会报错，会返回一个空值</span><br><span class="line">					xpath()</span><br><span class="line">					css()</span><br><span class="line">							注意:每一个selector对象可以再次的去使用xpath或者css方法</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="3-yield"><a href="#3-yield" class="headerlink" title="3.yield"></a>3.yield</h2><p>1.带有 yield 的函数不再是一个普通函数，而是一个生成器generator，可用于迭代</p>
+<p>2.yield 是一个类似 return 的关键字，迭代一次遇到vield时就返回vield后面(右边)的值。重点是:下一次迭代<br>时，从上一次迭代遇到的yield后面的代码(下一行)开始执行</p>
+<p>3.简要理解:vield就是 return 返回一个值，并且记住这个返回的位置，下次迭代就从这个位置后(下一行)开始</p>
+<p>案例:<br>    1.当当网		    (1)yield(2).管道封装(3).多条管道下载 (4)多页数据下载<br>    2.电影天堂		(1)一个item包含多级页面的数据</p>
+<h2 id="4-Mysql"><a href="#4-Mysql" class="headerlink" title="4.Mysql"></a>4.Mysql</h2><p>​		(1)下载	(<a target="_blank" rel="noopener" href="https://dev.mysal.com/downloads/windows/installer/5.7.html">https://dev.mysal.com/downloads/windows/installer/5.7.html</a>)<br>​		(2)安装	(<a target="_blank" rel="noopener" href="https://iingyan,baidu.com/album/d7130635f1c77d13fdf475df.html">https://iingyan,baidu.com/album/d7130635f1c77d13fdf475df.html</a>)</p>
+<h2 id="5-pymysql的使用步骤"><a href="#5-pymysql的使用步骤" class="headerlink" title="5.pymysql的使用步骤"></a>5.pymysql的使用步骤</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>pip install pymysql</span><br><span class="line"><span class="number">2.</span>pymysql.connect(host,port,user,password,db,charset)</span><br><span class="line"><span class="number">3.</span>conn.cursor()</span><br><span class="line"><span class="number">4.</span>cursor.execute()</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-CrawlSpider"><a href="#6-CrawlSpider" class="headerlink" title="6.CrawlSpider"></a>6.CrawlSpider</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>继承自scrapy.spider</span><br><span class="line"><span class="number">2.</span>独门秘笈Crawlspider可以定义规则，再解析html内容的时候，可以根据链接规则提取出指定的链接，然后再向这些链接发送请求</span><br><span class="line">所以，如果有需要跟进链接的需求，意思就是爬取了网页之后，需要提取链接再次爬取，使用crawlspider是非常合适的</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3.</span>提取链接</span><br><span class="line">	链接提取器，在这里就可以写规则提取指定链接</span><br><span class="line">scrapy.linkextractors.LinkExtractor(</span><br><span class="line">	allow = (),				<span class="comment">#正则表达式，提取符合正则的链接</span></span><br><span class="line">	deny = (),				<span class="comment">#(不用)正则表达式，不提取符合正则的链接</span></span><br><span class="line">	allow domains = (),		<span class="comment">#(不用)允许的域名</span></span><br><span class="line">	deny domains = (),		<span class="comment">#(不用)不允许的域名</span></span><br><span class="line">	restrict xpaths = ()，	<span class="comment">#xpath，提取符合xpath规则的链接</span></span><br><span class="line">	restrict css = ()		<span class="comment">#提取符合选择器规则的链接)</span></span><br><span class="line"><span class="number">4.</span>模拟使用</span><br><span class="line">		正则用法:links1 =LinkExtractor(allow=<span class="string">r&#x27;list 23d+\.html&#x27;</span>)</span><br><span class="line">		xpath用法:links2 = Linkextractor(restrict xpaths=<span class="string">r&#x27;//div[@class=&quot;x&quot;]&#x27;</span>)</span><br><span class="line">		css用法:links3 =LinkExtractor(restrict css=<span class="string">&#x27;.x&#x27;</span>)</span><br><span class="line"><span class="number">5.</span>提取连接</span><br><span class="line">		link.extract links(response)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">6.</span>注意事项</span><br><span class="line">	【注<span class="number">1</span>】callback只能写函数名字符串，callback=<span class="string">&#x27;parse item&#x27;</span></span><br><span class="line">	【注<span class="number">2</span>】在基本的spider中，如果重新发送请求，那里的callback写的是callback=self.parse item</span><br><span class="line">	【注<span class="number">3</span>】follow=true 是否跟进 就是按照提取连接规则进行提取</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">__________________Command  Prompt____________________</span><br><span class="line">scrapy shell https://www.dushu.com/book/1107.html</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">_______________________Scrapy  Shell______________________</span><br><span class="line"></span><br><span class="line">In [1]: from scrapy.linkextractors import LinkExtractor</span><br><span class="line"></span><br><span class="line">In [2]: link = LinkExtractor(allow=r&#x27;/book/1107_\d+\.html&#x27;)</span><br><span class="line"></span><br><span class="line">In [4]: link.extract_links(response)</span><br><span class="line">Out[4]:</span><br><span class="line">[Link(url=&#x27;https://www.dushu.com/book/1107_2.html&#x27;, text=&#x27;2&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_3.html&#x27;, text=&#x27;3&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_4.html&#x27;, text=&#x27;4&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_5.html&#x27;, text=&#x27;5&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_6.html&#x27;, text=&#x27;6&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_7.html&#x27;, text=&#x27;7&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_8.html&#x27;, text=&#x27;8&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_9.html&#x27;, text=&#x27;9&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_10.html&#x27;, text=&#x27;10&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_11.html&#x27;, text=&#x27;11&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_12.html&#x27;, text=&#x27;12&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_13.html&#x27;, text=&#x27;13&#x27;, fragment=&#x27;&#x27;, nofollow=False)]</span><br><span class="line"></span><br><span class="line">In [6]: link1 = LinkExtractor(restrict_xpaths=r&#x27;//div[@class=&quot;pages&quot;]/a&#x27;)</span><br><span class="line"></span><br><span class="line">In [7]: link1.extract_links(response)</span><br><span class="line">Out[7]:</span><br><span class="line">[Link(url=&#x27;https://www.dushu.com/book/1107_2.html&#x27;, text=&#x27;2&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_3.html&#x27;, text=&#x27;3&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_4.html&#x27;, text=&#x27;4&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_5.html&#x27;, text=&#x27;5&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_6.html&#x27;, text=&#x27;6&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_7.html&#x27;, text=&#x27;7&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_8.html&#x27;, text=&#x27;8&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_9.html&#x27;, text=&#x27;9&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_10.html&#x27;, text=&#x27;10&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_11.html&#x27;, text=&#x27;11&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_12.html&#x27;, text=&#x27;12&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_13.html&#x27;, text=&#x27;13&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_2.html&#x27;, text=&#x27;下一页»&#x27;, fragment=&#x27;&#x27;, nofollow=False)]</span><br><span class="line"></span><br><span class="line">In [8]: link.extract_links(response)</span><br><span class="line">Out[8]:</span><br><span class="line">[Link(url=&#x27;https://www.dushu.com/book/1107_2.html&#x27;, text=&#x27;2&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_3.html&#x27;, text=&#x27;3&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_4.html&#x27;, text=&#x27;4&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_5.html&#x27;, text=&#x27;5&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_6.html&#x27;, text=&#x27;6&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_7.html&#x27;, text=&#x27;7&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_8.html&#x27;, text=&#x27;8&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_9.html&#x27;, text=&#x27;9&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_10.html&#x27;, text=&#x27;10&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_11.html&#x27;, text=&#x27;11&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_12.html&#x27;, text=&#x27;12&#x27;, fragment=&#x27;&#x27;, nofollow=False),</span><br><span class="line"> Link(url=&#x27;https://www.dushu.com/book/1107_13.html&#x27;, text=&#x27;13&#x27;, fragment=&#x27;&#x27;, nofollow=False)]</span><br></pre></td></tr></table></figure>
+
+
+
+<p>运行原理:</p>
+<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240223150147961.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="7-CrawlSpider案例"><a href="#7-CrawlSpider案例" class="headerlink" title="7.CrawlSpider案例"></a>7.CrawlSpider案例</h2><p>需求: 读书网数据入库</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>创建项目:scrapy startproject dushuproject</span><br><span class="line"><span class="number">2.</span>跳转到spiders路径 cd\dushuproject\dushuprojectspiders</span><br><span class="line"><span class="number">3.</span>创建爬虫类:scrapy genspider -t crawl read www.dushu.com</span><br><span class="line"><span class="number">4.</span>items</span><br><span class="line"><span class="number">5.</span>spiders</span><br><span class="line"><span class="number">6.</span>settings</span><br><span class="line"><span class="number">7.</span>pipelines</span><br><span class="line">		数据保存到本地</span><br><span class="line">		数据保存到mysql数据库</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="8-数据入库"><a href="#8-数据入库" class="headerlink" title="8.数据入库"></a>8.数据入库</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">1</span>)settings配置参数:</span><br><span class="line">	HOST=<span class="string">&#x27;localhost&#x27;</span></span><br><span class="line">	PORT = <span class="number">3306</span></span><br><span class="line">	USER =<span class="string">&#x27;root&#x27;</span></span><br><span class="line">	PASSWORD=<span class="string">&#x27;x</span></span><br><span class="line"><span class="string">	DATABASE =&#x27;</span>spide<span class="string">r&#x27;</span></span><br><span class="line"><span class="string">	CHARSET =&#x27;</span>utf8<span class="string">&#x27;</span></span><br><span class="line"><span class="string">(2)管道配置</span></span><br><span class="line"><span class="string">	from scrapy.utils.project import get project settings</span></span><br><span class="line"><span class="string">	import pymysql</span></span><br><span class="line"><span class="string">	class MysqlPipeline(object):</span></span><br><span class="line"><span class="string">	#init 方法和open spider的作用是一样的</span></span><br><span class="line"><span class="string">	#init是获取setting中的连接参数</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="9-日志信息和日志等级"><a href="#9-日志信息和日志等级" class="headerlink" title="9.日志信息和日志等级"></a>9.日志信息和日志等级</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">1</span>)日志级别:</span><br><span class="line">		CRITICAL:	严重错误</span><br><span class="line">		ERROR:		一般错误!</span><br><span class="line">		WARNING:	警告</span><br><span class="line">		INFO:		一般信息</span><br><span class="line">		DEBUG:		调试信息</span><br><span class="line">		</span><br><span class="line">		默认的日志等级是DEBUG</span><br><span class="line">		只要出现了DEBUG或者DEBUG以上等级的日志</span><br><span class="line">		那么这些日志将会打印</span><br><span class="line">(<span class="number">2</span>)settings.py文件设置:</span><br><span class="line">		默认的级别为DEBUG，会显示上面所有的信息</span><br><span class="line">		在配置文件中 settings.py</span><br><span class="line">		LOG_FILE :将屏幕显示的信息全部记录到文件中，屏幕不再显示，注意文件后缀一定是.log</span><br><span class="line">		LOG_LEVEL :设置日志显示的等级，就是显示哪些，不显示哪些</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="10-scrapy的post请求"><a href="#10-scrapy的post请求" class="headerlink" title="10.scrapy的post请求"></a>10.scrapy的post请求</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">1</span>)重写start requests方法:</span><br><span class="line">		<span class="keyword">def</span> <span class="title function_">start</span> requests(self)</span><br><span class="line">(<span class="number">2</span>)start requests的返回值:</span><br><span class="line">	scrapy.FormRequest(url=url, headers=headers, callback=self.parse item, formdata=data)</span><br><span class="line">		url:要发送的post地址</span><br><span class="line">		headers:可以定制头信息</span><br><span class="line">		callback:回调函数</span><br><span class="line">		formdata:post所携带的数据，这是一个字典</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="11-代理"><a href="#11-代理" class="headerlink" title="11.代理"></a>11.代理</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">1</span>)到settings.py中，打开一个选项</span><br><span class="line">DOWNLOADER MIDDLEWARES =&#123;</span><br><span class="line">	postproject.middlewares.Proxy<span class="string">&#x27;:543,</span></span><br><span class="line"><span class="string">	&#125;</span></span><br><span class="line"><span class="string">(2)到middlewares.py中写代码</span></span><br><span class="line"><span class="string">def process request(self, request, spider):</span></span><br><span class="line"><span class="string">request.meta[&#x27;</span>proxy<span class="string">&#x27;l=&#x27;</span>https://<span class="number">113.68</span><span class="number">.202</span><span class="number">.10</span>:<span class="number">9999</span><span class="string">&#x27;</span></span><br><span class="line"><span class="string">return None</span></span><br></pre></td></tr></table></figure>
+
+
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/06/24/ajax%E5%85%A5%E9%97%A8/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/06/24/ajax%E5%85%A5%E9%97%A8/" class="trm-anima-link">
+                    
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/06/24</li>
+                <li>18:22</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-footer-card trm-scroll-animation">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.2.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.2.2
+            </span>
+        </div>
+      
+
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+            
+<div class="trm-fixed-container">
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+		
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.2.2"></script>
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+</body>
+
+</html>
