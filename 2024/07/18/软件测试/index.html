@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="[TOC] 软件测试 1 day 认识软件及测试 什么是软件   123软件分为应用软件和系统软件。	常见的软件有微信、淘宝、京东等应用软件，系统软件有windows、mac、android等。软件是用来控制计算机硬件的工具。     软件基本组成   12软件通用组成：	由客户端发送请求给代码服务器，从数据服务器上响应数据返回代码服务器后提交给客户端     软件产生过程    什么是软件测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件测试">
+<meta property="og:url" content="http://example.com/2024/07/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] 软件测试 1 day 认识软件及测试 什么是软件   123软件分为应用软件和系统软件。	常见的软件有微信、淘宝、京东等应用软件，系统软件有windows、mac、android等。软件是用来控制计算机硬件的工具。     软件基本组成   12软件通用组成：	由客户端发送请求给代码服务器，从数据服务器上响应数据返回代码服务器后提交给客户端     软件产生过程    什么是软件测试">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="article:published_time" content="2024-07-18T03:16:30.000Z">
+<meta property="article:modified_time" content="2024-07-18T10:19:52.141Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/404.jpg">
+
+
+<title >软件测试</title>
+
+<!-- Favicon -->
+
+    <link href='/img/favicon.svg?v=2.2.2' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/favicon.svg?v=2.2.2' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"John Doe","root":"/","typed_text":null,"theme_version":"2.2.2","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-07-18 18:19:52"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.2" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+
+ 
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/favicon.svg">
+    
+    
+        <div class="trm-logo-text">
+            Async<span>Theme</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/img/banner.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            软件测试
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2024
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/img/avatar.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        ThemeAsync
+    </h5>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                Residence:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            07/18
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            11:16
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            John Doe
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <p>[TOC]</p>
+<h1 id="软件测试"><a href="#软件测试" class="headerlink" title="软件测试"></a>软件测试</h1><hr>
+<h1 id="1-day"><a href="#1-day" class="headerlink" title="1 day"></a>1 day</h1><p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718112627321.png" alt="image-20240718112627321"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="认识软件及测试"><a href="#认识软件及测试" class="headerlink" title="认识软件及测试"></a>认识软件及测试</h2><ul>
+<li><h3 id="什么是软件"><a href="#什么是软件" class="headerlink" title="什么是软件"></a>什么是软件</h3></li>
+</ul>
+<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718114359335.png" alt="image-20240718114359335"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">软件分为应用软件和系统软件。</span><br><span class="line"><span class="code">	常见的软件有微信、淘宝、京东等应用软件，系统软件有windows、mac、android等。</span></span><br><span class="line"><span class="code">软件是用来控制计算机硬件的工具。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="软件基本组成"><a href="#软件基本组成" class="headerlink" title="软件基本组成"></a>软件基本组成</h3></li>
+</ul>
+<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718114920740.png" alt="image-20240718114920740"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">软件通用组成：</span><br><span class="line"><span class="code">	由客户端发送请求给代码服务器，从数据服务器上响应数据返回代码服务器后提交给客户端</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="软件产生过程"><a href="#软件产生过程" class="headerlink" title="软件产生过程"></a>软件产生过程</h3></li>
+</ul>
+<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718115416469.png" alt="image-20240718115416469"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<ul>
+<li><h3 id="什么是软件测试"><a href="#什么是软件测试" class="headerlink" title="什么是软件测试"></a>什么是软件测试</h3></li>
+</ul>
+<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718115829032.png" alt="image-20240718115829032"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">软件测试：</span><br><span class="line"><span class="code">	使用技术手段验证软件是否满足使用需求</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="软件测试的目的"><a href="#软件测试的目的" class="headerlink" title="软件测试的目的"></a>软件测试的目的</h3></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">减少软件缺陷(bug)，保障软件质量</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="测试主流技能"><a href="#测试主流技能" class="headerlink" title="测试主流技能"></a>测试主流技能</h2><ul>
+<li><h3 id="功能测试"><a href="#功能测试" class="headerlink" title="功能测试"></a>功能测试</h3></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">功能测试主要验证程序的功能是否满足需求</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h3></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用代码和工具代替手工，对项目进行测试</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="接口测试"><a href="#接口测试" class="headerlink" title="接口测试"></a>接口测试</h3></li>
+</ul>
+<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718121759002.png" alt="image-20240718121759002"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用代码或工具对服务端提供的接口进行测试</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h3></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">模拟多人使用软件，查找服务器缺陷(bug)。</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="常见的测试分类"><a href="#常见的测试分类" class="headerlink" title="常见的测试分类"></a>常见的测试分类</h2><ul>
+<li><h3 id="按测试阶段划分"><a href="#按测试阶段划分" class="headerlink" title="按测试阶段划分"></a>按测试阶段划分</h3></li>
+</ul>
+<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718123438622.png" alt="image-20240718123438622"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">#### 单元测试</span></span><br><span class="line"><span class="code">	针对程序源代码进行测试。</span></span><br><span class="line"><span class="code">#### 集成测试</span></span><br><span class="line"><span class="code">	又称接口测试，针对模块之间访问地址进行测试。</span></span><br><span class="line"><span class="code">#### 系统测试</span></span><br><span class="line"><span class="code">	对整个系统进行测试包括功能、兼容、文档等测试。</span></span><br><span class="line"><span class="code">#### 验收测试</span></span><br><span class="line"><span class="code">	主要分为内测、公测，使用不同人群来发掘项目缺陷。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="按代码可见度划分"><a href="#按代码可见度划分" class="headerlink" title="按代码可见度划分"></a>按代码可见度划分</h3></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">黑盒测试：(系统测试)</span><br><span class="line"><span class="code">	不关注源代码，针对程序UI功能进行测试 （UI-&gt;User Ineterface-&gt;用户 接口）</span></span><br><span class="line"><span class="code">	源代码不可见</span></span><br><span class="line"><span class="code">	UI功能可见</span></span><br><span class="line"><span class="code">灰盒测试：(集成测试)</span></span><br><span class="line"><span class="code">	针对程序部分代码进行测试（接口测试）</span></span><br><span class="line"><span class="code">	部分源代码可见</span></span><br><span class="line"><span class="code">	功能不可见</span></span><br><span class="line"><span class="code">白盒测试：(单元测试)</span></span><br><span class="line"><span class="code">	针对程序源代码进行测试</span></span><br><span class="line"><span class="code">	全代码可见</span></span><br><span class="line"><span class="code">	UI功能不可见</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718123724074.png" alt="image-20240718123724074"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="测试模型"><a href="#测试模型" class="headerlink" title="测试模型"></a>测试模型</h2><ul>
+<li><h3 id="质量模型"><a href="#质量模型" class="headerlink" title="质量模型"></a>质量模型</h3></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">衡量一个优秀软件的维度				</span><br><span class="line"><span class="code">	功能性</span></span><br><span class="line"><span class="code">	性能</span></span><br><span class="line"><span class="code">	兼容性</span></span><br><span class="line"><span class="code">	易用性</span></span><br><span class="line"><span class="code">	可靠性</span></span><br><span class="line"><span class="code">	安全</span></span><br><span class="line"><span class="code">	可维护性</span></span><br><span class="line"><span class="code">	可移植性</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718124410413.png" alt="image-20240718124410413"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="软件测试流程"><a href="#软件测试流程" class="headerlink" title="软件测试流程"></a>软件测试流程</h2><p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718130114780.png" alt="image-20240718130114780"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="测试用例"><a href="#测试用例" class="headerlink" title="测试用例"></a>测试用例</h2><ul>
+<li><h3 id="什么是用例"><a href="#什么是用例" class="headerlink" title="什么是用例"></a>什么是用例</h3></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用例：用户使用的案例</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718130507466.png" alt="image-20240718130507466"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<ul>
+<li><h3 id="什么是测试用例"><a href="#什么是测试用例" class="headerlink" title="什么是测试用例"></a>什么是测试用例</h3></li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">测试用例：</span><br><span class="line"><span class="code">	是为测试项目而实际的执行文档</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h3 id="用例的作用"><a href="#用例的作用" class="headerlink" title="用例的作用"></a>用例的作用</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">测试用例作用：</span><br><span class="line"><span class="code">	· 防止漏测</span></span><br><span class="line"><span class="code">	· 实施测试的标准</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+</li>
+<li><h3 id="用例编写格式"><a href="#用例编写格式" class="headerlink" title="用例编写格式"></a>用例编写格式</h3></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">用例编号</th>
+<th align="center">用例标题</th>
+<th align="center">项目&#x2F;模块</th>
+<th align="center">优先级</th>
+<th align="center">前置条件</th>
+<th align="center">测试步骤</th>
+<th align="center">测试数据</th>
+<th align="center">预期结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">项目_模块编号</td>
+<td align="center">预期结果（测试点）</td>
+<td align="center">所属项目或模块</td>
+<td align="center">表示用例的重要程度或者影响力p0~p4（p0最高）</td>
+<td align="center">要执行此条用例，有哪些前置操作</td>
+<td align="center">描述操作步骤</td>
+<td align="center">操作的数据，没有的话可以为空</td>
+<td align="center">期望达到的结果</td>
+</tr>
+</tbody></table>
+<ul>
+<li><h3 id="用例练习"><a href="#用例练习" class="headerlink" title="用例练习"></a>用例练习</h3></li>
+</ul>
+<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718132031809.png" alt="image-20240718132031809"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<hr>
+<h3 id="答案："><a href="#答案：" class="headerlink" title="答案："></a>答案：</h3><p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718132150646.png" alt="image-20240718132150646"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<hr>
+<h1 id="2-day"><a href="#2-day" class="headerlink" title="2 day"></a>2 day</h1><p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240718132532761.png" alt="image-20240718132532761"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="等价类划分法"><a href="#等价类划分法" class="headerlink" title="等价类划分法"></a>等价类划分法</h2><h2 id="边界值分析法"><a href="#边界值分析法" class="headerlink" title="边界值分析法"></a>边界值分析法</h2><h2 id="判定表法"><a href="#判定表法" class="headerlink" title="判定表法"></a>判定表法</h2><h2 id="场景法"><a href="#场景法" class="headerlink" title="场景法"></a>场景法</h2><h2 id="错误推测法"><a href="#错误推测法" class="headerlink" title="错误推测法"></a>错误推测法</h2><h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2>
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/05/%E8%BF%90%E7%BB%B4/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/05/%E8%BF%90%E7%BB%B4/" class="trm-anima-link">
+                    运维
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/05</li>
+                <li>17:10</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/07/18/python%E9%80%86%E5%90%91/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/07/18/python%E9%80%86%E5%90%91/" class="trm-anima-link">
+                    python逆向
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/07/18</li>
+                <li>11:16</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-footer-card trm-scroll-animation">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.2.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.2.2
+            </span>
+        </div>
+      
+
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+            
+<div class="trm-fixed-container">
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+		
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.2.2"></script>
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+</body>
+
+</html>
