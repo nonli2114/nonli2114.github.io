@@ -337,7 +337,7 @@
 
 
 
-<h3 id="4-scrapy工作原理"><a href="#4-scrapy工作原理" class="headerlink" title="4.scrapy工作原理!"></a>4.scrapy工作原理!</h3><p>![](D:\Windows_data\Pictures\Screenshots\屏幕截图 2023-11-29 214259.png)<img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240223144149761.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="4-scrapy工作原理"><a href="#4-scrapy工作原理" class="headerlink" title="4.scrapy工作原理!"></a>4.scrapy工作原理!</h3><p>![](D:\Windows_data\Pictures\Screenshots\屏幕截图 2023-11-29 214259.png)<img src="/2024/06/24/scrapy/Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240223144149761.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p>案例:1.汽车之家</p>
 <h2 id="2-scrapy-shell"><a href="#2-scrapy-shell" class="headerlink" title="2.scrapy shell"></a>2.scrapy shell</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>什么是scrapy shell?</span><br><span class="line">	Scrapy终端，是一个交互终端，供您在未启动spider的情况下尝试及调试您的爬取代码。 其本意是用来测试提取数据的代码，不过您可以将其作为正常的Python终端，在上面测试任何的Python代码。该终端是用来测试xPath或css表达式，查看他们的工作方式及从爬取的网页中提取的数据。在编写您的spider时，该终端提供了交互性测试您的表达式代码的功能，免去了每次修改后运行spider的麻烦。-旦熟悉了scrapy终端后，您会发现其在开发和调试spider时发挥的巨大作用。</span><br></pre></td></tr></table></figure>
 
@@ -365,7 +365,7 @@
 
 
 <p>运行原理:</p>
-<p><img src="C:\Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240223150147961.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/2024/06/24/scrapy/Users\21730\AppData\Roaming\Typora\typora-user-images\image-20240223150147961.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <h2 id="7-CrawlSpider案例"><a href="#7-CrawlSpider案例" class="headerlink" title="7.CrawlSpider案例"></a>7.CrawlSpider案例</h2><p>需求: 读书网数据入库</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>创建项目:scrapy startproject dushuproject</span><br><span class="line"><span class="number">2.</span>跳转到spiders路径 cd\dushuproject\dushuprojectspiders</span><br><span class="line"><span class="number">3.</span>创建爬虫类:scrapy genspider -t crawl read www.dushu.com</span><br><span class="line"><span class="number">4.</span>items</span><br><span class="line"><span class="number">5.</span>spiders</span><br><span class="line"><span class="number">6.</span>settings</span><br><span class="line"><span class="number">7.</span>pipelines</span><br><span class="line">		数据保存到本地</span><br><span class="line">		数据保存到mysql数据库</span><br></pre></td></tr></table></figure>
 
