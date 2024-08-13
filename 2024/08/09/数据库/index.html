@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="[TOC] 数据库数据库的介绍什么是数据库​	数据仓库 ​	常用的数据库有DB2、Oracle、Mysql、SQL Server、sQLite等。 ​	这些数据库的使用都需要安装相应的软件，启动数据库后我们才可以访问数据库里面的内容。而访问其内容的方式并不是用鼠标直接打开数据库文件查看，一般都是用数据库管理工具或者编写程序来访问数据库。当然，数据库和访问数据库可以不在同一个位置，也就是说数据库在北">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库">
+<meta property="og:url" content="http://example.com/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[TOC] 数据库数据库的介绍什么是数据库​	数据仓库 ​	常用的数据库有DB2、Oracle、Mysql、SQL Server、sQLite等。 ​	这些数据库的使用都需要安装相应的软件，启动数据库后我们才可以访问数据库里面的内容。而访问其内容的方式并不是用鼠标直接打开数据库文件查看，一般都是用数据库管理工具或者编写程序来访问数据库。当然，数据库和访问数据库可以不在同一个位置，也就是说数据库在北">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="article:published_time" content="2024-08-09T04:49:47.000Z">
+<meta property="article:modified_time" content="2024-08-12T09:25:47.882Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/404.jpg">
+
+
+<title >数据库</title>
+
+<!-- Favicon -->
+
+    <link href='/img/favicon.svg?v=2.2.2' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/favicon.svg?v=2.2.2' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"John Doe","root":"/","typed_text":null,"theme_version":"2.2.2","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-08-12 17:25:47"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.2" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+
+ 
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/favicon.svg">
+    
+    
+        <div class="trm-logo-text">
+            Async<span>Theme</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/img/banner.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            数据库
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2024
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/img/avatar.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        ThemeAsync
+    </h5>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                Residence:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            08/09
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            12:49
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            John Doe
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <p>[TOC]</p>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="数据库的介绍"><a href="#数据库的介绍" class="headerlink" title="数据库的介绍"></a>数据库的介绍</h2><h3 id="什么是数据库"><a href="#什么是数据库" class="headerlink" title="什么是数据库"></a>什么是数据库</h3><p>​	数据仓库</p>
+<p>​	常用的数据库有DB2、Oracle、Mysql、SQL Server、sQLite等。</p>
+<p>​	这些数据库的使用都需要安装相应的软件，启动数据库后我们才可以访问数据库里面的内容。而访问其内容的方式并不是用鼠标直接打开数据库文件查看，一般都是用数据库管理工具或者编写程序来访问数据库。当然，数据库和访问数据库可以不在同一个位置，也就是说数据库在北京，你在深圳写一段代码可以去访问它。</p>
+<h3 id="数据库分类"><a href="#数据库分类" class="headerlink" title="数据库分类"></a>数据库分类</h3><p>​	根据存储模型可将数据库划分为关系型数据库和非关系型数据库。关系型数据库，是建立在关系模型基础上的数据库，借助于集合代数等数学概念和方法来处理数据库中的数据。简单来说，关系模型指的就是二维表格模型，而一个关系型数据库就是由二维表及其之间的联系所组成的一个数据组织。标准数据查询语言SQL就是一种基于关系数据库的语言，这种语言执行对关系数据库中数据的检索和操作。</p>
+<p>关系型数据库(表与表之间有关系:体现为主外建)</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>产品</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>小型</td>
+<td>access、foxbase</td>
+<td>负载量小，用户大概100人以内(留言板、信息管理系统);成本在千元之内对安全性要求不高</td>
+</tr>
+<tr>
+<td>中型</td>
+<td>SQL Server、MySQL</td>
+<td>负载量，日访问在5000~10000;成本在万元以内(商务网站)﹔满足日常安全需求</td>
+</tr>
+<tr>
+<td>大型</td>
+<td>Sybase、db2、Oracle</td>
+<td>海量负载，可以处理海量数据( sybase &lt; oracle &lt; db2海量处理能力)；安全性高，相对贵</td>
+</tr>
+</tbody></table>
+<h3 id="数据库类型大全"><a href="#数据库类型大全" class="headerlink" title="数据库类型大全"></a>数据库类型大全</h3><table>
+<thead>
+<tr>
+<th align="center">数据类型</th>
+<th align="center">MySQL</th>
+<th align="center">Oracle</th>
+<th align="center">SQL Server</th>
+<th align="center">PostgreSQL</th>
+<th align="center">SQLite</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">精确数字</td>
+<td align="center">TINYINT SMALLINT MEDIUMINT INTEGER BIGINT NUMERIC</td>
+<td align="center"><font color="#FF7F00">SMALLINT INTEGER NUMERIC</font></td>
+<td align="center">SMALLINT MEDIUMINT INTEGER BIGINT NUMERIC</td>
+<td align="center">SMALLINT MEDIUMINT INTEGER BIGINT NUMERIC</td>
+<td align="center">动态类型</td>
+</tr>
+<tr>
+<td align="center">近似数字</td>
+<td align="center">FLOAT DOUBLE PRECISION</td>
+<td align="center"><font color="#FF7F00">BINARY_FLOAT BINARY_DOUBLE</font></td>
+<td align="center">REAL DOUBLE PRECISION</td>
+<td align="center">REAL DOUBLE PRECISION</td>
+<td align="center">动态类型</td>
+</tr>
+<tr>
+<td align="center">定长字符串</td>
+<td align="center">CHAR</td>
+<td align="center"><font color="#FF7F00">CHAR</font></td>
+<td align="center">CHAR</td>
+<td align="center">CHAR</td>
+<td align="center">动态类型</td>
+</tr>
+<tr>
+<td align="center">变长字符串</td>
+<td align="center">VARCHAR</td>
+<td align="center"><font color="#FF7F00">VARCHAR</font><font color="red">2</font></td>
+<td align="center">VARCHAR</td>
+<td align="center">VARCHAR</td>
+<td align="center">动态类型</td>
+</tr>
+<tr>
+<td align="center">字符串大对象</td>
+<td align="center">TEXT</td>
+<td align="center"><font color="#FF7F00">CLOB</font></td>
+<td align="center">VARCHAR(MAX)</td>
+<td align="center">TEXT</td>
+<td align="center">动态类型</td>
+</tr>
+<tr>
+<td align="center">日期</td>
+<td align="center">DATE</td>
+<td align="center"><font color="#FF7F00">DATE</font></td>
+<td align="center">DATE</td>
+<td align="center">DATE</td>
+<td align="center">动态类型</td>
+</tr>
+<tr>
+<td align="center">时间</td>
+<td align="center">TIME</td>
+<td align="center"><font color="red">——</font></td>
+<td align="center">TIME</td>
+<td align="center">TIME</td>
+<td align="center">动态类型</td>
+</tr>
+<tr>
+<td align="center">时间戳</td>
+<td align="center">DATE</td>
+<td align="center"><font color="#FF7F00">DATE</font></td>
+<td align="center">DATE</td>
+<td align="center">DATE</td>
+<td align="center">动态类型</td>
+</tr>
+<tr>
+<td align="center">二进制</td>
+<td align="center">BINARY VARBINARY BLOB</td>
+<td align="center"><font color="#FF7F00">BLOB</font></td>
+<td align="center">BINARY VARBINARY</td>
+<td align="center">BYTEA</td>
+<td align="center">动态类型</td>
+</tr>
+</tbody></table>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810160808004.png" alt="image-20240810160808004"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810160825238.png" alt="image-20240810160825238"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810160937360.png" alt="image-20240810160937360"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="DBMS"><a href="#DBMS" class="headerlink" title="DBMS"></a>DBMS</h3><p>​	<strong>数据库管理系统</strong>(Database Management System)是一种<strong>操纵和管理数据库</strong>的大型软件，用于建立、使用和维护数据库，简称DBMS。它对数据库进行统一的管理和控制，以保证数据库的安全性和完整性<br>用户通过DBMS<br>访问数据库中的数据，数据库管理员也通过dbms进行数据库的维护工作。它可使多个应用程序和用户用不同的方法在同时或不同时刻去建立，修改和询问数据库。大部分DBMS提供<font color="red"><strong>数据定义语言DDL(Data Definition</strong><br><strong>Language)</strong></font>和<font color="red"><strong>数据操作语言DML (Data Manipulation Language)</strong></font>，供用户定义数据库的模式结构与权限约束，实现对数据的追加、删除等操作，以及<font color="red"><strong>数据库控制语言DCL(Data Control Language)</strong></font>，用来设置或更改数据库用户或角色权限的语句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">数据库和数据库管理系是一个东西吗?</span><br><span class="line"></span><br><span class="line">数据库:存储数据的地方(就是一些数据文件而已)</span><br><span class="line"></span><br><span class="line">数据库管理系统:用来管理数据以及用户操作数据的软件</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240809135053192.png" alt="image-20240809135053192"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h1 id="SQL-Server"><a href="#SQL-Server" class="headerlink" title="SQL Server"></a>SQL Server</h1><h2 id="数据库介绍"><a href="#数据库介绍" class="headerlink" title="数据库介绍"></a>数据库介绍</h2><h3 id="什么是数据库-1"><a href="#什么是数据库-1" class="headerlink" title="什么是数据库"></a>什么是数据库</h3><p>​	狭义:<br>​		存储数据的仓库</p>
+<p>​	广义:<br>​		可以对数据进行存储和管理的软件以及数据本身统称为数据库</p>
+<p>数据库是由表、关系、操作组成</p>
+<h3 id="为什么需要数据库"><a href="#为什么需要数据库" class="headerlink" title="为什么需要数据库"></a>为什么需要数据库</h3><p>​	几乎所有的应用软件的后台都需要数据库</p>
+<p>​	数据库存储数据占用空间小 	容易持久保存</p>
+<p>​	存储比较安全</p>
+<p>​	容易维护和升级数据库移植比较容易</p>
+<p>​	简化对数据的操作</p>
+<p>​	为将来学习Oracle做准备</p>
+<p>​	B&#x2F;S架构里面包含数据库</p>
+<h3 id="数据库的安装与卸载"><a href="#数据库的安装与卸载" class="headerlink" title="数据库的安装与卸载"></a>数据库的安装与卸载</h3><h4 id="windows安装"><a href="#windows安装" class="headerlink" title="windows安装"></a>windows安装</h4><p>​		百度</p>
+<h4 id="基于Docker安装SqlServer"><a href="#基于Docker安装SqlServer" class="headerlink" title="基于Docker安装SqlServer"></a>基于Docker安装SqlServer</h4><h5 id="系统安装要求"><a href="#系统安装要求" class="headerlink" title="系统安装要求"></a>系统安装要求</h5><p>Linux系统-CentoS7</p>
+<p>远程工具MobaXterm</p>
+<p>必须docker引擎1.8及更高版本</p>
+<h5 id="sql安装先决条件"><a href="#sql安装先决条件" class="headerlink" title="sql安装先决条件"></a>sql安装先决条件</h5><table>
+<thead>
+<tr>
+<th>组件</th>
+<th>要求</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>硬盘</td>
+<td>sQL Server要求最少6 GB的可用硬盘空间。磁盘空间要求将随所安装的SQL Server组件不同而发生变化。有关详细信息，请参阅本文后面部分的硬盘空间要求。有关支持的数据文件存储类型的信息，请参阅Storage Types for Data Files。</td>
+</tr>
+<tr>
+<td>监视</td>
+<td>SQL Server要求有Super-VGA (800x600)或更高分辨率的显示器。 lnternet	使用Internet 功能需要连接Internet(可能需要付费)。</td>
+</tr>
+<tr>
+<td>内存*</td>
+<td>最低要求: Express Edition:512 MB所有其他版本:1 GB 推荐: Express Edition: 1 GB所有其他版本:至少4GB，并且应随着数据库大小的增加而增加来确保最佳性能。</td>
+</tr>
+<tr>
+<td>处理器速度</td>
+<td>最低要求:x64处理器:1.4 GHz推荐:2.0 GHz 或更快</td>
+</tr>
+<tr>
+<td>处理器类型</td>
+<td>x64处理器:AMD Opteron、AMD Athlon 64、支持 Intel EM64T的Intel Xeon，以及支持EM64T的Intel Pentium lV</td>
+</tr>
+</tbody></table>
+<h5 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h5><p>开始安装<br>拉取SqlServer2019镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker pull mcr.microsoft.com/mssq1/server : 2019-1atest</span><br></pre></td></tr></table></figure>
+
+<p>准备数据库文件的挂在目录–&#x2F;root&#x2F;docker_volume&#x2F;mssql 同时给目录设置权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> -R 777/root/docker_volume/mssq1</span><br></pre></td></tr></table></figure>
+
+<p>启动一个容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo bocker run -e <span class="string">&quot;ACCEPT_EULA=Y&quot;</span> -e <span class="string">&quot;sA_PASSWORD=Sa123456&quot;</span>\</span><br><span class="line">	-p 1433:1433 --name sql1 --hostname sql1 \</span><br><span class="line">	-d \</span><br><span class="line">	mcr.microsoft.com/mssq1/server : 2019-1atest</span><br><span class="line"></span><br><span class="line">sudo docker run -e <span class="string">&quot;ACCEPT_EULA=Y&quot;</span> -e <span class="string">&quot;SA_PASSWORD=Sa123456&quot;</span>\</span><br><span class="line">	-p 1433:1433 --name sql1 --hostname sql1 \</span><br><span class="line">	-d \</span><br><span class="line">	-v /root/docker_volume /mssql : /var/opt/mssql \</span><br><span class="line">	mcr.microsoft.com/mssql/server :2019-1atest</span><br></pre></td></tr></table></figure>
+
+<h5 id="基于docker安装后测试连接到SQL-Server"><a href="#基于docker安装后测试连接到SQL-Server" class="headerlink" title="基于docker安装后测试连接到SQL Server"></a>基于docker安装后测试连接到SQL Server</h5><p>下列步骤在容器内部使用SQL Server命令行工具sqlcmd来连接SQL Server。</p>
+<p>1、使用docker exec -it命令在运行的容器内部启动交互式Bash Shell。在下面的示例中，sq11是在创建容器时由–name参数指定的名称。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker <span class="built_in">exec</span> -it sq11 <span class="string">&quot;bash&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>2、在容器内部使用完整路径通过sqlcmd进行本地连接。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/mssq1-too1s/bin/sq1cmd -s loca1host -u SA -P <span class="string">&quot;sa123456&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>3、如果成功，应会显示sqlcmd命令提示符:1&gt;。</p>
+<h5 id="注意防火墙和端口问题"><a href="#注意防火墙和端口问题" class="headerlink" title="注意防火墙和端口问题"></a>注意防火墙和端口问题</h5><p>1、启动防火墙就必须要手动放行1433端口、或者关闭防火墙<br>#查看防火墙状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewa71-cmd --state</span><br></pre></td></tr></table></figure>
+
+<p>#开启防火墙</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start firewalld.service</span><br></pre></td></tr></table></figure>
+
+<p>#关闭防火墙</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service</span><br></pre></td></tr></table></figure>
+
+<p>#重启防火墙</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart firewalld.service</span><br></pre></td></tr></table></figure>
+
+<p>#重新载入配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<h3 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h3><p>​	学习数据库必须的学习数据库原理么</p>
+<p>​		需要一定的数据库原理</p>
+<p>​	学习SqlServer 2005必须的先学一门编程语言么</p>
+<p>​		不需要，懂更好理解TL_SQL</p>
+<p>​	数据结构和数据库的区别</p>
+<p>​		数据库是在应用软件级别研究数据的存储和操作</p>
+<p>​		数据结构是在系统软件级别研究数据的存储和操作</p>
+<p>​	什么是连接</p>
+<p>​		客户端连接数据库本事，发送sql命令行，给数据库查询数据。数据库将查询到的数据返回到客户端。</p>
+<p>​	有了编程语言为什么还需要数据库</p>
+<p>​		对内存数据操作时编程语言的强项，但是对硬盘数据操作却是编程语言的弱项</p>
+<p>​	建议初学者从三个方面学习数据库</p>
+<h2 id="数据库的使用"><a href="#数据库的使用" class="headerlink" title="数据库的使用"></a>数据库的使用</h2><h3 id="创建数据库和表"><a href="#创建数据库和表" class="headerlink" title="创建数据库和表"></a>创建数据库和表</h3><p>以下步骤在数据库sql语句中，创建一个名为<code>TestDB</code>的新数据库。<br>1、在sqlcmd命令提示符中，粘贴以下<code>Transact-SQL</code>命令以创建测试数据库:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> DATABASE TestDB ;</span><br></pre></td></tr></table></figure>
+
+<p>2、在下一行中，编写一个查询以返回服务器上所有数据库的名称:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Name <span class="keyword">from</span> sys .databases ;</span><br></pre></td></tr></table></figure>
+
+<p>3、前两个命令没有立即运行。在新行中键入Go以运行前面的命令:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><p>1、在<code>sqlcmd</code>命令提示符中，将上下文切换到新的TestDB 数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE TestDB;</span><br></pre></td></tr></table></figure>
+
+<p>2、创建名为<code>Inventory</code>的新表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> Inventory (</span><br><span class="line">    id <span class="type">INT</span>,</span><br><span class="line">    name NVARCHAR(<span class="number">50</span>),</span><br><span class="line">    quantity <span class="type">INT</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>3、将数据插入新表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> Inventory <span class="keyword">values</span>(<span class="number">1</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="number">150</span>); <span class="keyword">insert</span> <span class="keyword">into</span> Invertory <span class="keyword">values</span>(<span class="number">2</span>, <span class="string">&#x27;orange&#x27;</span>, <span class="number">154</span>);</span><br></pre></td></tr></table></figure>
+
+<p>4、要运行上述命令的类型<code>GO</code></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GO</span><br></pre></td></tr></table></figure>
+
+<h3 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h3><p>1、通过sqlcmd命令提示符输入查询，以返回Inventory表中数量大于152的行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> Inventory <span class="keyword">where</span> quantity <span class="operator">&gt;</span> <span class="number">152</span>;</span><br></pre></td></tr></table></figure>
+
+<p>2、运行以下命令</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">go</span><br></pre></td></tr></table></figure>
+
+<h3 id="推出sqlcmd命令提示符"><a href="#推出sqlcmd命令提示符" class="headerlink" title="推出sqlcmd命令提示符"></a>推出<code>sqlcmd</code>命令提示符</h3><p>1、要结束sqlcmd会话，请键入<code>QUIT</code>:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit</span><br></pre></td></tr></table></figure>
+
+<p>2、要在容器中推出交互式命令行，请键入<code>exit</code>。退出交互式<code>Bash Shell</code>后，容器将继续运行</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure>
+
+<h3 id="sqlcmd实用工具安装"><a href="#sqlcmd实用工具安装" class="headerlink" title="sqlcmd实用工具安装"></a>sqlcmd实用工具安装</h3><p>在windows上安装sqlcmd工具</p>
+<p>下载地址: <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/sql/tools/sqlcmd-utility?view=sql-server-ver15">https://docs.microsoft.com/zh-cn/sql/tools/sqlcmd-utility?view=sql-server-ver15</a></p>
+<h3 id="使用sqlcmd工具连接"><a href="#使用sqlcmd工具连接" class="headerlink" title="使用sqlcmd工具连接"></a>使用sqlcmd工具连接</h3><p><strong>从容器外连接</strong><br>    还可以从支持SQL连接的任何Linux、Windows或macOS外部工具连接到Docker计算机上的SQL Server实例。以下步骤在容器外使用<strong>sqIcmd</strong>连接在容器中运行的SQL Server。这些步骤假定你已在容器外安装了SQLServer合令行T具。使用其他丁具时，同样的原则依然适用，但连接过程因工具而异。</p>
+<p>1、使用<code>ifconfig</code>或<code>ip addr</code>查找容器主机的IP地址。</p>
+<p>2、对于本示例，请在客户端计算机上安装<code>sqlcmd</code>工具。有关详细信息，请参阅在 Windows 上安装 <code>sqlcmd</code>或在<code>Linux</code>上安装 <code>sqlcmd</code></p>
+<p>3、运行<code>sqlcmd</code>，指定IP地址和映射容器中的端口1433的端口。本例中为主机上的相同端口1433。如果在主机上指定了不同的映射端口，则在此处使用它。还需要在防火墙上打开相应的入站端口以允许连接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlcmd -s 192.168.52.75,1433 -U SA -p <span class="string">&quot;sa123456&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Win下-SQL-Server管理工具连接"><a href="#Win下-SQL-Server管理工具连接" class="headerlink" title="Win下 SQL Server管理工具连接"></a>Win下 SQL Server管理工具连接</h3><p>1、输入用户名 	sa</p>
+<p>2、输入密码	Sa123456</p>
+<p>3、连接数据库引擎</p>
+<h1 id="Oracle"><a href="#Oracle" class="headerlink" title="Oracle"></a>Oracle</h1><h2 id="ORACLE简介"><a href="#ORACLE简介" class="headerlink" title="ORACLE简介"></a>ORACLE简介</h2><h3 id="一-什么是ORACLE"><a href="#一-什么是ORACLE" class="headerlink" title="(一)什么是ORACLE"></a>(一)什么是ORACLE</h3><p>​	ORACLE 数据库系统是美国ORACLE公司（甲骨文）提供的以<strong>分布式</strong>数据库为核心的一组软件产品，是目前最流行的客户&#x2F;服务器(CLIENT&#x2F;SERVER)或B&#x2F;S体系结构的数据库之一。</p>
+<p>​	ORACLE通常应用于大型系统的数据库产品。</p>
+<p>​	ORACLE数据库是目前世界上使用最为广泛的数据库管理系统,作为一个通用的数据库系统，它具有完整的数据管理功能;作为一个关系数据库，它是一个完备关系的产品;作为<strong>分布式</strong>数据库它实现了分布式处理功能。</p>
+<p>​	ORACLE数据库具有以下特点︰</p>
+<p>​	（1）支持多用户、大事务量的事务处理</p>
+<p>​	（2）数据安全性和完整性控制</p>
+<p>​	（3）支持分布式数据处理</p>
+<p>​	（4）可移植性</p>
+<h3 id="二-ORACLE体系结构"><a href="#二-ORACLE体系结构" class="headerlink" title="(二)ORACLE体系结构"></a>(二)ORACLE体系结构</h3><p><strong>1.数据库</strong><br>    Oracle数据库是数据的物理存储。这就包括（数据文件ORA或者DBF、控制文件、联机日志、参数文件)。其实Oracle数据库的概念和其它数据库不一样，这里的数据库是一个操作系统只有一个库。可以看作是Oracle就只有一个大数据库</p>
+<p><strong>⒉.实例</strong><br>    一个Oracle实例Oracle Instance 有一系列的后台进程Backguound Processes)和内存结构( Memory Structures)组成。<font color="red">一个实例只能关联一个数据库，访问一个数据库；但一个数据库可以有n个实例。（RAC）</font></p>
+<p>​	<strong>oracle实例</strong>:位于物理内存的数据结构，它由操作系统的多个后台进程和一个共享的内存池所组成，共享的内存可以被所有进程访问。Oracle用它们来管理数据库访问。用户如果要存取数据库〈也就是硬盘上的文件）里的数据，必须通过Oracle实例才能实现，不能直接读取硬盘上的文件。实际上，Oracle实例就是平常所说的数据库服务(service)。在任何时刻，<strong>一个实例只能与一个数据库关联，访问一个数据库;而同一个数据库可由多个实例访问(RAC)</strong></p>
+<p><strong>3.数据文件( dbf )</strong><br>    数据文件是数据库的物理存储单位。数据库的数据是存储在表空间中的，真正是在某一个或者多个数据文件中。而一个表空间可以由一个或多个数据文件组成，一个数据文件只能属于一个表空间。一旦数据文件被加入到某个表空间后，就不能删除这个文件，如果要删除某个数据文件，只能删除其所属于的表空间才行。</p>
+<p><strong>4.表空间</strong><br>    表空间是Oracle对物理数据库上相关数据文件(ORA或者DBF文件)的逻辑映射。一个数据库在逻辑上被划分成一到若干个表空间，每个表空间包含了在逻辑上相关联的一组结构。每个数据库至少有一个表空间(称之为system表空间)。<br>    每个表空间由同一磁盘上的一个或多个文件组成，这些文件叫数据文件(datafile)。一个数据文件只能属于一个表空间。</p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240809132824845.png" alt="image-20240809132824845"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240809132911593.png" alt="image-20240809132911593"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240809143206644.png" alt="image-20240809143206644"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="Oracle安装与配置"><a href="#Oracle安装与配置" class="headerlink" title="Oracle安装与配置"></a>Oracle安装与配置</h2><h3 id="windows中安装与配置"><a href="#windows中安装与配置" class="headerlink" title="windows中安装与配置"></a>windows中安装与配置</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1zY4y1874D?p=2&vd_source=648930452995a8a76cc8b1028300c8e4">0002oracle环境搭建（下载和安装）_哔哩哔哩_bilibili</a></p>
+<p>直接装 ，成功万事大吉，失败兜兜转转</p>
+<h4 id="一-VMware-虚拟服务器-win10"><a href="#一-VMware-虚拟服务器-win10" class="headerlink" title="(一) VMware 虚拟服务器 win10"></a>(一) VMware 虚拟服务器 win10</h4><p>垃圾 装个虚拟机就行了</p>
+<h4 id="二）网络配置"><a href="#二）网络配置" class="headerlink" title="(二）网络配置"></a>(二）网络配置</h4><p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810112722020.png" alt="image-20240810112722020"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h4 id="三）安装ORACLE数据库"><a href="#三）安装ORACLE数据库" class="headerlink" title="(三）安装ORACLE数据库"></a>(三）安装ORACLE数据库</h4><p>直接安装</p>
+<h4 id="四-SQLPlus远程连接ORACLE数据库"><a href="#四-SQLPlus远程连接ORACLE数据库" class="headerlink" title="(四)SQLPlus远程连接ORACLE数据库"></a>(四)SQLPlus远程连接ORACLE数据库</h4><p>配置首选项中的Oracle主目录与OCI库，从网上下载远程连接工具instantclient_18_5 配置主目录</p>
+<p>Oracle主目录 ： D:\Windows_data\Desktop\Oralce\instantclient_18_5</p>
+<p>OCI库：D:\Windows_data\Desktop\Oralce\instantclient_18_5\oci.dll</p>
+<p>从虚拟服务器中复制 tnsnames.ora 文件到指定目录</p>
+<p>修改instantclient_18_5目录下的tnsnames.ora文件，将</p>
+<p>本地数据库名称下的host修改为虚拟机地址</p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810113613807.png" alt="image-20240810113613807"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>配置环境变量</p>
+<p>TNS_ADMIN</p>
+<p>D:\Windows_data\Desktop\Oralce\instantclient_18_5</p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810113152385.png" alt="image-20240810113152385"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h4 id="五-PLSQL-Developer安装与配置"><a href="#五-PLSQL-Developer安装与配置" class="headerlink" title="(五)PLSQL Developer安装与配置"></a>(五)PLSQL Developer安装与配置</h4><h4 id="六-中文编码设置"><a href="#六-中文编码设置" class="headerlink" title="(六)中文编码设置"></a>(六)中文编码设置</h4><p>查看服务器端编码SQL:</p>
+<p>select userenv(“language’) from dual</p>
+<p>我实际查到的结果为:AMERICAN_AMERICA.ZHS16GBK</p>
+<p>计算机-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;新建</p>
+<p>设置变量名:NLS_LANG,变量值:第1步查到的值，我的是</p>
+<p>AMERICAN_AMERICA.ZHS16GBK</p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810111659892.png" alt="image-20240810111659892"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>第二步配置系统环境变量：</p>
+<p>NLS_LANG  #native language suppert — language</p>
+<p>SIMPLIFIED CHINESE_CHINA.AL32UTF8</p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810112458464.png" alt="image-20240810112458464"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>重启pl&#x2F;sql</p>
+<h3 id="centos7中安装与配置"><a href="#centos7中安装与配置" class="headerlink" title="centos7中安装与配置"></a>centos7中安装与配置</h3><h2 id="项目案例：《自来水公司收费系统》"><a href="#项目案例：《自来水公司收费系统》" class="headerlink" title="项目案例：《自来水公司收费系统》"></a>项目案例：《自来水公司收费系统》</h2><h3 id="（一）项目介绍与需求分析"><a href="#（一）项目介绍与需求分析" class="headerlink" title="（一）项目介绍与需求分析"></a>（一）项目介绍与需求分析</h3><p>XXX市自来水公司为更好地对自来水收费进行规范化管理，决定委托传智播客.黑马程序员开发《自来水公司收费系统》。考虑到自来水业务数量庞大，数据并发量高，决定数据库采用ORACLE数据库。</p>
+<p>主要功能包括:<br>    1.、基础信息管理∶<br>    （1）业主类型设置</p>
+<p>​	（2）价格设置</p>
+<p>​	（3）区域设置</p>
+<p>​	（4）收费员设置</p>
+<p>​	（5）地址设置</p>
+<p>​    2、业主信息管理∶<br>​	（1）业主信息维护</p>
+<p>​	（2）业主信息查询</p>
+<p>​    3、收费管理∶<br>​	（1）抄表登记</p>
+<p>​	（2）收费登记</p>
+<p>​	（3）收费记录查询</p>
+<p>​	（4）欠费用户清单</p>
+<p>​    4、统计分析</p>
+<p>​	（1）统计日报单</p>
+<p>​	（2）统计月报单</p>
+<p>​		… …</p>
+<h3 id="（二）表结构设计"><a href="#（二）表结构设计" class="headerlink" title="（二）表结构设计"></a>（二）表结构设计</h3><ol>
+<li><p>业主类型（T_OWNERTYPE）</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>类型（位数）</th>
+<th>是否必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>VARCHAR2(30)</td>
+<td>是</td>
+<td>类型名称</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>价格表（T_PRICETABLE）</p>
+<table>
+<thead>
+<tr>
+<th align="left">字段名</th>
+<th>类型（位数）</th>
+<th>是否必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">ID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>主键</td>
+</tr>
+<tr>
+<td align="left">PRICE</td>
+<td>NUMBER(10,2)</td>
+<td>是</td>
+<td>价格</td>
+</tr>
+<tr>
+<td align="left">OWNERTYPEID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>业主类型ID</td>
+</tr>
+<tr>
+<td align="left">MINNUM</td>
+<td>NUMBER(10,2)</td>
+<td>是</td>
+<td>区间数开始值</td>
+</tr>
+<tr>
+<td align="left">MAXNUM</td>
+<td>NUMBER(10,2)</td>
+<td>是</td>
+<td>区间数截至值</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>区域表（T_AREA）</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>类型（位数）</th>
+<th>是否必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>VARCHER2(30)</td>
+<td>是</td>
+<td>区域名称</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>收费员表（T_OPERATOR）</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>类型（位数）</th>
+<th>是否必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>VARCHAR2(30)</td>
+<td>是</td>
+<td>操作员名称</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>地址表（T_ADDRESS）</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>类型（位数）</th>
+<th>是否必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>VARCHAR2(30)</td>
+<td>是</td>
+<td>类型名称</td>
+</tr>
+<tr>
+<td>AREAID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>区域ID</td>
+</tr>
+<tr>
+<td>OPERATORID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>操作员ID</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>业主表（T_OWNERS)</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>类型（位数）</th>
+<th>是否必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>VARCHAR2(30)</td>
+<td>是</td>
+<td>业主名称</td>
+</tr>
+<tr>
+<td>ADDRESSID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>地址ID</td>
+</tr>
+<tr>
+<td>HOUSENUMBER</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>门牌号</td>
+</tr>
+<tr>
+<td>WATERMETER</td>
+<td>VARCHAR2(30)</td>
+<td>是</td>
+<td>水表编号</td>
+</tr>
+<tr>
+<td>ADDDATE</td>
+<td>DATE</td>
+<td>是</td>
+<td>登记日期</td>
+</tr>
+<tr>
+<td>OWNERTYPEID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>业主类型ID</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>收费台账（T_ACCOUNT）</p>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>类型（位数）</th>
+<th>是否必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>主键</td>
+</tr>
+<tr>
+<td>OWNERID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>业主编号</td>
+</tr>
+<tr>
+<td>OWNERTYPEID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>业主类型</td>
+</tr>
+<tr>
+<td>AREAID</td>
+<td>NUMBER</td>
+<td>是</td>
+<td>所在区域</td>
+</tr>
+<tr>
+<td>YEAR</td>
+<td>CHAR(4)</td>
+<td>是</td>
+<td>账务年份</td>
+</tr>
+<tr>
+<td>MONTH</td>
+<td>CHAR(2)</td>
+<td>是</td>
+<td>账务月份</td>
+</tr>
+<tr>
+<td>NUM0</td>
+<td>NUMBER</td>
+<td></td>
+<td>上月累计数</td>
+</tr>
+<tr>
+<td>NUM1</td>
+<td>NUMBER</td>
+<td></td>
+<td>本月累计数</td>
+</tr>
+<tr>
+<td>USENUM</td>
+<td>NUMBER</td>
+<td></td>
+<td>本月使用数</td>
+</tr>
+<tr>
+<td>METERUSERID</td>
+<td>NUMBER</td>
+<td></td>
+<td>抄表员</td>
+</tr>
+<tr>
+<td>METERDATE</td>
+<td>DATE</td>
+<td></td>
+<td>抄表日期</td>
+</tr>
+<tr>
+<td>MONEY</td>
+<td>NUMBER(10,2)</td>
+<td></td>
+<td>应缴金额</td>
+</tr>
+<tr>
+<td>ISFEE</td>
+<td>CHAR(1)</td>
+<td>是</td>
+<td>是否缴费</td>
+</tr>
+<tr>
+<td>FEEDATE</td>
+<td>DATE</td>
+<td></td>
+<td>缴费日期</td>
+</tr>
+<tr>
+<td>FEEUSERID</td>
+<td>NUMBER</td>
+<td></td>
+<td>收费员</td>
+</tr>
+</tbody></table>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810125138904.png" alt="image-20240810125138904"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+</li>
+</ol>
+<h3 id="（三）创建表空间"><a href="#（三）创建表空间" class="headerlink" title="（三）创建表空间"></a>（三）创建表空间</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span>space waterboss  	<span class="operator">/</span><span class="operator">/</span>waterboss为表空间名称</span><br><span class="line">datafile <span class="string">&#x27;c: lwaterboss.dbf&#x27;</span>  	<span class="operator">/</span><span class="operator">/</span>datafile 用于设置物理文件名称</span><br><span class="line">size <span class="number">100</span>m    					<span class="operator">/</span><span class="operator">/</span>size用于设置表空间的初始大小</span><br><span class="line">autoextend <span class="keyword">on</span>   				<span class="operator">/</span><span class="operator">/</span>autoextend <span class="keyword">on</span>用于设置自动增长，如果存储量超过初始大小，则开始自动扩容</span><br><span class="line">next <span class="number">10</span>m;   						<span class="operator">/</span><span class="operator">/</span>next用于设置扩容的空间大小</span><br></pre></td></tr></table></figure>
+
+<h3 id="（四）创建用户"><a href="#（四）创建用户" class="headerlink" title="（四）创建用户"></a>（四）创建用户</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> wateruser 			<span class="operator">/</span><span class="operator">/</span>wateruser为创建的用户名</span><br><span class="line">identified <span class="keyword">by</span> itcast			<span class="operator">/</span><span class="operator">/</span>identified <span class="keyword">by</span> 用于设置用户的密码</span><br><span class="line"><span class="keyword">default</span> tablespace waterboss    <span class="operator">/</span><span class="operator">/</span><span class="keyword">default</span> tablesapce用于指定默认表空间名称</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810132356927.png" alt="image-20240810132356927"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810132312604.png" alt="image-20240810132312604"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="（五）用户赋权"><a href="#（五）用户赋权" class="headerlink" title="（五）用户赋权"></a>（五）用户赋权</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grant</span> dba <span class="keyword">to</span> wateruser			<span class="operator">/</span><span class="operator">/</span>给用户wateruser赋予DBA权限后即可登陆</span><br></pre></td></tr></table></figure>
+
+<h2 id="表的创建、修改与册除"><a href="#表的创建、修改与册除" class="headerlink" title="表的创建、修改与册除"></a>表的创建、修改与册除</h2><h3 id="创表"><a href="#创表" class="headerlink" title="创表"></a>创表</h3><p>语法</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> 表名(</span><br><span class="line">	字段名	类型（长度） <span class="keyword">primary</span> key,</span><br><span class="line">	字段名	类型（长度）,</span><br><span class="line">	... ...</span><br><span class="line">	字段名	类型（长度）</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>数据类型：</p>
+<p>​	1、字符型</p>
+<p>​	CHAR:固定长度的字符类型，最多存储2000个字节<br>​	VARCHAR2:可变长度的字符类型，最多存储4000个字节</p>
+<p>​	LONG:大文本类型。最大可以存储2个G</p>
+<p>​	2、数值型</p>
+<p>​	NUMBER:数值类型</p>
+<pre><code>例如:NUMBER(5)						最大可以存的数为99999
+    NUMBER(5,2)						 最大可以存的数为999.99
+</code></pre>
+<p>​	3、日期型</p>
+<p>​	 DATE∶日期时间型，精确到秒</p>
+<p>​	TIMESTAMP:精确到秒的小数点后9位</p>
+<p>​	4、二进制型(大数据类型)</p>
+<p>​	CLOB:存储字符,最大可以存4个G</p>
+<p>​	BLOB∶存储图像、声音、视频等二进制数据,最多可以存4个G</p>
+<p>实例：</p>
+<p>创建业主表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--业主表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_owners(</span><br><span class="line">  id number <span class="keyword">primary</span> key <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  name varchar2 (<span class="number">30</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  addressid number <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  housenumber varchar2 (<span class="number">30</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  watermeter varchar2 (<span class="number">30</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  adddate <span class="type">date</span> <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  ownertypeid number <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">);</span><br><span class="line"><span class="comment">--收费台账表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_account(</span><br><span class="line">  id number <span class="keyword">primary</span> key <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  ownerid number <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  ownertypeid number <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  areaid number <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  <span class="keyword">year</span> <span class="type">char</span>(<span class="number">4</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  <span class="keyword">month</span> <span class="type">char</span>(<span class="number">2</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  num0 number,</span><br><span class="line">  num1 number,</span><br><span class="line">  usenum number,</span><br><span class="line">  meteruseris number,</span><br><span class="line">  meterdate number,</span><br><span class="line">  money number(<span class="number">10</span>,<span class="number">2</span>),</span><br><span class="line">  isfee <span class="type">char</span>(<span class="number">1</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  feedate <span class="type">date</span>,</span><br><span class="line">  feeuserid number</span><br><span class="line">);</span><br><span class="line"><span class="comment">--地址表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_address(</span><br><span class="line">  id number <span class="keyword">primary</span> key <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  name varchar2 (<span class="number">30</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  areaid number <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  operatorid number <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">);</span><br><span class="line"><span class="comment">--收费员表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_operator(</span><br><span class="line">  id number <span class="keyword">primary</span> key <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  name varchar2 (<span class="number">30</span>) <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">);</span><br><span class="line"><span class="comment">--区域表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_area(</span><br><span class="line">  id number <span class="keyword">primary</span> key <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  name varchar2 (<span class="number">30</span>) <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">);</span><br><span class="line"><span class="comment">--价格表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_pticetable(</span><br><span class="line">  id number <span class="keyword">primary</span> key <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  price number(<span class="number">10</span>,<span class="number">2</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  ownertypeid number <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  minnum number(<span class="number">10</span>,<span class="number">2</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  maxnum number(<span class="number">10</span>,<span class="number">2</span>) <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">);</span><br><span class="line"><span class="comment">--业主类型表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> t_ownertype(</span><br><span class="line">  id number <span class="keyword">primary</span> key <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line">  name varchar2 (<span class="number">30</span>) <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改表"><a href="#修改表" class="headerlink" title="修改表"></a>修改表</h3><p>1、增加字段</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名称 <span class="keyword">ADD</span>(</span><br><span class="line">    列名<span class="number">1</span> 类型[<span class="keyword">DEFAULT</span> 默认值],</span><br><span class="line">    列名<span class="number">2</span> 类型[<span class="keyword">DEFAULT</span> 默认值],</span><br><span class="line">    ...</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>语句:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--追加字段</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> T_OWNERSADD(</span><br><span class="line">    REMARK VARCHAR2(<span class="number">20</span>),</span><br><span class="line">    OUTDATE <span class="type">DATE</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>2、修改字段</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名称 MODIFY(</span><br><span class="line">    列名<span class="number">1</span> 类型[<span class="keyword">DEFAULT</span> 默认值],</span><br><span class="line">    列名<span class="number">2</span> 类型[<span class="keyword">DEFAULT</span> 默认值],</span><br><span class="line">    ...</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>语句∶</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--修改字段</span></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> T_OWNERS MODIFY(</span><br><span class="line">    REMARK <span class="type">CHAR</span>(<span class="number">20</span>),</span><br><span class="line">    OUTDATE <span class="type">TIMESTAMP</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>3、修改字段名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名称 RENAME <span class="keyword">COLUMN</span> 原列名 <span class="keyword">TO</span> 新列名;</span><br></pre></td></tr></table></figure>
+
+<p>语句:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> T_OWNERS RENAME <span class="keyword">COLUMN</span> OUTDATE <span class="keyword">TO</span> EXITDATE;</span><br></pre></td></tr></table></figure>
+
+<p>4、删除字段名</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 表名称 <span class="keyword">drop</span> <span class="keyword">column</span> 列名<span class="number">1</span>,列名<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+
+<p>语句：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--删除字段</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> T_OWNERS <span class="keyword">drop</span> <span class="keyword">column</span> remark;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><p>语法：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> 表名</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="数据增删改"><a href="#数据增删改" class="headerlink" title="数据增删改"></a>数据增删改</h2><h3 id="插入数据-1"><a href="#插入数据-1" class="headerlink" title="插入数据"></a>插入数据</h3><p>语法︰</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO 表名[(列名1, 列名2, ...)] VALUES (值1, 值2, ...)</span><br></pre></td></tr></table></figure>
+
+<p>执行INSERT后一定要再执行commit提交事务<br>向业主表插入数据︰</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> T_OWINERS <span class="keyword">VALUES</span>(</span><br><span class="line">    <span class="number">1</span>,   				<span class="comment">--id</span></span><br><span class="line">    <span class="string">&#x27;张丰&#x27;</span>,			   <span class="comment">--业主名</span></span><br><span class="line">    <span class="number">1</span>,					<span class="comment">--地址</span></span><br><span class="line">    <span class="string">&#x27;2-2&#x27;</span>,				<span class="comment">--门牌</span></span><br><span class="line">    <span class="string">&#x27;5678&#x27;</span>,				<span class="comment">--水表编号</span></span><br><span class="line">    sysdate,			<span class="comment">--日期</span></span><br><span class="line">    <span class="number">1</span>					<span class="comment">--业主类型ID</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>语句中的sysdate是系统变量用于获取当前日期，点击齿轮的图标后，再点击下图的绿色图标，此图标为commit</p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810172429950.png" alt="image-20240810172429950"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>我们再次录入一条数据，语句如下:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> T_OWNERS <span class="keyword">VALUES</span> (</span><br><span class="line">    <span class="number">2</span>,</span><br><span class="line">    <span class="string">&#x27;赵大侃&#x27;</span>,</span><br><span class="line">    <span class="number">1</span>,</span><br><span class="line">    <span class="string">&#x27;2-3&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;9876&#x27;</span>,</span><br><span class="line">    sysdate,</span><br><span class="line">    <span class="number">1</span> </span><br><span class="line">);</span><br><span class="line"><span class="keyword">commit</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改数据"><a href="#修改数据" class="headerlink" title="修改数据"></a>修改数据</h3><p>语法︰</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> 表名 <span class="keyword">SET</span> 列名<span class="number">1</span><span class="operator">=</span>值<span class="number">1</span>, 列名<span class="number">2</span><span class="operator">=</span>值<span class="number">2</span>,</span><br><span class="line">....</span><br><span class="line"><span class="keyword">WHERE</span>修改条件;</span><br></pre></td></tr></table></figure>
+
+<p>执行UPDATE后一定要再执行commit提交事务<br>需求∶将ID为1的业主的登记日期更改为三天前的日期</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> T_OWNERS <span class="keyword">set</span> adddate<span class="operator">=</span>adddate<span class="number">-3</span> <span class="keyword">where</span> id<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line"><span class="keyword">commit</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><p>语法1∶</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名 <span class="keyword">WHERE</span> 删除条件;</span><br></pre></td></tr></table></figure>
+
+<p>执行DELETE后一定要再执行commit提交事务</p>
+<p>需求:删除业主ID为2的业主信息</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> T_OWNERS <span class="keyword">where</span> id<span class="operator">=</span><span class="number">2</span>;</span><br><span class="line"><span class="keyword">commit</span>;</span><br></pre></td></tr></table></figure>
+
+<p>语法2∶</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">TRUNCATETABLE 表名称</span><br></pre></td></tr></table></figure>
+
+<p>比较truncat 与delete 实现数据删除?</p>
+<ol>
+<li>delete删除的数据可以rollback</li>
+<li>delete删除可能产生碎片，并且不释放空间</li>
+<li>truncate是先摧毁表结构，再重构表结构</li>
+</ol>
+<h2 id="JDBC连接ORACLE"><a href="#JDBC连接ORACLE" class="headerlink" title="JDBC连接ORACLE"></a>JDBC连接ORACLE</h2><h3 id="创建工程，引入驱动包"><a href="#创建工程，引入驱动包" class="headerlink" title="创建工程，引入驱动包"></a>创建工程，引入驱动包</h3><p>在下图目录中可以找到驱动包ORACLE的JDBC驱动包，拷贝到工程即可使用</p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810182842582.png" alt="image-20240810182842582"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>创建java工程waterbess ,建立lib文件夹将ojdbc.jar拷贝到此文件夹然后addbuild path</p>
+<p><img src="/2024/08/09/%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240810182847344.png" alt="image-20240810182847344"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="BaseDao"><a href="#BaseDao" class="headerlink" title="BaseDao"></a>BaseDao</h3><p>我们通常编写BaseDao负责加载驱动，获取数据库连接，关闭资源，代码如下:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> cn.itcast.waterboss.dao;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*基本数据访问类</span></span><br><span class="line"><span class="comment">*<span class="doctag">@author</span> Administrator</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BaseDao</span> &#123;</span><br><span class="line">	<span class="comment">//加载驱动</span></span><br><span class="line">    <span class="keyword">static</span>&#123;</span><br><span class="line">    	<span class="keyword">try</span> &#123;</span><br><span class="line">    		class.forName( <span class="string">&quot;oracle.jdbc.driver.OracleDriver&quot;</span> );</span><br><span class="line">    		&#125; <span class="keyword">catch</span> (ClassNotFoundException  e) &#123;</span><br><span class="line">    			e.printStackTrace();</span><br><span class="line">    		&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">    *获取数据库连接</span></span><br><span class="line"><span class="comment">    *<span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">    *<span class="doctag">@throws</span> SQLException</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> java.sql.connection <span class="title function_">getConnection</span><span class="params">( )</span> <span class="keyword">throws</span> SQLException&#123;</span><br><span class="line">    <span class="keyword">return</span> java.sq1.DriverManager.getConnection(</span><br><span class="line">        <span class="string">&quot;jdbc:oracle:thin:@192.168.52.35:1521 : orcl&quot;</span>,<span class="string">&quot;wateruser&quot;</span>, <span class="string">&quot;itcast&quot;</span> );</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 关闭资源</span></span><br><span class="line"><span class="comment">    * @param rs</span></span><br><span class="line"><span class="comment">    * @param stmt</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">closeAll</span><span class="params">(java.sql.Resultset rs,java.sql.statement stmt,java.sq1.connection conn)</span></span><br><span class="line">    &#123;</span><br><span class="line">    <span class="comment">//关闭结果集</span></span><br><span class="line">        <span class="keyword">if</span>(rs!=<span class="literal">null</span>)&#123;</span><br><span class="line">        	<span class="keyword">try</span> &#123;</span><br><span class="line">        		rs.close();</span><br><span class="line">       			&#125; <span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">        			e.printstackTrace( );</span><br><span class="line">        		&#125;</span><br><span class="line">    		&#125;</span><br><span class="line">    <span class="comment">//关闭执行对象</span></span><br><span class="line">        <span class="keyword">if</span>(stmt ! =<span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">    			stmt.close();</span><br><span class="line">    		&#125;<span class="keyword">catch</span> (SQLException e) &#123;</span><br><span class="line">    			e.printStackTrace( );&#125;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="业主增删改代码编写"><a href="#业主增删改代码编写" class="headerlink" title="业主增删改代码编写"></a>业主增删改代码编写</h3><h2 id="数据导出与导入"><a href="#数据导出与导入" class="headerlink" title="数据导出与导入"></a>数据导出与导入</h2><p>当我们使用一个数据库时，总希望数据库的内容是可靠的、正确的，但由于计算机系统的故障（硬件故障、软件故障、网络故障、进程故障和系统故障)影<br>响数据库系统的操作，影响数据库中数据的正确性，甚至破坏数据库，使数据库<br>中全部或部分数据丢失。因此当发生上述故障后，希望能重构这个完整的数据库<br>该处理称为数据库恢复，而要进行数据库的恢复必须要有数据库的备份工作。</p>
+<h3 id="整库导入与导出"><a href="#整库导入与导出" class="headerlink" title="整库导入与导出"></a>整库导入与导出</h3><p>整库导出命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exp system/itcast full=y</span><br></pre></td></tr></table></figure>
+
+<p>添加参数full&#x3D;y 就是整库导出</p>
+<p>执行命令后会在当前目录下生成一个叫EXPDAT.DMP（expdat.dmp）的文件，此文件为备份文件。</p>
+<p>如果想要指定备份文件的名称，则添加file参数即可，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exp system/itcast file=文件名 full=y</span><br></pre></td></tr></table></figure>
+
+
+
+<p>整库导入命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imp system/itcast full=y</span><br></pre></td></tr></table></figure>
+
+<p>此命令如果不指定file参数，则默认使用备份文件expdat.dmp进行导入，如果指定file参数，则按照file指定的备份文件进行恢复。</p>
+<h3 id="按用户导入与导出"><a href="#按用户导入与导出" class="headerlink" title="按用户导入与导出"></a>按用户导入与导出</h3><p>按用户导出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exp username/password owner=wateruser file=wateruser.dmp</span><br></pre></td></tr></table></figure>
+
+<p>按用户导入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imp username/password file=wateruser.dmp fromuser=wateruser</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="按表导入与导出"><a href="#按表导入与导出" class="headerlink" title="按表导入与导出"></a>按表导入与导出</h3><p>按表导出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exp wateruser/itcas file=xx.dmp tables=t_account,t_area</span><br></pre></td></tr></table></figure>
+
+<p>用tables参数来指定需要导出的表，如果有多个表用逗号分隔即可</p>
+<p>按表导入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imp wateruser/itcast file=xx.dmp tables=t_account,t_area</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h3 id="知识点总结"><a href="#知识点总结" class="headerlink" title="知识点总结"></a>知识点总结</h3><h3 id="上机任务布置"><a href="#上机任务布置" class="headerlink" title="上机任务布置"></a>上机任务布置</h3><h2 id="Oracle的使用"><a href="#Oracle的使用" class="headerlink" title="Oracle的使用"></a>Oracle的使用</h2><h3 id="创建用户和表空间"><a href="#创建用户和表空间" class="headerlink" title="创建用户和表空间"></a>创建用户和表空间</h3><ul>
+<li><p>以超级管理员身份登录</p>
+</li>
+<li><p>创建表空间</p>
+</li>
+<li><p>创建用户</p>
+</li>
+<li><p>给用户授权</p>
+</li>
+<li><p>查询测试</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sqlplus /nolog; 			//启动sqlplus不登录</span><br><span class="line">conn sys/root as sysdba;	//通过超级管理员以dba的身份登录</span><br><span class="line">create tablespace 表空间名 datafile &#x27;文件路径\文件名.dbf&#x27; size空间大小;		</span><br><span class="line">	 //创建表空间create user 用户名identified by 密码default tablespace表空间;  //创建用户并指定表空间grant dba to 用户;</span><br><span class="line">    //给用户授予dba的权限</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<hr>
+<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h1 id="HBase"><a href="#HBase" class="headerlink" title="HBase"></a>HBase</h1><h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1>
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/09/scrapy/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/09/scrapy/" class="trm-anima-link">
+                    scrapy
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/09</li>
+                <li>12:49</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/06/%E5%AE%9E%E6%96%BD/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/06/%E5%AE%9E%E6%96%BD/" class="trm-anima-link">
+                    实施
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/06</li>
+                <li>16:47</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-footer-card trm-scroll-animation">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.2.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.2.2
+            </span>
+        </div>
+      
+
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+            
+<div class="trm-fixed-container">
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+		
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.2.2"></script>
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+</body>
+
+</html>

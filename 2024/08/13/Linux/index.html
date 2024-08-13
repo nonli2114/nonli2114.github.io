@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="常见的Linux操作系统你可曾知道Linux的魅力或威力来自哪里？那就是，由于众多发行版百花齐放，Linux的阵营日益壮大，每一款发行版都拥有一大批用户，开发者自愿为相关项目投入精力。Linux发行版可谓是形形色色，它们旨在满足每一种能想得到的需求。本文就是为了简述某一款发行版为何存在、该发行版的目标用户是哪些，以及它与其他发行版相比有什么样的特殊功能。 1. Debian Debian运行起来极">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux">
+<meta property="og:url" content="http://example.com/2024/08/13/Linux/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="常见的Linux操作系统你可曾知道Linux的魅力或威力来自哪里？那就是，由于众多发行版百花齐放，Linux的阵营日益壮大，每一款发行版都拥有一大批用户，开发者自愿为相关项目投入精力。Linux发行版可谓是形形色色，它们旨在满足每一种能想得到的需求。本文就是为了简述某一款发行版为何存在、该发行版的目标用户是哪些，以及它与其他发行版相比有什么样的特殊功能。 1. Debian Debian运行起来极">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="og:image" content="http://example.com/img/404.jpg">
+<meta property="article:published_time" content="2024-08-13T06:22:40.000Z">
+<meta property="article:modified_time" content="2024-08-13T06:30:18.442Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/404.jpg">
+
+
+<title >Linux</title>
+
+<!-- Favicon -->
+
+    <link href='/img/favicon.svg?v=2.2.2' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/favicon.svg?v=2.2.2' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
+
+    
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
+
+    
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
+    
+    
+
+
+
+
+<!-- Icon -->
+
+    
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
+
+
+
+
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"John Doe","root":"/","typed_text":null,"theme_version":"2.2.2","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-08-13 14:30:18"};</script>
+
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.2" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
+
+<!-- CDN -->
+
+
+    
+    
+
+
+
+<!-- Site Analytics -->
+
+ 
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
+
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
+
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
+
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/favicon.svg">
+    
+    
+        <div class="trm-logo-text">
+            Async<span>Theme</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+    <!-- mode switcher place -->
+    <div class="trm-mode-switcher-place">
+        <div class="trm-mode-switcher">
+            <i class="iconfont far fa-sun"></i>
+            <input class="tgl tgl-light" id="trm-swich" type="checkbox">
+            <label class="trm-swich" for="trm-swich"></label>
+            <i class="iconfont far fa-moon"></i>
+        </div>
+    </div>
+    <!-- mode switcher place end -->
+
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            
+<div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/img/banner.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            NEWS LETTER
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            Linux
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        2024
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/img/avatar.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        ThemeAsync
+    </h5>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                Residence:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <div class="trm-post-info row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            08/13
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            14:22
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            John Doe
+        </div>
+    </div>
+</div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="常见的Linux操作系统"><a href="#常见的Linux操作系统" class="headerlink" title="常见的Linux操作系统"></a>常见的Linux操作系统</h1><p>你可曾知道Linux的魅力或威力来自哪里？那就是，由于众多发行版百花齐放，Linux的阵营日益壮大，每一款发行版都拥有一大批用户，开发者自愿为相关项目投入精力。Linux发行版可谓是形形色色，它们旨在满足每一种能想得到的需求。本文就是为了简述某一款发行版为何存在、该发行版的目标用户是哪些，以及它与其他发行版相比有什么样的特殊功能。</p>
+<p><strong>1. Debian</strong></p>
+<p><a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=Debian&spm=1001.2101.3001.7020">Debian</a>运行起来极其稳定，这使得它非常适合用于服务器。<a target="_blank" rel="noopener" href="http://os.51cto.com/art/201305/393876.htm">Debian</a>平时维护三套正式的软件库和一套非免费软件库，这给另外几款发行版（比如Ubuntu和Kali等）带来了灵感。Debian这款操作系统派生出了多个Linux发行版。它有37500多个软件包，这方面唯一胜过Debian的其他发行版只有Gentoo。Debian使用apt或aptitude来安装和更新软件。</p>
+<p>Debian这款操作系统无疑并不适合新手用户，而是适合系统管理员和高级用户。Debian支持如今的大多数架构（处理器）。</p>
+<p>下载Debian ISO映像文件：<a target="_blank" rel="noopener" href="http://dd.ma/BnNdplbF">http://dd.ma/BnNdplbF</a></p>
+<p>附有屏幕截图的Debian安装：《<a target="_blank" rel="noopener" href="http://www.tecmint.com/debian-gnulinux-7-0-code-name-wheezy-server-installation-guide/">Debian 7.0”Wheezy”安装指南</a>》</p>
+<p><a target="_blank" rel="noopener" href="http://s4.51cto.com/wyfs01/M01/11/17/wKioJlHt5vjC-TKOAABHyPGNhFU792.jpg-wh_651x-s_3489747668.jpg"><img src="https://imgconvert.csdnimg.cn/aHR0cDovL3M0LjUxY3RvLmNvbS93eWZzMDEvTTAxLzExLzE3L3dLaW9KbEh0NXZqQy1US09BQUJIeVBHTmhGVTc5Mi5qcGctd2hfNjUxeC1zXzM0ODk3NDc2NjguanBn?x-oss-process=image/format,png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></a></p>
+<p>Debian Linux</p>
+<p><strong>2. Gentoo</strong></p>
+<p>与Debian一样，Gentoo这款操作系统也包含数量众多的软件包。Gentoo并非以预编译的形式出现，而是每次需要针对每个系统进行编译。连Gentoo社区都觉得Gentoo安装和使用起来很困难；不过它被认为是最佳学习对象，可以进而了解Linux操作系统的内部运作原理。提到Gentoo总有人这么说：”如果你要学用Linux发行版，那就学用该发行版吧；如果你学会了Gentoo，也就学会了Linux。”Gentoo使用portage来安装和更新软件。</p>
+<p>Gentoo这款操作系统适合对Linux已经完全驾轻就熟的那些用户。</p>
+<p>下载和安装Gentoo：<a target="_blank" rel="noopener" href="http://dd.ma/Y0dT3sAQ">http://dd.ma/Y0dT3sAQ</a></p>
+<p><a target="_blank" rel="noopener" href="http://s4.51cto.com/wyfs01/M01/11/17/wKioJlHt5vjBalpMAABL4oqPtu0218.jpg"><img src="https://i-blog.csdnimg.cn/blog_migrate/27f7c9bda87177017510933db57ab61c.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></a></p>
+<p>Gentoo Linux</p>
+<p><strong>3. Ubuntu</strong></p>
+<p>Ubuntu是Debian的一款衍生版，也是当今最受欢迎的免费操作系统。Ubuntu侧重于它在这个市场的应用，在服务器、云计算、甚至一些运行Ubuntu Linux的移动设备上很常见。作为Debian Gnu Linux的一款衍生版，Ubuntu的进程、外观和感觉大多数仍然与Debian一样。它使用apt软件管理工具来安装和更新软件。它也是如今市面上用起来最容易的发行版之一。Ubuntu使用基于apt的程序包管理器。</p>
+<p>Ubuntu是新手用户肯定爱不释手的一款操作系统。</p>
+<p>下载Ubuntu ISO映像文件：<a target="_blank" rel="noopener" href="http://dd.ma/8ek7k9OR">http://dd.ma/8ek7k9OR</a></p>
+<p>附有屏幕截图的Ubuntu安装：《<a target="_blank" rel="noopener" href="http://www.tecmint.com/ubuntu-13-04-installation-guide/">Ubuntu 13.04”Raring Ringtail”安装指南</a>》</p>
+<p><a target="_blank" rel="noopener" href="http://s9.51cto.com/wyfs01/M01/11/19/wKioOVHt5viAPsHGAABCRuNHQPI181.jpg"><img src="https://i-blog.csdnimg.cn/blog_migrate/20db5a424053662b4c4269ee0d15b24c.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></a></p>
+<p>Ubuntu Linux</p>
+<p><strong>4. Damn Vulnerable Linux</strong></p>
+<p>当然，大多数人可能对这款发行版前所未闻，不过该发行版在本文中还是占有一席之地。那么，它有何过人之处呢？ Damn Vulnerable Linux恰如其名：其字面意思就是”该死的易受攻击的Linux”。Vulnerable Linux（DVL）根本不是一般意义上的优秀的Linux发行版。它有意捆绑了坏的、配置不当的、过时的、很容易被不法分子攻击的软件。</p>
+<p>它的目的在于借机训练Linux管理员。还有什么比给Linux管理员一款坏的发行版去排解问题来得更管用的吗？面对Apache、MySQL、PHP、FTP和SSH等比较旧或破的版本，接受训练的管理员够有得忙了。</p>
+<p>Damn Vulnerable Linux堪称旨在训练管理员的实验室。</p>
+<p>下载Damn Vulnerable Linux（DVL）ISO映像文件：<a target="_blank" rel="noopener" href="http://sourceforge.jp/projects/sfnet_virtualhacking/downloads/os/dvl/DVL_1.5_Infectious_Disease.iso/">DVL_1.5_Infectious_Disease.iso</a></p>
+<p><a target="_blank" rel="noopener" href="http://s1.51cto.com/wyfs01/M01/12/82/wKioOVH6LC6Dm6xcAACRX1ikz3I028.jpg"><img src="https://i-blog.csdnimg.cn/blog_migrate/7add4b905d925e7d270e5af360b57f3e.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></a></p>
+<p>Damn Vulnerable Linux</p>
+<p><strong>5. 红帽企业级Linux</strong></p>
+<p>这是第一款面向商业市场的<a target="_blank" rel="noopener" href="http://os.51cto.com/art/201305/393328.htm">Linux发行版</a>。它有服务器版本，支持众多处理器架构，包括x86和x86_64。红帽公司通过课程红帽认证系统管理员&#x2F;红帽认证工程师（RHCSA&#x2F;RHCE），对系统管理员进行培训和认证。就全球市场而言，总利润中80%来自支持，另外20%来自培训和认证，不过在印度不是这样。</p>
+<p>在印度，红帽的利润中80%来自认证和培训，只有20%来自支持。而Fedora是个平台，而不是开发新产品或新应用程序的测试环境；一旦成为稳定版，就与红帽企业级Linux捆绑在一起，包括支持。红帽提供了非常多的稳定版应用程序，但是众所周知的缺点是，把太多旧程序包打包起来，支持成本确实相当高。不过，如果安全是关注的首要问题，那么红帽企业级Linux的确是款完美的发行版，它使用YUM程序包管理器。</p>
+<p>红帽企业级Linux是系统管理员的第一选择，它有众多的程序包，还有非常到位的支持。</p>
+<p>由于该发行版是商业化产品，所以不是免费的。不过，你可以下载用于教学用途的测试版。</p>
+<p>下载红帽企业级Linux测试版DVD ISO映像文件：RedHat Enterprise Linux（<a target="_blank" rel="noopener" href="https://www.redhat.com/wapps/sso/login.html?redirect=https://rhn.redhat.com/rhn/software/channels/Beta.do">测试版</a>）</p>
+<p>附有屏幕截图的RHEL 6安装：《<a target="_blank" rel="noopener" href="http://www.tecmint.com/red-hat-enterprise-linux-rhel-6-installation-guide-with-screenshots/">RHEL 6安装指南</a>》</p>
+<p>补充说明：通常认为，开发了该发行版的Marc Ewin将该产品命名为红帽，因为他丢失了似乎很心爱的那顶红色帽子，帽子是他爷爷在他过生日时送的礼物。</p>
+<p><a target="_blank" rel="noopener" href="http://s8.51cto.com/wyfs01/M00/11/17/wKioJlHt5viz4COpAABDkrn1UvU673.jpg"><img src="https://i-blog.csdnimg.cn/blog_migrate/30ea3c8014fe8e60c616b42f1cc99aa3.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></a></p>
+<p>红帽企业级Linux</p>
+<p><strong>6. CentOS</strong></p>
+<p><a target="_blank" rel="noopener" href="http://os.51cto.com/art/201005/200790.htm">CentOS</a>是一款企业级Linux发行版，它使用红帽企业级Linux中的免费源代码重新构建而成。这款重构版完全去掉了注册商标以及Binary程序包方面一个非常细微的变化。有些人不想支付一大笔钱，又能领略红帽企业级Linux；对他们来说，CentOS值得一试。此外，CentOS的外观和行为似乎与母发行版红帽企业级Linux如出一辙。 CentOS使用YUM来管理软件包。</p>
+<p>非常稳定的程序包；谁要是想在桌面端测试一下服务器的运作原理，都应该试试这款操作系统。</p>
+<p>下载<a target="_blank" rel="noopener" href="http://os.51cto.com/art/201305/393020.htm">CentOS 6.4</a> DVD ISO映像文件：<a target="_blank" rel="noopener" href="http://dd.ma/BNbpqFB8">http://dd.ma/BNbpqFB8</a></p>
+<p>附有屏幕截图的CentOS 6.4安装：《<a target="_blank" rel="noopener" href="http://www.tecmint.com/centos-6-4-installation-guide-with-screenshots/">CentOS 6.4安装指南</a>》</p>
+<p><a target="_blank" rel="noopener" href="http://s3.51cto.com/wyfs01/M00/11/17/wKioJlHt5vjCkPgtAABopSU_0nk138.jpg"><img src="https://i-blog.csdnimg.cn/blog_migrate/7a445d8a264350c5f670d0500717d366.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></a></p>
+<p>CentOS Linux</p>
+<p><strong>7. Fedora</strong></p>
+<p>小巧的Fedora适合那些人：想尝试最先进的技术，等不及程序的稳定版出来。其实，Fedora就是红帽公司的一个测试平台；产品在成为企业级发行版之前，在该平台上进行开发和测试。Fedora是一款非常好的发行版，有庞大的用户论坛，软件库中还有为数不少的软件包。Fedora同样使用YUM来管理软件包。</p>
+<p>下载<a target="_blank" rel="noopener" href="http://os.51cto.com/art/201301/379088.htm">Fedora 18</a>（Spherical Cow）DVD ISO映像文件：<a target="_blank" rel="noopener" href="http://dd.ma/CyBshk4Q">http://dd.ma/CyBshk4Q</a></p>
+<p>附有屏幕截图的Fedora 18（Spherical Cow）安装：《<a target="_blank" rel="noopener" href="http://www.tecmint.com/fedora-18-installation-guide/">Fedora 18（Spherical Cow）安装指南</a>》</p>
+<p><a target="_blank" rel="noopener" href="http://s5.51cto.com/wyfs01/M00/11/19/wKioOVHt5vixn0MSAACAwNNOuyA607.jpg"><img src="https://i-blog.csdnimg.cn/blog_migrate/8408ce21a7f148b27eaca9ec8b3ec5e2.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></a></p>
+<p>Fedora Linux</p>
+<p><strong>8. Kali Linux</strong></p>
+<p>Kali Linux是<a target="_blank" rel="noopener" href="http://os.51cto.com/art/201102/244746.htm">Debian</a>的一款衍生版。Kali旨在用于渗透测试。它大概在三个月前才发行。Kali的前身是Backtrack。用于Debian的所有Binary软件包都可以安装到Kali Linux上，而Kali的魅力或威力就来自于此。此外，支持Debian的用户论坛为Kali加分不少。Kali随带许多的渗透测试工具，无论是Wifi、数据库还是其他任何工具，都设计成立马可以使用。Kali使用APT来管理软件包。</p>
+<p>毫无疑问，Kali Linux是一款渗透测试工具，或者是文明黑客（我不想谈论恶意黑客）青睐的操作系统。</p>
+<p>下载Kali Linux DVD ISO映像文件：<a target="_blank" rel="noopener" href="http://www.tecmint.com/download-kali-linux-dvd-iso-images/">Kali Linux 6</a></p>
+<p><a target="_blank" rel="noopener" href="http://s6.51cto.com/wyfs01/M01/11/19/wKioOVHt5vjDOkXtAAB66Ud3GOA707.jpg"><img src="https://i-blog.csdnimg.cn/blog_migrate/240e421049fed9f4675657fa29b3498b.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></a></p>
+<p>Kali Linux</p>
+<p><strong>9. Arch Linux</strong></p>
+<p><a target="_blank" rel="noopener" href="http://os.51cto.com/art/201006/206869.htm">Arch</a>是一款采用滚动发行方式的操作系统：只要安装一次就够了；每当发行了某个新版本，就可以升级发行版，不需要重新安装。Pacman是Arch Linux的软件包管理器。Arch Linux既支持X86处理器架构，又支持X86_64架构，安装程序可以从光盘或U盘来运行。Arch旨在从开发者的角度而不是从用户的角度做到力求简单。Arch配置和安装起来超容易。它真是一款面向高手的发行版，让你可以了解Linux系统的每一个细枝末节。</p>
+<p>下载Arch Linux ISO映像文件：<a target="_blank" rel="noopener" href="http://dd.ma/kIkgJGD1">http://dd.ma/kIkgJGD1</a></p>
+<p><a target="_blank" rel="noopener" href="http://s4.51cto.com/wyfs01/M01/11/17/wKioJlHt5vnw8y5zAAAp3Eh4lJ0354.jpg"><img src="https://i-blog.csdnimg.cn/blog_migrate/3b6f657607653b53f7e3047bc5c326b5.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></a></p>
+<p>Arch Linux</p>
+<p><strong>10. OpenSuse</strong></p>
+<p><a target="_blank" rel="noopener" href="http://os.51cto.com/art/201005/202196.htm">OpenSuse</a>这款Linux发行版是免费的，并不供商业用途使用，仍然供个人使用。OpenSuse的真正竞争对手是红帽企业级Linux。它使用Yast来管理软件包。有了Yast，使用和管理服务器应用程序就非常容易。此外，Yast安装向导程序可以配置电子邮件服务器、LDAP服务器、文件服务器或Web服务器，没有任何不必要的麻烦。它随带snapper快照管理工具，因而可以恢复或使用旧版的文件、更新和配置。由于让滚动发行版本成为可能的Tumbleweed，可将已安装的操作系统更新到最新版本，不需要任何的新发行版。</p>
+<p>SUSE在管理员当中的名气更大，因为它有Yast以及让<a target="_blank" rel="noopener" href="http://os.51cto.com/art/201302/382170.htm">系统管理员</a>能够自动管理任务的其他此类应用程序，同样水准的其他发行版没有这项功能。</p>
+<p>下载OpenSuse 12.3 DVD ISO映像文件：<a target="_blank" rel="noopener" href="http://dd.ma/gSerotMi">http://dd.ma/gSerotMi</a></p>
+<p>附有屏幕截图的<a target="_blank" rel="noopener" href="http://os.51cto.com/art/201303/384379.htm">OpenSuse 12.3</a>安装：《<a target="_blank" rel="noopener" href="http://www.tecmint.com/opensuse-12-3-installation-guide-with-screenshots/">OpenSuse 12.3安装指南</a>》</p>
+<p><a target="_blank" rel="noopener" href="http://s8.51cto.com/wyfs01/M01/11/17/wKioJlHt5vvBvu0KAABxz60NgFQ048.jpg"><img src="https://i-blog.csdnimg.cn/blog_migrate/76d21860cb781ca2ab8c5573312d4e0a.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></a></p>
+<p>OpenSuse Linux</p>
+<p>本文不是什么大盘点。市面上有好几百款发行版，每款发行版在某个方面都与众不同。不可能在此全部罗列，本文只罗列了十款最常见的Linux发行版（世界上只有两种人，一种是懂二进制的，另一种是不懂二进制的）。请宣传Linux的魅力或威力。</p>
+<h1 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h1><p> <strong>容器：</strong></p>
+<p>容器是一种虚拟化技术。<br>我们知道，在传统的服务器使用中，服务器物理资源存在较大的浪费。虚拟化技术就是为了避免这种浪费而产生的技术。下图展示了从虚拟化技术，到容器技术的发展史。</p>
+<p><img src="/2024/08/13/Linux/6f76d080b109023be2792848e477396c.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>我们可以看到，容器技术不是凭空产生的，而是经历了漫长的演变过程。了解了这种演变，了解了容器技术为解决什么问题而诞生，你就不会对容器技术望而生畏了。</p>
+<p>容器技术最早应用在Linux操作系统，称为Linux Container(LXC)，早期在互联网公司开始使用部署分布式应用，随后随着容器管理器（Docker、Rocket和CloudFoundary Garden）兴起，定制容器宿主操作系统(CoreOS、Ubuntu Snappy、Red Hat Atomic)盛行，容器被有效构建和管理、并在各行各业普遍使用和认可。</p>
+<p><strong>容器技术的官方定义是：</strong></p>
+<p>容器是通过一种虚拟化技术来隔离运行在主机上不同进程，从而达到进程之间、进程和宿主操作系统相互隔离、互不影响的技术。</p>
+<p>要理解这个定义，首先要弄清楚<strong>容器和虚拟机的区别。</strong></p>
+<p>简单来说，虚拟机是一个机器，但容器是一个进程。</p>
+<p>每一个虚拟机里面都有一套完整的操作系统，而容器层安装在操作系统之上，它直接利用了宿主机的内核，更加轻量化，启动速度极快。通常，我们在会每个容器里面跑单个的应用，而在虚拟机里会跑很多应用。下图展示了虚拟机和容器的不同。</p>
+<p><img src="/2024/08/13/Linux/23cd1735c9f6ccb1d995dbf2577d7794.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'>容器技术具有：简化部署、快速启动、服务组合、易于迁移等优点。</p>
+<p>容器技术具有：简化部署、快速启动、服务组合、易于迁移等优点。</p>
+<h2 id="K8S-Kubernetes"><a href="#K8S-Kubernetes" class="headerlink" title="K8S(Kubernetes)"></a>K8S(Kubernetes)</h2><p><img src="https://i-blog.csdnimg.cn/blog_migrate/782931775e1ae0ec02ccf506c8d94a36.jpeg" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>Kubernetes （简称k8s）近两年大火，如果你是一名云计算从业者，或者运维人员，还不了解kubernetes 的话那你已经OUT了。</p>
+<p><strong>Kubernetes 是什么</strong></p>
+<p>官方定义是，Kubernetes是用于自动部署、扩展和容器化应用程序的开源系统。</p>
+<p>而我们要了解究竟什么是Kubernetes，首先要明白容器的概念，以及Docker是什么。</p>
+<p><strong>什么是kubernetes</strong></p>
+<p>了解了容器和Docker，再来看kubernetes的定义就很容易理解了。</p>
+<p>上文提到，Kubernetes是用于自动部署、扩展和容器化应用程序的开源系统。</p>
+<p>当我们使用的容器服务多了，面临的访问量增大以后，我们就需要一种工具把这些容器统一的管理起来，需要实现对这些容器的自动部署、扩展和管理。也就是俗称的容器编排。</p>
+<p>Kubernetes就是这样一种容器编排系统。</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/7a1160d55fbb4467acc4b5e9c7d61623.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>上图是Kubernetes的架构图。</p>
+<p>从大的模块看，图中包含Master组件(APIs, scheduler, etc)，Node节点和cloud端。</p>
+<p>Master中，包含负责提供API服务的组件kube-apiserver；作为后台数据库的etcd，监听组件kube-scheduler；运行控制器的组件kube-controller-manager。</p>
+<p>Node节点中包括运行在各个节点的客户端的kubelet，运行在各个节点的网络代理组件kube-proxy，支持运行容器底层环境的软件Container Runtime。</p>
+<p>Cloud端作为集群外部的附加能力，通过与cloud-controller-manager组件对接，扩展k8s集群云上动态扩展的特性。</p>
+<p><strong>如何上手使用 kubernetes</strong></p>
+<p><strong>Kubernetes的安装</strong></p>
+<p>Kubernetes有很多种安装方法，这里就不一一介绍了。推荐三种主要的安装方法，感兴趣的朋友可以通过关键词搜索相关教程，按步骤尝试安装。如果遇到问题，可以在我们的社群或者Kubernetes中文社区提问。</p>
+<p>常见的三种安装方法：<br>- Kuberspray<br>- Kubeadm<br>- 手动安装</p>
+<p><strong>Kubernetes有哪些优势</strong></p>
+<p>为什么我们要用Kubernetes？因为它更省钱，更快，更省力。</p>
+<p>Kubernetes和Docker都是开源的，这意味着你不需要支付高昂的授权费用；容器服务从启动到关停，比传统的服务器、虚拟机都要快捷很多；管理方面，Kubernetes提供一整套架构，管理方便，节省了运维的人力。</p>
+<p>容器技术是未来发展的必然趋势。如果你从事开发、运维、云计算相关工作，一定要多多关注容器技术的发展。</p>
+<p><strong>几个与Kubernetes相关的产品&#x2F;概念</strong></p>
+<p>在Kubernetes的生产实践中，有这几个产品&#x2F;概念建议你去了解：</p>
+<p><strong>Openshift：</strong>OpenShift是由Red Hat开发的容器化软件解决方案。他们的主要产品是OpenShift容器平台，这是由Kubernetes管理的平台即服务（PaaS）。</p>
+<p><strong>Amazon EKS：</strong>Amazon Elastic Kubernetes Service (Amazon EKS) ，这是一项完全托管的 Kubernetes 服务。EKS拥有原生的kubernetes体验，并与AWS其他的云服务无缝的结合，为用户提供极佳的云端容器体验。下期直播我们会着重介绍这个产品。</p>
+<p><strong>微服务：</strong>由于容器技术的发展，微服务的理念也越来越被人们接受。按照微服务的理念，如果使用容器作为基础设施，能够实现快速部署，快速迭代。很多时候大家会将微服务和容器技术一起谈论，甚至有些公司直接将自己的新建的微服务应用部署在容器平台上。</p>
+<p><strong>如何学习Kubernetes</strong></p>
+<p>学习kubernetes，其实官方文档和github 就用了。最重要的，是你要边实践边学习，遇到不懂的问题，多搜索，多思考，多在社区里交流。实践出真知，这也是所有技术学习的不二法门。</p>
+<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p><strong>最流行的开源容器引擎：Docker</strong></p>
+<p>谈到容器，就不能不讲Docker。Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。</p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/5f122fc78244942feb19e3705ffc68a9.png" alt="img"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>Docker把容器变得标准化了。要理解Docker，你需要明白<strong>三个最主要的概念：容器、镜像、仓库。</strong></p>
+<p>- 容器是运行在虚拟机上的进程。<br>- 镜像是一种存储形式，可以理解为数据或应用的副本。<br>- 仓库是用来存储镜像的。</p>
+<p>Docker能够普遍使用起来，很大程度上个得益于Docker的仓库里汇集了很多已经标准化的镜像，大大提升了部署效率。</p>
+
+</article>
+    
+    
+
+</div>
+<div class="trm-post-next-prev row">
+    <div class="col-lg-12">
+        <!-- title -->
+        <h5 class="trm-title-with-divider">
+            其他文章
+            <span data-number="02"></span>
+        </h5>
+    </div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/13/Docker%E7%BB%8F%E5%85%B8%E5%AE%9E%E4%BE%8B/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/13/Docker%E7%BB%8F%E5%85%B8%E5%AE%9E%E4%BE%8B/" class="trm-anima-link">
+                    Docker经典实例
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/13</li>
+                <li>14:58</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/12/%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7%20Anible%20%E5%9C%A8%E9%83%A8%E7%BD%B2%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E4%B8%8B%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%88%E4%B8%8A%EF%BC%89/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/12/%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E5%B7%A5%E5%85%B7%20Anible%20%E5%9C%A8%E9%83%A8%E7%BD%B2%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E4%B8%8B%E7%9A%84%E5%BA%94%E7%94%A8%EF%BC%88%E4%B8%8A%EF%BC%89/" class="trm-anima-link">
+                    
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/12</li>
+                <li>17:32</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+
+    
+
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-footer-card trm-scroll-animation">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.2.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.2.2
+            </span>
+        </div>
+      
+
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+            
+<div class="trm-fixed-container">
+    
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+        
+
+        
+    
+
+		
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.2.2"></script>
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+</body>
+
+</html>

@@ -7,12 +7,12 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="[TOC]   网络协议Web协议通信原理在开始学web服务器之前，需要先理解web通信协议，才能够更好的吸收其中精华。 我们平时浏览网页的时候,会打开浏览器，输入网址后按下回车键，然后就会显示出你想要浏览的内容。在这个看似简单的用户行为背后，到底隐藏了些什么呢?  浏览器本身是一个客户端，当你输入URL的时候，首先浏览器会去请求DNS服务器，通过DNS获取相应的域名对应的IP  然后通过IP地址">
+<meta name="description" content="同学们，在前两天我们学习了Linux操作系统的常见命令以及如何在Linux上部署一个单体项目。大家想一想自己最大的感受是什么？我相信，除了个别天赋异禀的同学以外，大多数同学都会有相同的感受，那就是麻烦。核心体现在三点：  命令太多了，记不住 软件安装包名字复杂，不知道去哪里找 安装和部署步骤复杂，容易出错  其实上述问题不仅仅是新手，即便是运维在安装、部署的时候一样会觉得麻烦、容易出错。特别是我们">
 <meta property="og:type" content="article">
-<meta property="og:title" content="运维">
-<meta property="og:url" content="http://example.com/2024/08/05/%E8%BF%90%E7%BB%B4/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2024/08/12/Docker/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="[TOC]   网络协议Web协议通信原理在开始学web服务器之前，需要先理解web通信协议，才能够更好的吸收其中精华。 我们平时浏览网页的时候,会打开浏览器，输入网址后按下回车键，然后就会显示出你想要浏览的内容。在这个看似简单的用户行为背后，到底隐藏了些什么呢?  浏览器本身是一个客户端，当你输入URL的时候，首先浏览器会去请求DNS服务器，通过DNS获取相应的域名对应的IP  然后通过IP地址">
+<meta property="og:description" content="同学们，在前两天我们学习了Linux操作系统的常见命令以及如何在Linux上部署一个单体项目。大家想一想自己最大的感受是什么？我相信，除了个别天赋异禀的同学以外，大多数同学都会有相同的感受，那就是麻烦。核心体现在三点：  命令太多了，记不住 软件安装包名字复杂，不知道去哪里找 安装和部署步骤复杂，容易出错  其实上述问题不仅仅是新手，即便是运维在安装、部署的时候一样会觉得麻烦、容易出错。特别是我们">
 <meta property="og:locale">
 <meta property="og:image" content="http://example.com/img/404.jpg">
 <meta property="og:image" content="http://example.com/img/404.jpg">
@@ -38,52 +38,14 @@
 <meta property="og:image" content="http://example.com/img/404.jpg">
 <meta property="og:image" content="http://example.com/img/404.jpg">
 <meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="og:image" content="http://example.com/img/404.jpg">
-<meta property="article:published_time" content="2024-08-05T09:10:08.000Z">
-<meta property="article:modified_time" content="2024-08-13T07:24:27.036Z">
+<meta property="article:published_time" content="2024-08-12T09:32:50.687Z">
+<meta property="article:modified_time" content="2024-06-21T07:40:29.764Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/img/404.jpg">
 
 
-<title >运维</title>
+<title >Hexo</title>
 
 <!-- Favicon -->
 
@@ -122,7 +84,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"John Doe","root":"/","typed_text":null,"theme_version":"2.2.2","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-08-13 15:24:27"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-06-21 15:40:29"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.2" id="trm-switch-style">
@@ -271,7 +233,7 @@
                             NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            运维
+                            
                         </h1>
 
                         
@@ -361,13 +323,13 @@
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
-            08/05
+            08/12
         </div>
     </div>
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-clock trm-icon"></i><br>
-            17:10
+            17:32
         </div>
     </div>
     <div class="col-sm-4">
@@ -379,492 +341,7 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <p>[TOC]</p>
-<hr>
-<hr>
-<h1 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h1><h2 id="Web协议通信原理"><a href="#Web协议通信原理" class="headerlink" title="Web协议通信原理"></a>Web协议通信原理</h2><p>在开始学web服务器之前，需要先理解web通信协议，才能够更好的吸收其中精华。</p>
-<p>我们平时浏览网页的时候,会打开浏览器，输入网址后按下回车键，然后就会显示出你想要浏览的内容。在这个看似简单的用户行为背后，到底隐藏了些什么呢?</p>
-<ul>
-<li><p>浏览器本身是一个客户端，当你输入URL的时候，首先浏览器会去请求DNS服务器，通过DNS获取相应的域名对应的IP</p>
-</li>
-<li><p>然后通过IP地址找到IP对应的服务器后，要求建立TCP连接</p>
-</li>
-<li><p>等浏览器发送完HTTP Request(请求)包后，服务器接收到请求包之后才开始处理请求包</p>
-</li>
-<li><p>服务器调用自身服务，返回HTTP Response(响应)包;</p>
-</li>
-<li><p>客户端收到来自服务器的响应后开始渲染这个Response包里的主体(body)，等收到全部的内容随后断开与该服务器之间的TCP连接。</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">	部署web服务器提供网站功能，最基本的内容展示html内容，指的是静态数据，动态数据。</span><br><span class="line">静态数据：</span><br><span class="line">	png、css、js、gif、mp4。</span><br><span class="line">动态数据：</span><br><span class="line">	从mysql等数据库中读取出来的数据。</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805173032474.png" alt="image-20240805173032474"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805173924900.png" alt="image-20240805173924900"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>一个Web服务器也被称为HTTP服务器，它通过HTTP协议与客户端通信。<br>这个客户端通常指的是Web浏览器。</p>
-<p><strong>web服务器工作原理</strong></p>
-<p>Web服务器的工作原理可以简单地归纳为:</p>
-<ul>
-<li>客户端通过TCP&#x2F;IP协议建立到服务器的TCP连接</li>
-<li>客户端向服务器发送HTTP协议请求包，请求服务器里的资源文档</li>
-<li>服务器向客户端发送HTTP协议应答包，如果请求的资源包含有动态语言的内容，那么服务器会调用动态语言的解释引擎负责处理”动态内容”，并将处理得到的数据返回给客户端</li>
-<li>客户端与服务器断开。由客户端解释HTML文档，在客户端屏幕上渲染图形结果</li>
-</ul>
-<p><strong>客户端请求到达服务端流程</strong></p>
-<ul>
-<li>当客户端拿到服务端域名对应的ip后，浏览器会以一个随机端口（1024&lt;随机端口&lt;65535）向服务器的web程序(nginx、apache)的80端口发起tcp连接请求。</li>
-<li>该请求经过复杂的网络环境后到达服务端，进入到服务器的对应的网卡，再进入到linux内核的tcplip协议栈，一层一层的解开数据包，甚至经过防火墙，最终到达nginx程序，确认tcp&#x2F;ip连接。</li>
-<li>确认tcp连接之后，客户端继续发起http请求，如常见的get、post请求方法。</li>
-</ul>
-<p><strong>小结</strong></p>
-<p>因此你会发现，web通信原理中，主要分两块协议的建立:</p>
-<ul>
-<li>tcp&#x2F;ip</li>
-<li>HTTP</li>
-</ul>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805174800248.png" alt="image-20240805174800248"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h2 id="Tcp和HTTP协议"><a href="#Tcp和HTTP协议" class="headerlink" title="Tcp和HTTP协议"></a>Tcp和HTTP协议</h2><p><strong>TCPIIP协议</strong><br>传输控制协议（TCP，Transmission Control Protocol）是一种面向连接的、可靠的、基于字节流的传输层通信协议。</p>
-<p>简单说就是TCP协议就是控制数据包在传过过程中的规范格式。</p>
-<p>IP是Internet Protocol(网际互连协议）的缩写，是TCP&#x2F;IP体系中的网络层协议。</p>
-<p>设计IP的目的是提高网络的可扩展性:<br>一是解决互联网问题，实现大规模、异构网络的互联互通;<br>二是分割顶层网络应用和底层网络技术之间的耦合关系，以利于两者的独立发展。</p>
-<p>根据端到端的设计原则，IP只为主机提供一种无连接、不可靠的、尽力而为的数据包传输服务。</p>
-<ul>
-<li>TCP&#x2F;IP协议指的不仅仅是tcp、和ip这两个协议。</li>
-<li>而是由FTP、SMTP、TCP、UDP、IP等各种协议组成的协议簇，但是TCPIP最最具有代表性，因此俗称TCP&#x2F;IP协议。</li>
-</ul>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805175818345.png" alt="image-20240805175818345"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805175905131.png" alt="image-20240805175905131"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h2 id="OSI七层模型"><a href="#OSI七层模型" class="headerlink" title="OSI七层模型"></a>OSI七层模型</h2><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805175938880.png" alt="image-20240805175938880"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805180502231.png" alt="image-20240805180502231"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<hr>
-<h2 id="抓包分析三次握手"><a href="#抓包分析三次握手" class="headerlink" title="抓包分析三次握手"></a>抓包分析三次握手</h2><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805180727622.png" alt="image-20240805180727622"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>讲解TCP三次握手和四次握手之前，我们先了解一下TCP和UDP这两个重量级的传输层协议。</p>
-<p><strong>用户数据报协议</strong>UDP (User Datagram Protocol) :</p>
-<ul>
-<li><strong>UDP在传送数据之前不需要先建立连接</strong>，远程主机在收到UDP报文后，不需要给出任何确认。</li>
-<li>虽然UDP<strong>不提供可靠交付</strong>，但在某些情况下UDP确是一种最有效的工作方式(一般用于即时通信)，比如: QQ语音、QQ视频、直播等等</li>
-</ul>
-<p>**传输控制协议TCP **(Transmission Control Protocol) :</p>
-<ul>
-<li>TCP提供<strong>面向连接</strong>的服务。在传送数据之前必须先建立连接，数据传送结束后要释放连接。</li>
-<li>TCP不提供广播或多播服务。由于TCP要提供<strong>可靠</strong>的，面向连接的传输服务（TCP的可靠体现在TCP在传递数据之前，会有三次握手来建立连接，而且在数据传递时，有确认、窗口、重传、流量控制、拥塞控制机制，在数据传完后，还会四次挥手断开连接用来节约系统资源)，这不仅使协议数据单元的首部增大很多，还要占用许多处理机资源。</li>
-<li>TCP<strong>一般用于文件传输、发送和接收邮件、远程登录等场景</strong>。</li>
-</ul>
-<p><strong>抓包查看三次握手(真理)</strong><br>鼎鼎大名的tcp&#x2F;ip协议的三次握手、也就是关乎于syn、syn&#x2F;ack、ack 三个标识位<br>tcp是一个及其复杂的知识点，这里咱们通过wireshare来尽量的通过实践，理解tcp的序列号和确认号的关系。<br>TCP协议正在报文中使用了大量的标志位来控制tcp的连接状态;</p>
-<p>最主要的三个标志位如下</p>
-<ul>
-<li>SYN、创建一个连接</li>
-<li>FIN、终止一个连接</li>
-<li>ACK、确认接收到了数据</li>
-</ul>
-<p><strong>第一次握手(SYN)</strong><br>打开tcp层的数据包信息，展开TCP的标志位区域(flag)，可以看到tcp用到的所有标志位。</p>
-<p><strong>第二次握手(SYN、ACK)</strong></p>
-<p><strong>第三次握手(ACK)</strong><br>第二个数据包。第二次握手，服务端给与的ack标志位，用于确认收到客户端的SYN数据包</p>
-<p>为什么是【SYN.ACH】?因为表明服务端也是想要建立TCP连接</p>
-<h2 id="图解三次握手流程"><a href="#图解三次握手流程" class="headerlink" title="图解三次握手流程"></a>图解三次握手流程</h2><hr>
-<blockquote>
-<p>[!CAUTION]</p>
-<p><strong>抓包工具，查看TCP&#x2F;IP的三次握手</strong></p>
-<p>经典问题：你了解TCP&#x2F;IP的三次握手，四次挥手嘛？</p>
-</blockquote>
-<p>具体数据包的报文格式，暂时不用过多去琢磨;<br>什么时候需要琢磨数据包的序列号，只有当你在生产环境下，遇见的及其棘手的问题，比如一些数据不同步，交易数据丢失等极端情况，需要去抓取数据包，逐个分析，数据包的完整性，序列号。<br>目前只需要大致了解数据包的类型，以及作用即可;</p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805181502056.png" alt="image-20240805181502056"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805182752406.png" alt="image-20240805182752406"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805183003068.png" alt="image-20240805183003068"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805183032502.png" alt="image-20240805183032502"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">1、抓取ssh登录的数据包，查看 tcp/ip协议基础之上的 SSH应用层协议</span><br><span class="line">登录web-7机器</span><br><span class="line">windows(本机：192.168.xx.xx) </span><br><span class="line">↓</span><br><span class="line">Vment8(nat虚拟网卡：10.0.0.1)</span><br><span class="line">↓</span><br><span class="line">web-7(虚拟机nat：10.0.0.7)</span><br><span class="line"></span><br><span class="line">两个ip:port的数据包交互</span><br><span class="line">10.0.0.1:随机端口 &gt; 10.0.0.7:22</span><br><span class="line"></span><br><span class="line">wireshark大鲨鱼抓包工具查看ssh登录数据包收发情况</span><br><span class="line"></span><br><span class="line">在window中使用 shell工具连接 web-7</span><br><span class="line">ssh远程连接，也是建立在TCP/IP的三次握手之上</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2、查看网站访问的数据包，基于 tcp/ip基础之上的HTTP应用层协议</span><br><span class="line">由于捕捉的是vment8的网卡流量，检测http协议，只能给这个网段内的机器，发http请求。</span><br><span class="line"></span><br><span class="line">这里需要注意，如果多次访问nginx,可能回抓不到默认的tcp三次握手。</span><br><span class="line">TCP三次握手是用于首次连接的请求。</span><br><span class="line">访问nginx页面的请求，第一次以及建立好连接，默认会有一个保持连接后续的请求。便不会再继续tcp三次握手，而是直接发送http请求，和nginx服务器已经建立好tcp连接了。</span><br><span class="line"></span><br><span class="line">使用另一个浏览器如firefox、chrome，去重新建立tcp连接</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805183630852.png" alt="image-20240805183630852"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240805183907434.png" alt="image-20240805183907434"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<hr>
-<h2 id="抓包分析四次挥手"><a href="#抓包分析四次挥手" class="headerlink" title="抓包分析四次挥手"></a>抓包分析四次挥手</h2><p>理论知识，确实重要。但得先记住理论的流程，再去动手实践，得出真知。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1、先建立ssh连接，然后退出ssh会话，查看是否发出tcp/ip的四次挥手，四个数据包。</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240807155726965.png" alt="image-20240807155726965"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h4 id="TCP连接状态报文"><a href="#TCP连接状态报文" class="headerlink" title="TCP连接状态报文"></a>TCP连接状态报文</h4><p>面试时候拿出来背诵即可</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1 cLOSE 		没有任何连接状态</span><br><span class="line">2 LISTEN		 监听状态、等待来自TCP的连接请求</span><br><span class="line">3 SYN-SENT		发送连接请求后，等待对方确认</span><br><span class="line">4 SYN-RECEIVED	 收到、发送一个连接请求后,等待对方确认</span><br><span class="line">5 ESTABLISHED	代表传输连接已经建立，双方进入数据传输状态</span><br><span class="line">6 FIN-WAIT-1	主动关闭1，主机已发送关闭连接请求，等待对方确认</span><br><span class="line">7 FIN-wAIT-2	主动关闭2，主机己收到对方关闭传输连接的确认，等待对方发送关闭传输连接请求</span><br><span class="line">8 TIME-WAIT		完成双向传输连接关闭，等待服务端最终确认</span><br><span class="line">9 CLOSE-wAIT		被动关闭连接，收到对方发来的关闭连接请求，且已经确认。1l LAST-ACK被动关闭,等待最后一个关闭传输连接的确认。</span><br><span class="line">10 CLOSE			双方同时确认了关闭传输连接</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="常用的熟知端口号"><a href="#常用的熟知端口号" class="headerlink" title="常用的熟知端口号"></a>常用的熟知端口号</h4><table>
-<thead>
-<tr>
-<th align="center">应用程序</th>
-<th align="center">FTP</th>
-<th align="center">TFTP</th>
-<th align="center">TELNET</th>
-<th align="center">SMTP</th>
-<th align="center">DNS</th>
-<th>HTTP</th>
-<th align="center">SSH</th>
-<th align="center">MYSQL</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">熟知端口</td>
-<td align="center">21,20</td>
-<td align="center">69</td>
-<td align="center">23</td>
-<td align="center">25</td>
-<td align="center">53</td>
-<td>80</td>
-<td align="center">22</td>
-<td align="center">3306</td>
-</tr>
-<tr>
-<td align="center">传输层协议</td>
-<td align="center">TCP</td>
-<td align="center">UDP</td>
-<td align="center">TCP</td>
-<td align="center">TCP</td>
-<td align="center">UDP</td>
-<td>TCP</td>
-<td align="center">TCP</td>
-<td align="center">TCP</td>
-</tr>
-</tbody></table>
-<h2 id="套接字socket学习"><a href="#套接字socket学习" class="headerlink" title="套接字socket学习"></a>套接字socket学习</h2><h4 id="TCP与套接字（socket）"><a href="#TCP与套接字（socket）" class="headerlink" title="TCP与套接字（socket）"></a>TCP与套接字（socket）</h4><p>通过前面对OSI网络模型的学习，我们知道了在网络层中可以通过IP地址实现两个机器之间的通信。</p>
-<p>但是这并不具体，因为真正进行通信的实体是在主机中的进程，是一个主机汇总的一个进程与另一个主机中的一个进程在交换数据。</p>
-<h4 id="什么是socket套接字"><a href="#什么是socket套接字" class="headerlink" title="什么是socket套接字"></a>什么是socket套接字</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">任何，两个机器的连接，指的是TCP/IP协议的连接，本质上是两个socket的通信</span><br><span class="line"></span><br><span class="line">socket套接字就是	ip+port的具象化</span><br><span class="line"></span><br><span class="line">比如部署nginx服务，运行在10.0.0.7:80 端口，这就是一个socket通过本地去访问这个socket，浏览器随机指定的端口，发出请求</span><br><span class="line"></span><br><span class="line">10.0.0.1:61145 这也是一个socket</span><br></pre></td></tr></table></figure>
-
-<h4 id="本地套接字"><a href="#本地套接字" class="headerlink" title="本地套接字"></a>本地套接字</h4><p>比如单机LNMP，应用程序在机器内部内存之间数据交互</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">套接字存在的意义，在于让两端进行数据交互，数据传输</span><br><span class="line">php</span><br><span class="line">10.0.0.7:9000</span><br><span class="line">mysql(10.0.0.7:3306 这是一个ip:port形式的 socket)</span><br><span class="line">mysql -uroot -p -h10.0.0.7</span><br><span class="line"></span><br><span class="line">另一个形式是，也就是文件形式的本地socket</span><br><span class="line">（因为本地内存文件socket形式，比网络socket传输效率更高）</span><br><span class="line">在后面高级部分，python的高级部署</span><br><span class="line"></span><br><span class="line">socket的都是具象化证明服务的确运行了，可以对外提供访问了，可以交互了</span><br><span class="line">mysql运行在 /tmp/mysql.sock</span><br><span class="line"></span><br><span class="line">这个文件存在，则表示mysql运行</span><br><span class="line">你可通过这个 /tmp/mysql.sock去登录mysql 数据库</span><br><span class="line"></span><br><span class="line">此时暂时部署形式都是 网络socket形式，将程序部署在 ip:port的形式。</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="网络套接字"><a href="#网络套接字" class="headerlink" title="网络套接字"></a>网络套接字</h4><p>部署LNMP,这是不同机器之间的远程访问，就是远程socket</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">比如http协议的交互</span><br><span class="line"></span><br><span class="line">本质上是主机与web-7的交互以及nginx反向代理、远程部署</span><br><span class="line">10.0.0.1:61145 &gt; 10.0.0.7:80</span><br><span class="line"></span><br><span class="line">后端机器</span><br><span class="line">远程socket通信，部署后端机器（lb-5：10.0.0.5:80）服务，与远程的另一个服务通过网络通信（web-7:10.0.0.7:80） 就是socket通信</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="HTTP协议基础篇"><a href="#HTTP协议基础篇" class="headerlink" title="HTTP协议基础篇"></a>HTTP协议基础篇</h2><p>这些内容都是部署网站，后续的nginx高级知识点的必备内容。</p>
-<h3 id="HTTP协议概述"><a href="#HTTP协议概述" class="headerlink" title="HTTP协议概述"></a>HTTP协议概述</h3><p>HTTP是一个客户端终端（用户）和服务器端（网站）请求和应答的标准（TCP)。</p>
-<ul>
-<li>通过使用网页浏览器、网络爬虫或者其它的工真，客户端发起一个HTTP请求到服务器上指定端口（默认端口为80）</li>
-<li>我们称这个客户端为用户代理程序(user agent) .</li>
-<li>应答的服务器上存储着一些资源，比如HTML文件和图像。我们称这个应答服务器为源服务器（origin server）。</li>
-<li>在用户代理和源服务器中间可能存在多个“中间层”，比如代理服务器．网关或者隧道（tunnel）。</li>
-<li>通常，由HTTP客户端发起一个请求，创建一个到服务器指定端口（默认是80端口）的TCP连接。</li>
-<li>HTTP服务器则在那个端口监听客户端的请求。一旦收到请求，服务器会向客户端返回一个状态，比如“HTTP&#x2F;1.1 200 OK”，以及返回的内容，如请求的文件、错误消息、或者其它信息。</li>
-</ul>
-<h3 id="HTTP工作原理"><a href="#HTTP工作原理" class="headerlink" title="HTTP工作原理"></a>HTTP工作原理</h3><p>HTTP协议定义Web客户端如何从Web服务器请求Web页面，以及服务器如何把Web页面传送给客户端。</p>
-<p>HTTP协议采用了 请求&#x2F;响应 模型。</p>
-<p>客户端向服务器发送一个请求报文。请求报文包含请求的方法、URL、协议版本、请求头部和请求数据。服务器以一个状态行 作为响应，响应的内容包括协议的版本、成功或者错误代码、服务器信息、响应头部和响应数据。</p>
-<h3 id="HTTP请求-响应的步骤"><a href="#HTTP请求-响应的步骤" class="headerlink" title="HTTP请求&#x2F;响应的步骤"></a>HTTP请求&#x2F;响应的步骤</h3><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808143917243.png" alt="image-20240808143917243"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、客户端连接到web服务器</span><br><span class="line">一个HTTP客户端，通常是浏览器，与web服务器的HTTP端口（默认为80）建立一个TCP套接字连接。例如：http://www.yuncha</span><br></pre></td></tr></table></figure>
-
-<p>例如:在浏览器地址栏键入URL.按下回车之后会经历以下流程:</p>
-<ol>
-<li>浏览器向DNS 服务器请求解析该URL中的域名所对应的IP地址;</li>
-<li>解析出IP地址后，根据该IP地址和默认端口80。和服务器建立TCP连接;</li>
-<li>浏览器发出读取文件(URL 中域名后面部分对应的文件)的HTTP请求，该请求报文作为TCP三次握手的第三个报文的数据发送给服务器:</li>
-<li>服务器对浏览器请求作出啊应，并把对应的html文本发送给浏览器;</li>
-<li>浏览器将该 html文本并显示内容:</li>
-<li>释放 TCP连接;<br>总结<br>HTTP协议是基手TCP&#x2F;IP协议之上的应用层协议。</li>
-</ol>
-<h3 id="请求-响应的模式"><a href="#请求-响应的模式" class="headerlink" title="请求-响应的模式"></a>请求-响应的模式</h3><p>HTTP协议规定,请求从客户端发出,最后服务器端响应该请求并返回。<br>换句话说,肯定是先从客户端开始建立通信的.服务器端在没有接收到请求之前不会发送响应。</p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808144617342.png" alt="image-20240808144617342"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h3 id="无状态"><a href="#无状态" class="headerlink" title="无状态"></a>无状态</h3><p>HTTP是一种不保存状态,即无状态(stateless)协议。</p>
-<p>HTTP协议自身不对请求和响应之间的通信状态进行保存。</p>
-<p>也就是说在HTTP这个级别.协议对于发送过的请求或响应都不做持久化处理。</p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808144653616.png" alt="image-20240808144653616"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>这种无状态设计是为了保证HTTP可以处理大量的请求响应;</p>
-<p>http默认不会记住每一次连接的状态信息，下一次都会认为是一个新的客户端连接</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">比如你去找到禁用chrome浏览器的cookie功能。</span><br><span class="line"></span><br><span class="line">在禁用了这个功能后；</span><br><span class="line"></span><br><span class="line">每次登入一个需要验证身份的网站都需要重新登录；</span><br><span class="line">比如淘宝网，每一次打开页面网页都提示你需要重新登录；</span><br><span class="line"></span><br><span class="line">这是网站为了解决无状态实现的技术。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>但是如果HTTP完全无状态，你登录到淘宝网后，点击电子产品的跳转链接，它又提示你需要登录了，这就是一个无状态的实际效果。<br>因此此类需要保持用户身份信息的业务，必须要保存用户的状态。<br>于是引入了Cookie技术，能够保持用户的身份信息，下一次客户端发出请求，服务端能记忆客户端的身份。</p>
-<p>没有cookie：</p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808152646938.png" alt="image-20240808152646938"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>有Cookie:</p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808153120250.png" alt="image-20240808153120250"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h3 id="HTTP请求方法"><a href="#HTTP请求方法" class="headerlink" title="HTTP请求方法"></a>HTTP请求方法</h3><h4 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法"></a>请求方法</h4><p>定义client发送给server的请求是什么类型：</p>
-<ul>
-<li>get获取静态数据（查看一张图片）</li>
-<li>post发送提交一些数据（登录表单，提交账户密码数据）</li>
-<li>…等等方法</li>
-</ul>
-<h4 id="HTTP请求方法-1"><a href="#HTTP请求方法-1" class="headerlink" title="HTTP请求方法"></a>HTTP请求方法</h4><p>HTTP请求方法是客户端（如浏览器）与服务器之间进行通信时，用于指定请求类型或所需操作的一组指令。根据HTTP标准，HTTP请求可以使用多种请求方法，这些方法定义了客户端与服务器之间如何交互以及服务器应该如何响应。以下是HTTP请求方法的一些主要类型及其简要说明：</p>
-<h4 id="HTTP-1-0定义的请求方法"><a href="#HTTP-1-0定义的请求方法" class="headerlink" title="HTTP&#x2F;1.0定义的请求方法"></a>HTTP&#x2F;1.0定义的请求方法</h4><ol>
-<li><strong>GET</strong>：</li>
-</ol>
-<p>  - <strong>用途</strong>：用于请求服务器发送资源（如网页、图片等）。GET请求通常用于获取数据，而不对数据进行修改。<br>  - <strong>特点</strong>：请求的参数附加在URL后面，多个参数之间用&amp;分隔。由于URL长度有限制（通常在1024K左右），因此GET请求不适合传输大量数据。</p>
-<ol start="2">
-<li><strong>POST</strong>：</li>
-</ol>
-<p>  - <strong>用途</strong>：用于向服务器提交数据，以创建或更新资源。POST请求常用于提交表单数据或上传文件。<br>  - <strong>特点</strong>：请求的数据包含在请求体中，而不是附加在URL后面。POST请求对数据的长度没有限制（尽管实际限制取决于服务器和浏览器的配置），且相对GET请求更安全（因为数据不会显示在URL中）。</p>
-<ol start="3">
-<li><strong>HEAD</strong>：</li>
-</ol>
-<p>  - <strong>用途</strong>：类似于GET请求，但服务器仅返回响应头信息，而不返回实际的内容体。HEAD请求通常用于检查资源的元数据（如资源是否存在、响应头的信息等）。</p>
-<h4 id="HTTP-1-1新增的请求方法"><a href="#HTTP-1-1新增的请求方法" class="headerlink" title="HTTP&#x2F;1.1新增的请求方法"></a>HTTP&#x2F;1.1新增的请求方法</h4><ol>
-<li><strong>PUT</strong>：</li>
-</ol>
-<ul>
-<li><strong>用途</strong>：用于向服务器发送数据以更新现有资源。如果指定的资源不存在，则服务器可能会根据请求创建新资源。PUT请求通常被视为幂等的，即多次执行相同的PUT请求应该产生相同的结果。</li>
-</ul>
-<ol start="2">
-<li><strong>DELETE</strong>：</li>
-</ol>
-<ul>
-<li><strong>用途</strong>：请求服务器删除指定的资源。DELETE请求通常包含要删除的资源标识符（如URL）。</li>
-</ul>
-<ol start="3">
-<li><strong>OPTIONS</strong>：</li>
-</ol>
-<p>  - <strong>用途</strong>：用于获取服务器针对特定资源所支持的HTTP请求方法。OPTIONS请求也可以用于检查服务器的性能或进行跨域资源共享（CORS）的预检请求。</p>
-<ol start="4">
-<li><strong>PATCH</strong>：</li>
-</ol>
-<ul>
-<li><strong>用途</strong>：用于对资源进行部分修改。与PUT请求不同，PATCH请求只更改资源的部分内容，而不是替换整个资源。</li>
-</ul>
-<ol start="5">
-<li><strong>TRACE</strong>：</li>
-</ol>
-<ul>
-<li><strong>用途</strong>：用于回显服务器收到的请求，主要用于测试和诊断。TRACE请求允许客户端查看请求在服务器中的处理路径。</li>
-</ul>
-<ol start="6">
-<li><strong>CONNECT</strong>：</li>
-</ol>
-<ul>
-<li><strong>用途</strong>：HTTP&#x2F;1.1协议中预留给能够将连接改为管道方式的代理服务器。CONNECT方法通常用于HTTPS连接，客户端可以通过该隧道发送加密的数据。</li>
-</ul>
-<h4 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h4><p>- <strong>安全性</strong>：GET请求由于将参数附加在URL上，因此其安全性较低。POST、PUT、DELETE和PATCH等请求方法由于将数据传输在请求体中，因此相对更安全。然而，如果不使用HTTPS，这些请求的数据仍然可能被截获。<br>- <strong>缓存和书签</strong>：GET请求通常可以被缓存和收藏为书签，而POST等请求则不行。<br>- <strong>数据格式</strong>：POST和PUT请求可以传输的数据格式多样，包括表单数据（application&#x2F;x-www-form-urlencoded）、文件上传（multipart&#x2F;form-data）等。而GET请求通常只能传输ASCII字符，并且数据会附加在URL上。</p>
-<h3 id="请求、响应报文查看"><a href="#请求、响应报文查看" class="headerlink" title="请求、响应报文查看"></a>请求、响应报文查看</h3><p>请求和响应报文是HTTP协议中客户端与服务器通信的基本单位。它们包含了请求和响应的详细信息，包括请求方法、资源路径、协议版本、头信息（如Cookie、User-Agent等）以及可选的消息体（如表单数据、文件等）。</p>
-<p>要查看请求和响应报文，可以通过以下几种方式：</p>
-<h4 id="1-使用网络调试工具"><a href="#1-使用网络调试工具" class="headerlink" title="1. 使用网络调试工具"></a>1. 使用网络调试工具</h4><p>大多数现代浏览器都内置了网络调试工具，如Chrome浏览器的开发者工具中的“Network”标签页。通过打开该页面，你可以看到所有网络请求的详细信息，包括请求方法、URL、状态码、响应时间、头信息以及预览和原始消息体内容。</p>
-<h4 id="2-使用命令行工具（如curl）"><a href="#2-使用命令行工具（如curl）" class="headerlink" title="2. 使用命令行工具（如curl）"></a>2. 使用命令行工具（如curl）</h4><p>如果你正在使用命令行界面或脚本进行HTTP请求，可以使用像<code>curl</code>这样的命令行工具来查看请求和响应的详细内容。例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -v -X GET <span class="string">&quot;http://example.com&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>上面的命令将执行一个GET请求到<code>http://example.com</code>，并显示详细的请求过程和响应内容。其中<code>-v</code>参数用于显示详细的输出信息，而<code>-X</code>参数用于指定HTTP请求方法。</p>
-<h4 id="3-通过编程方式分析网络流量（如Wireshark）"><a href="#3-通过编程方式分析网络流量（如Wireshark）" class="headerlink" title="3. 通过编程方式分析网络流量（如Wireshark）"></a>3. 通过编程方式分析网络流量（如Wireshark）</h4><p>对于网络专业人士或安全专家来说，他们可能会使用像Wireshark这样的网络协议分析器来查看和分析网络流量。这些工具能够捕获所有流经网络的流量并展示每个数据包的详细信息，包括TCP&#x2F;IP头、HTTP头、SSL&#x2F;TLS握手等。通过这些工具可以更深入地了解网络通信的细节。</p>
-<h4 id="4-使用专门的抓包软件（如Fiddler、Charles-Proxy）"><a href="#4-使用专门的抓包软件（如Fiddler、Charles-Proxy）" class="headerlink" title="4. 使用专门的抓包软件（如Fiddler、Charles Proxy）"></a>4. 使用专门的抓包软件（如Fiddler、Charles Proxy）</h4><p>Fiddler、Charles Proxy等代理软件可以捕获电脑或移动设备上的网络流量，并提供一个友好的用户界面来查看和编辑请求与响应的内容。这些工具通常被用来调试Web应用、测试API接口或者监控网络性能问题等场景中。</p>
-<p>当使用这些工具时，通常需要设置浏览器或其他客户端应用程序以通过代理服务器进行通信。然后你就可以在抓包软件中看到所有的HTTP请求和响应了。</p>
-<h3 id="响应状态码"><a href="#响应状态码" class="headerlink" title="响应状态码"></a>响应状态码</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1、当你 client 发出 get 请求 获取一个图片信息 发出requests</span><br><span class="line">2、server 响应结果，nginx找到这个图片，返回给用户 response</span><br><span class="line">响应信息是有对应的状态码的。</span><br><span class="line"></span><br><span class="line">20x系列，表示请求，响应正常解析</span><br><span class="line">30x系列，表示本次请求，被转发到另一个服务器上了</span><br><span class="line">40x系列，联示client客户端访问的url有问题，该资源不存在</span><br><span class="line">50x系列，表示网站的服务端出错了(php-fpm)没有运行</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
-
-<p>HTTP状态码是服务器在响应客户端请求时返回的一组标准代码，用来表示服务器对请求的处理结果。HTTP状态码由三位数字组成，根据其类别，可以分为五大类：</p>
-<ol>
-<li><strong>信息性状态码（100-199）</strong></li>
-</ol>
-<p>  - 100 Continue：服务器已收到请求头，并且客户端应继续发送请求消息体。<br>  - 101 Switching Protocols：服务器将根据其Upgrade头部字段中指定的协议切换通信协议。</p>
-<ol start="2">
-<li><strong>成功状态码（200-299）</strong></li>
-</ol>
-<p>  - 200 OK：请求已成功处理。<br>  - 201 Created：请求已成功，且服务器已创建新的资源。<br>  - 204 No Content：服务器成功处理了请求，但没有返回任何内容。<br>  - 206 Partial Content：服务器成功处理了部分GET请求。</p>
-<ol start="3">
-<li><strong>重定向状态码（300-399）</strong></li>
-</ol>
-<p>  - 301 Moved Permanently：资源已被永久移动到新位置。<br>  - 302 Found：资源已被临时移动到新位置。<br>  - 304 Not Modified：未修改文档，服务器返回此状态码时，不会返回文档内容。</p>
-<ol start="4">
-<li><strong>客户端错误状态码（400-499）</strong></li>
-</ol>
-<p>  - 400 Bad Request：请求有语法错误或者无法满足。<br>  - 401 Unauthorized：请求需要用户验证。<br>  - 403 Forbidden：服务器拒绝该请求。<br>  - 404 Not Found：无法找到指定位置的资源。这可能是最为人熟知的HTTP状态码之一，通常用于页面或资源不存在的场景中。</p>
-<ol start="5">
-<li><strong>服务器错误状态码（500-599）</strong></li>
-</ol>
-<p>  - 500 Internal Server Error：服务器遇到意外情况，无法完成请求。<br>  - 503 Service Unavailable：服务器当前无法处理请求（可能是过载或停机维护）。</p>
-<p>其他状态码如502 Bad Gateway、504 Gateway Timeout等也用于表示不同类型的服务器端问题。</p>
-<p>每个状态码都包含了特定的含义和用途，它们帮助客户端理解发生了什么以及应该如何响应这些信息。例如当接收到一个<code>404 Not Found</code>的状态码时，浏览器通常会显示一个错误页面告知用户该资源不存在；而接收到<code>200 OK</code>则表示一切正常并会显示所请求的资源内容等。</p>
-<h2 id="URL格式"><a href="#URL格式" class="headerlink" title="URL格式"></a>URL格式</h2><h2 id="静态资源与web服务器"><a href="#静态资源与web服务器" class="headerlink" title="静态资源与web服务器"></a>静态资源与web服务器</h2><h2 id="什么是动态资源"><a href="#什么是动态资源" class="headerlink" title="什么是动态资源"></a>什么是动态资源</h2><h2 id="总结梳理（面试背诵）"><a href="#总结梳理（面试背诵）" class="headerlink" title="总结梳理（面试背诵）"></a>总结梳理（面试背诵）</h2><p>这些更多的理论，很重要，必须你要做好笔记，去背，记忆，否则面试一问三不知。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">1.dns篇</span><br><span class="line">用户访问域名www.yuchaoit.cn</span><br><span class="line">↓</span><br><span class="line">浏览器跳转</span><br><span class="line">↓</span><br><span class="line">浏览器缓存（disk cache）</span><br><span class="line">↓</span><br><span class="line">Hosts文件</span><br><span class="line">↓</span><br><span class="line">本地DNS服务器（递归查询〉迭代查询)</span><br><span class="line">↓</span><br><span class="line">client向server发起查询(递归查询)</span><br><span class="line">server向server发起查询(迭代查询)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2.TCP/IP协议篇（三次握手)</span><br><span class="line">client &gt; SYN报文，请求连接</span><br><span class="line">server &gt; SYN，ACK报文响应client</span><br><span class="line">client &gt; ACK，建立连接</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">3.客户端发起http请求</span><br><span class="line">-请求方法是什么、get、post、 delete</span><br><span class="line">请求主机是什么、www.yuchaoit.cn</span><br><span class="line">-请求资源是什么 、 http: //yuchaoit.cn:8090/upload/2022/05/xnip2022-05-01_16-32-30- b82235c9b62c42af8ea25e0313ca42f7.jpg</span><br><span class="line">-请求端口是什么、默认http是80、https是443</span><br><span class="line">-请求参数是什么、请求头部信息（资源类型、是否压缩、cookie、浏览器客户端等)</span><br><span class="line">-请求信息最后的换行</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="网络设备协议"><a href="#网络设备协议" class="headerlink" title="网络设备协议"></a>网络设备协议</h1><p>网络设备的相关协议以及基础配置，以及有线网络和无线网络的基本配置，是网络通信中的重要组成部分。以下是对这些内容的详细阐述：</p>
-<h2 id="一、网络设备的相关协议"><a href="#一、网络设备的相关协议" class="headerlink" title="一、网络设备的相关协议"></a>一、网络设备的相关协议</h2><p>网络设备的相关协议种类繁多，每种协议都有其特定的应用场景和功能。以下是一些常见的网络设备相关协议：</p>
-<ol>
-<li><p><strong>TCP&#x2F;IP协议</strong>：这是互联网通信的基础协议，包括IP协议和TCP协议等。IP协议负责给每台联网设备分配地址，确保数据能够准确发送到目标设备；TCP协议则负责发现传输中的问题，并请求重新传输，直到数据安全正确地到达目的地。</p>
-</li>
-<li><p><strong>HTTP协议</strong>：超文本传输协议，用于在客户端和服务器之间传输超文本文档，如网页内容。它是一种无状态协议，即每次请求都是独立的。</p>
-</li>
-<li><p><strong>FTP协议</strong>：文件传输协议，用于在客户端和服务器之间传输文件。它支持匿名登录和认证登录，允许用户上传和下载文件。</p>
-</li>
-<li><p><strong>SMTP协议</strong>：简单邮件传输协议，用于在邮件服务器之间传输电子邮件。它定义了邮件的传输规则，包括邮件格式和命令。</p>
-</li>
-<li><p><strong>POP3协议</strong>：邮局协议版本3，用于从邮件服务器上接收邮件。它允许用户在本地计算机上下载邮件，并在服务器上删除邮件。</p>
-</li>
-<li><p><strong>IMAP协议</strong>：互联网消息访问协议，用于在客户端和邮件服务器之间管理邮件。它允许用户在客户端上对邮件进行操作，而不需要将邮件下载到本地计算机。</p>
-</li>
-<li><p><strong>DNS协议</strong>：域名系统协议，用于将域名解析为IP地址。它将域名与IP地址进行映射，并将域名解析请求发送到适当的DNS服务器上。</p>
-</li>
-<li><p><strong>DHCP协议</strong>：动态主机配置协议，用于在局域网中为计算机分配IP地址。它可以自动分配IP地址、子网掩码和默认网关等网络配置信息。</p>
-</li>
-<li><p><strong>SSH协议</strong>：安全外壳协议，用于在不安全的网络上安全地远程登录和执行命令。它通过加密和身份验证机制保证通信的安全性。</p>
-</li>
-</ol>
-<p>这些协议共同构成了网络通信的基础，确保了数据能够在各种设备和系统之间安全、可靠地传输。</p>
-<h2 id="二、网络设备的基础配置"><a href="#二、网络设备的基础配置" class="headerlink" title="二、网络设备的基础配置"></a>二、网络设备的基础配置</h2><p>网络设备的基础配置通常包括以下几个方面：</p>
-<ol>
-<li><p><strong>管理IP设置</strong>：为网络设备分配一个管理IP地址，以便通过该地址远程访问和管理设备。</p>
-</li>
-<li><p><strong>登录认证信息配置</strong>：设置设备的登录用户名和密码，以确保只有授权用户才能访问设备。</p>
-</li>
-<li><p><strong>系统时间配置</strong>：设置设备的系统时间，以确保日志记录、时间同步等功能的准确性。</p>
-</li>
-<li><p><strong>网络接口配置</strong>：根据网络拓扑结构和需求，配置设备的网络接口参数，如IP地址、子网掩码、网关等。</p>
-</li>
-<li><p><strong>安全策略配置</strong>：配置设备的安全策略，如防火墙规则、访问控制列表（ACL）等，以保护网络免受攻击和未经授权的访问。</p>
-</li>
-</ol>
-<h2 id="三、有线网络和无线网络的基本配置"><a href="#三、有线网络和无线网络的基本配置" class="headerlink" title="三、有线网络和无线网络的基本配置"></a>三、有线网络和无线网络的基本配置</h2><h3 id="有线网络的基本配置"><a href="#有线网络的基本配置" class="headerlink" title="有线网络的基本配置"></a>有线网络的基本配置</h3><ol>
-<li><p><strong>物理连接</strong>：使用网线将计算机、交换机、路由器等设备连接起来，形成物理网络拓扑结构。</p>
-</li>
-<li><p><strong>IP地址分配</strong>：为网络中的每台设备分配一个唯一的IP地址，以便进行通信和数据传输。</p>
-</li>
-<li><p><strong>子网划分</strong>：根据网络规模和需求，将网络划分为不同的子网，以提高网络性能和安全性。</p>
-</li>
-<li><p><strong>网关和DNS设置</strong>：设置网络的默认网关和DNS服务器地址，以确保设备能够正确访问互联网和其他网络资源。</p>
-</li>
-</ol>
-<h3 id="无线网络的基本配置"><a href="#无线网络的基本配置" class="headerlink" title="无线网络的基本配置"></a>无线网络的基本配置</h3><ol>
-<li><p><strong>SSID设置</strong>：为无线网络设置一个易于识别的名称（SSID），以便用户能够连接到网络。</p>
-</li>
-<li><p><strong>安全加密</strong>：配置无线网络的安全加密方式（如WPA2-PSK），以保护网络通信的安全性和隐私性。</p>
-</li>
-<li><p><strong>信道选择</strong>：选择一个合适的无线信道，以避免与其他无线网络的干扰。</p>
-</li>
-<li><p><strong>MAC地址过滤</strong>：配置MAC地址过滤规则，以限制只有特定设备才能连接到无线网络。</p>
-</li>
-<li><p><strong>DHCP服务</strong>：启用DHCP服务，为连接到无线网络的设备自动分配IP地址和其他网络配置信息。</p>
-</li>
-</ol>
-<p>通过以上配置，可以确保有线网络和无线网络能够正常运行，并满足用户的通信需求。</p>
-<hr>
-<h1 id="NGINX中间件-nginx"><a href="#NGINX中间件-nginx" class="headerlink" title="NGINX中间件(nginx)"></a>NGINX中间件(nginx)</h1><h2 id="nginx基础篇"><a href="#nginx基础篇" class="headerlink" title="nginx基础篇"></a>nginx基础篇</h2><h3 id="web服务器介绍"><a href="#web服务器介绍" class="headerlink" title="web服务器介绍"></a>web服务器介绍</h3><p>Web服务器常指的是(world wide web,www）服务器、也是HTTP服务器，主要用于提供网上信息浏览。</p>
-<p>我们大部分人接触互联网，都基本上是通过浏览器访问互联网中各种资源。</p>
-<p>Web网络服务是一种被动访问的服务程序，即只有接收到互联网中其他主机发出的请求后才会响应，最终用于提供服务程序的Web服务器会通过HTTP(超文本传输协议)或HTTPS(安全超文本传输协议)把请求的内容传送给用户。</p>
-<p>Unix和Linux平台下的常用Web服务器常见有:</p>
-<ul>
-<li><p>Apache</p>
-</li>
-<li><p>Nginx</p>
-</li>
-<li><p>Lighttpd</p>
-</li>
-<li><p>Tomcat</p>
-</li>
-<li><p>IBM WebSphere</p>
-</li>
-</ul>
-<p>其中最为广泛的是Nginx，在Windows平台上最常用的是微软的IIS(Internet Information Server，互联网信息服务)是Windows系统中默认的Web服务程序。</p>
-<h4 id="Apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h4><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808160835306.png" alt="image-20240808160835306"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>Apache是世界主流的Web服务器，世界上大多著名网站都是Apache搭建，优势在于开放源代码，开发维护团队强大、支持跨平台应用(Unix、Linux、Windows)，强大的移植性等优点。<br>Apache属于重量级产品，功能以模块化定制，消耗内存较高，性能稍弱于其他轻量级Web服务器。</p>
-<h4 id="Lighttpd"><a href="#Lighttpd" class="headerlink" title="Lighttpd"></a>Lighttpd</h4><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808161005627.png" alt="image-20240808161005627"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>Lighttpd是一款高安全性、快速、且灵活的Web服务器产品，专为高性能环境而设计，相比其他Web服务器，内存占用量小，能够有效管理CPU负载，支持(FastCGI、SCGI，Auth，输出压缩，url重写，别名)等重要功能,是Nginx的重要对手之一。</p>
-<h4 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h4><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808161044973.png" alt="image-20240808161044973"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>Tomcat是一个开源、运行基于Java的Web应用软件的容器，Tomcat Server根据servlet和JSP规范执行，但是Tomcat对于平台文件、高并发处理较弱。<br>要使用Tomcat需要对Java的应用部署有足够的了解。</p>
-<h4 id="IBM-WebSphere"><a href="#IBM-WebSphere" class="headerlink" title="IBM WebSphere"></a>IBM WebSphere</h4><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808161127729.png" alt="image-20240808161127729"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>WebSphere Applicaiton Server是一种强大的Web应用服务器，基于Java的应用环境、建立、部署和管理网站应用。</p>
-<h4 id="Microsoft-IIS"><a href="#Microsoft-IIS" class="headerlink" title="Microsoft IIS"></a>Microsoft IIS</h4><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808161224491.png" alt="image-20240808161224491"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>微软的IIS是一种灵活，安全易管理的Web服务器，从流媒体到Web应用程序，IIS提供了图形化的管理界面，用于配置和管理网络服务。<br>llS是一整套Web组件，包含了Web服务器，FTP服务器，SMTP服务器等常用的网页浏览、文件传输，邮件新闻等功能。<br>缺点是只能运行在Windows平台，还得购买商业化的操作系统。</p>
-<h4 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h4><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808161241700.png" alt="image-20240808161241700"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>Nginx是俄罗斯人lgor Sysoev(伊戈尔·塞索耶夫）开发的一款高性能的HTTP和反向代理服务器。<br>Nginx以高效的<code>epoll</code>、<code>kqueue</code>、<code>eventport</code>作为网络IO模型，在高并发场景下，Nginx能够轻松支持5w并发连接数的响应，并且消耗的服务器内存、CPU等系统资源消耗却很低，运行非常稳定。</p>
-<blockquote>
-<p>当前想让nginx支持5万并发，甚至百万级并发， 都是可以的，但需要做很多的优化工作，如：</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">想至少支持5万并发的基本调优</span><br><span class="line">1.服务器内存、CPU硬件支持,如8核16线程、32G内存的服务器</span><br><span class="line">2.磁盘使用SSD、或者购买至少15000转的SAS企业级硬盘，做成RAID e</span><br><span class="line">3.安装光纤网口</span><br><span class="line">4.使用linux系统，如centos7，优化内核参数。对TCP连接的没置</span><br><span class="line">5.优化nginx.conf中并发相关的参数。如等</span><br><span class="line">worker_processes 16;</span><br><span class="line">worker_connections 50000;</span><br><span class="line">6.未完待续,nginx百万级并发优化篇的知识,.面试造火箭必备</span><br><span class="line"></span><br><span class="line">优化工作思路为</span><br><span class="line">1、优化硬件</span><br><span class="line">2、优化linux内核</span><br><span class="line">3、优化nginx配置文件此参数</span><br></pre></td></tr></table></figure>
-
-<p>国内著名站点，新浪博客、网易、淘宝、豆瓣、迅雷等大型网站都在使用Nginx作为<code>web服务器</code>或是<code>反向代理服务器</code>。</p>
-<p>异步非阻塞的高性能IO模型，任你有N个请求来临，nginx都临危不惧，从容解析响应。</p>
-<h4 id="为何选择nginx"><a href="#为何选择nginx" class="headerlink" title="为何选择nginx"></a>为何选择nginx</h4><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808162241660.png" alt="image-20240808162241660"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>在互联网的快速普及，全球化、物联网的迅速发展，世界排名前3的分别是Apache、llS、Nginx，而Nginx一直在呈现增长趋势。</p>
-<h4 id="在线自动生成nginx配置文件"><a href="#在线自动生成nginx配置文件" class="headerlink" title="在线自动生成nginx配置文件"></a>在线自动生成nginx配置文件</h4><p><a target="_blank" rel="noopener" href="https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN">https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN</a></p>
-<p>可以自由选择所需的应用，生成nginx配置作为参考。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">根据业务需求，自动生成复杂的nginx配置文件，提供参考。</span><br></pre></td></tr></table></figure>
-
-<h3 id="nginx介绍"><a href="#nginx介绍" class="headerlink" title="nginx介绍"></a>nginx介绍</h3><h4 id="1、nginx是什么"><a href="#1、nginx是什么" class="headerlink" title="1、nginx是什么"></a>1、nginx是什么</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.nginx是一个高性能的HTTP服务器、反向代理服务器。</span><br><span class="line">2.主要特点</span><br><span class="line"> -开源源代码</span><br><span class="line"> -高性能，并发性能、处理tcp连接性能极高</span><br><span class="line"> -可靠，服务稳定,得到了全世界的验证。</span><br></pre></td></tr></table></figure>
-
-<h4 id="2、为什么选择nginx"><a href="#2、为什么选择nginx" class="headerlink" title="2、为什么选择nginx"></a>2、为什么选择nginx</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1、每一家公司都会用到nginx</span><br><span class="line">2、技术成熟，是企业最常见且必要的工具</span><br><span class="line">3、适用于任意架构，单机环境、集群环境、微服务架构、云原生架构等</span><br></pre></td></tr></table></figure>
-
-<h4 id="3、nginx重要特性"><a href="#3、nginx重要特性" class="headerlink" title="3、nginx重要特性"></a>3、nginx重要特性</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1.官网直接获取源码,免费用,讲道理这种高性能的软件，是很责的。</span><br><span class="line">2.高性能,官网提供测试数据，性能残暴,1秒内能支持5万个tcp连接</span><br><span class="line">3.消耗资源很低，有数据证明在生产环境下3万左右的并发tcp连接，开启10个nginx进程消耗不到150M。</span><br><span class="line">4.有能力可以自己对nginx进行二次开发,如淘宝的tengine.</span><br><span class="line">5.模块化管理，nginx有大量的模块（插件)，运维根据公司的业务需求，按需编译安装设置即可。模块插件是为了提供额外的功能,如</span><br><span class="line">- url重写，根据域名、url、客户端的不同,转发http请求到不同的机器</span><br><span class="line">- https证书的支持</span><br><span class="line">-支持静态资源压缩</span><br><span class="line">-支持热部署、无须重启,更新配置文件</span><br><span class="line">-支持二次开发新插件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="4-企业用nginx做什么"><a href="#4-企业用nginx做什么" class="headerlink" title="4.企业用nginx做什么"></a>4.企业用nginx做什么</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.提供静态页面展示,网页服务</span><br><span class="line">2.提供多个网站、多个域名的网页服务</span><br><span class="line">3.提供反向代理服务(结合动态应用程序)</span><br><span class="line">4.提供简单资源下载服务(密码认证)</span><br><span class="line">5.用户行为分析(日志功能)</span><br></pre></td></tr></table></figure>
-
-<h3 id="nginx架构"><a href="#nginx架构" class="headerlink" title="nginx架构"></a>nginx架构</h3><p>nginx是多进程架构，当启动nginx会使用root创建master进程，由master进程创建多个worker进程。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root@yuchao-tx-server ~]<span class="comment">#ps -ef|grep nginx |grep -v grep</span></span><br><span class="line"></span><br><span class="line">root 	8382 	1 	0 5月01 ? 	00:00:00 nginx: master process /usr/sbin/nginx</span><br><span class="line">wordpre+ 16566 8382 0 5月01 ?	00:00:02 nginx: worker process</span><br><span class="line"></span><br><span class="line">========================================================================</span><br><span class="line">nginx运行后，有多少个干活的工人，多进程，调用多个cpu去解析用户的请求</span><br><span class="line"></span><br><span class="line">在linux中进行多进程开发，开辟多个进程，调用多个cpu，当然也会消耗更多的机器资源，内存，cpu资源，给服务器带来更大的压力</span><br><span class="line">-不是说进程越多，干活越快，合理的分配，才能达到最高效的处理效率</span><br><span class="line"></span><br><span class="line">========================================================================</span><br><span class="line">有一个屋子要装修，请1个工人干活，还是请5个工人干活，请500个工人干活</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">哪一个效率是最高的呢?最合适的?</span><br><span class="line">========================================================================</span><br><span class="line">关于nginx的优化设置，nginx默认应该启动多少个进程去工作呢?默认就是根据cpu的核数去设置进程数即可。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="master进程"><a href="#master进程" class="headerlink" title="master进程"></a>master进程</h3><p>包工头进程，管理nginx的数据，创建worker工作进程。</p>
-<h4 id="master主进程原理"><a href="#master主进程原理" class="headerlink" title="master主进程原理"></a>master主进程原理</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.启动时检查nginx.conf是否正确,语法错误		--nginx -t 命令给master进程发送信号，去检测配置文件</span><br><span class="line">2.根据配置文件的参数创建、且监控worker进程的数量和状态</span><br><span class="line">3.监听socket，接收client发起的请求，然后worker竞争抢夺链接，获胜的可以处理且响应请求。	--master监听ip:port 0.0.0.0:80 被动的等待用户发来连接请求 nginx的主进程工作状态</span><br><span class="line">4.接收管理员发送的管理nginx进程的信号，并且将信号通知到worker进程。 --接受、响应、处理管理员请求的worker进程，worker进程由master进程创建并管理。 如果使用 kill -9 nginx_pid(master)则将结束master以及下辖的所有的worker进程。</span><br><span class="line">5.如果管理员发送了reload命令，则读取新配置文件，创建新的worker进程，结束旧的worker进程。</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808164554338.png" alt="image-20240808164554338"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h3 id="worker进程"><a href="#worker进程" class="headerlink" title="worker进程"></a>worker进程</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.实际处理client网络请求的是worker</span><br><span class="line">2.master根据nginx.conf决定worker的数量</span><br><span class="line">3.有client用户请求到达时，worker之间进程竞争，获胜者和client建立连接且处理用户请求;</span><br><span class="line">4.接收用户请求后，若需要代理转发给后端，则后端处理完毕后接收处理结果，再响应给用户</span><br><span class="line">5.接收并处理master发来的进程信号，如启动、重启、重载、停止。</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="nginx进程通信"><a href="#nginx进程通信" class="headerlink" title="nginx进程通信"></a>nginx进程通信</h3><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808165530845.png" alt="image-20240808165530845"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h3 id="nginx处理http请求流程"><a href="#nginx处理http请求流程" class="headerlink" title="nginx处理http请求流程"></a>nginx处理http请求流程</h3><p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808165725075.png" alt="image-20240808165725075"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h3 id="nginx动手环节"><a href="#nginx动手环节" class="headerlink" title="nginx动手环节"></a>nginx动手环节</h3><h3 id="nginx模块介绍"><a href="#nginx模块介绍" class="headerlink" title="nginx模块介绍"></a>nginx模块介绍</h3><h4 id="模块解释"><a href="#模块解释" class="headerlink" title="模块解释"></a>模块解释</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Nginx模块名称模块作用</span><br><span class="line">ngx_http_access_module	四层基于工P的访问控制,可以通过匹配客户端源IP地址进行限剑</span><br><span class="line">ngx_http_auth_basic_module	状态页，使用basic机制进行用户认证，在编译安装nginx的时候需要添加编译参数--wit..没写完</span><br><span class="line">ngx_http_stub_status_module	状态统计模块</span><br><span class="line">ngx_http_gzip_module	文件的压缩功能</span><br><span class="line">ngx_http_gzip_static_module	静态压缩模块</span><br><span class="line">ngx_http_ssl_module nginx 的https功能</span><br><span class="line">ngx_http_rewrite_module	重定向模块,解析和处理rewrite请求</span><br><span class="line">ngx_http_referer_module	防盗链功能,基于访问安全考虑</span><br><span class="line">ngx_http_proxy_module	将客户端的请求以http协议转发至指定服务器进行处理</span><br><span class="line">ngx_stream_proxy_module	tcp负载,将客户端的请求以tcp协议转发至指定服务器处理</span><br><span class="line">ngx_http_fastcgi_module	将客户端对php的请求以fastcgi协议转发至指定服务器助理</span><br><span class="line">ngx_http_uwsgi_module 将客户端对Python的请求以uwsgi协议转发至指定服务器处理ngx_http_headers_module	可以实现对头部报文添加指定的key与值</span><br><span class="line">ngx_http_upstream_module	负载均衡模块，提供服务器分组转发、权重分配、状态监测、调度算法等高级功能</span><br><span class="line">ngx_stream_upstream_module	后端服务器分组转发、权重分配、状态监测、调度算法等高级功能</span><br><span class="line">ngx_http_fastcgi_module	实现通过fastcgi协议将指定的客户端请求转发至php-fpm处理</span><br><span class="line">ngx_http_flv_module 	为flv伪流媒体服务端提供支持</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="模块官网"><a href="#模块官网" class="headerlink" title="模块官网"></a>模块官网</h4><p>官网文档</p>
-<p><a target="_blank" rel="noopener" href="https://nginx.org/en/docs/">https://nginx.org/en/docs/</a> 所有模块</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx核心功能都以插件的方式，是否安装插件，开启该功能决定是否有各种功能。</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808170952753.png" alt="image-20240808170952753"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808171013648.png" alt="image-20240808171013648"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h3 id="nginx部署实践"><a href="#nginx部署实践" class="headerlink" title="nginx部署实践"></a>nginx部署实践</h3><h4 id="nginx安装形式"><a href="#nginx安装形式" class="headerlink" title="nginx安装形式"></a>nginx安装形式</h4><ul>
-<li>源代码编译安装，优点<ul>
-<li>版本，可以获取官网最新的软件包，甚至最新测试版，都可以直接编译安装</li>
-<li>还有稳定版本</li>
-<li>自由定义，安装路径自由定义，·自由定义第三方插件</li>
-<li>缺点，安装步骤繁琐，耗时太长，看你要装多少个模块，编译添加的模块多，安装的就更久</li>
-</ul>
-</li>
-<li>rpm安装<ul>
-<li>得提前准备好nginx本身的rpm包，以及相关依赖的rpm包</li>
-<li>用于离线安装nginx的环境</li>
-</ul>
-</li>
-<li>yum安装，你会用哪些形式的仓库?<ul>
-<li>阿里云第三方仓库(centos-base.repo,epel.repo)<ul>
-<li>这个其实都不靠谱。</li>
-</ul>
-</li>
-<li>自建yum仓库（得提前准备好nginx本身的rpm包，以及相关依赖的rpm包)</li>
-<li>nginx官网仓库（获取官网最新稳定版的yum源仓库)<ul>
-<li>yum一键安装，省心省事，版本也是有一定的保障的，rpm的安全性也是有保障的</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">官网yum仓库</span><br><span class="line">源代码编译</span><br><span class="line">离线的rpm安装（yum自建仓库)</span><br></pre></td></tr></table></figure>
-
-<h4 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h4><p>官网</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https ://nginx.org/en/docs/configure.html</span><br></pre></td></tr></table></figure>
-
-<p>超哥的文档</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.创建用户</span><br><span class="line">groupadd wwaw-g 666</span><br><span class="line">useradd wwnw -u 666 -g 666 -H -s /sbin/nologin4</span><br><span class="line">2.安装依赖环境</span><br><span class="line">[root@web-9 ~]<span class="comment">#yum install pcre pcre-devel openssl openssl-devel zlib zlib-devel gzip</span></span><br><span class="line"></span><br><span class="line">3.下载源码https://nginx.org/download/，且解压缩</span><br><span class="line"> <span class="built_in">mkdir</span> /yuchao-linux-data/ -p ;wget -o /yuchao-linux-data/nginx-1.19.0.tar.gz https://nginx.org/en/docs/configure.html</span><br><span class="line"><span class="built_in">cd</span> /yuchao-linux-data/ &amp;&amp; tar -zxf nginx-1.19.8.tar-gz</span><br></pre></td></tr></table></figure>
-
-<h5 id="开始编译，编译三部曲"><a href="#开始编译，编译三部曲" class="headerlink" title="开始编译，编译三部曲"></a>开始编译，编译三部曲</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">0.查看稿译参数帮助信息</span><br><span class="line">[rootiweb-9 lyuchso-linux-data/nginx-1.19.0]<span class="comment">#. /configure --help</span></span><br><span class="line">1.编译黎数</span><br><span class="line">[rootipweb-9/yuchao . linux.data/nginx-1.19.0]<span class="comment">#./configure .-usormw ..group-ww . .prefixm/opt/nginx-1....</span></span><br><span class="line"></span><br><span class="line">2.编译安装</span><br><span class="line">[rootiweb-9 / yuchao-linux-dats/nginx-1.19.0]<span class="comment">#make &amp;&amp; make install</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="创建软连接"><a href="#创建软连接" class="headerlink" title="创建软连接"></a>创建软连接</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[ root@web-9 /yuchao-linux-data/nginx-1.19.0]<span class="comment">#ln -s /opt/nginx-1-19-0/ /opt/nginx[root@web-9 /yuchao-linux-data/nginx-1.19.0]#</span></span><br><span class="line">[root@web-9 /yuchao-linux-data/nginx-1.19.0]<span class="comment">#1l -d /opt/nginx</span></span><br><span class="line">lrwxrwxrwx 1 root root 18 May 7 17:12 /opt/nginx -&gt; /opt/nginx-1-19-0/</span><br></pre></td></tr></table></figure>
-
-<h5 id="默认的nginx安装目录"><a href="#默认的nginx安装目录" class="headerlink" title="默认的nginx安装目录"></a>默认的nginx安装目录</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@web-9 /yuchao-linux-data/nginx-1.19.e]<span class="comment">#ls /opt/nginx	conf html logssbin</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="检查语法"><a href="#检查语法" class="headerlink" title="检查语法"></a>检查语法</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@seb-9 /opt]<span class="comment">#/opt/nginx/sbin/nginx -t</span></span><br><span class="line">nginx: the configuration file /opt/nginx-1-19-0/conf/nginx.conf syntax is oknginx: configuration file /opt/nginx-1-19-8/conf/nginx.conf <span class="built_in">test</span> is successful</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="启动nginx"><a href="#启动nginx" class="headerlink" title="启动nginx"></a>启动nginx</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">先不着急配置PATH,先绝对路径启动</span><br><span class="line">-c参数指定配置文件启动</span><br><span class="line">[root@web-9 /opt]<span class="comment">#/opt/nginx/sbin/nginx -c /opt/nginx/conf/nginx.conf[root@web-9 /opt]#ps -eflgrep nginx</span></span><br><span class="line">root	5e9761 		0 	17:26 	?		00:00:00 nginx: master process /opt/nginx/sbin/nginx -c /opt...</span><br><span class="line">wovow	5097750976 	8 	17:26	?		00:00:00 nginx: worker process</span><br><span class="line">root	5097945214 	0 	17:26 	pts/0	00:00:00 grep --color=auto nginx</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h5 id="停止nginx"><a href="#停止nginx" class="headerlink" title="停止nginx"></a>停止nginx</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@web-9 /opt]<span class="comment">#/opt/nginx/sbin/nginx -s stop</span></span><br></pre></td></tr></table></figure>
-
-<h5 id="测试nginx"><a href="#测试nginx" class="headerlink" title="测试nginx"></a>测试nginx</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@web-9 /opt]<span class="comment">#/opt/nginx/sbin/nginx -c /opt/nginx/conf/nginx.conf</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240808172651222.png" alt="image-20240808172651222"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h4 id="yum安装"><a href="#yum安装" class="headerlink" title="yum安装"></a>yum安装</h4><h5 id="epel源安装就不操作了"><a href="#epel源安装就不操作了" class="headerlink" title="epel源安装就不操作了"></a>epel源安装就不操作了</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.配置阿里云yum epel源</span><br><span class="line"></span><br><span class="line">2 .yum install nginx -y</span><br></pre></td></tr></table></figure>
-
-<h5 id="官网nginx源"><a href="#官网nginx源" class="headerlink" title="官网nginx源"></a>官网nginx源</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">官网文档</span><br><span class="line">https://nginx.org/en/linux_packages.html#RHEL-Centos</span><br></pre></td></tr></table></figure>
-
-<h5 id="于超文档"><a href="#于超文档" class="headerlink" title="于超文档"></a>于超文档</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">1.安装yum工具包</span><br><span class="line">sudo yum install yum-utils</span><br><span class="line">2.设置yum仓库</span><br><span class="line">最新稳定版,线上用这个</span><br><span class="line"><span class="built_in">cat</span> &gt; /etc/yum.repos.d/nginx.repo &lt;&lt; <span class="string">&quot;EOF&quot;</span></span><br><span class="line">[nginx-stable]</span><br><span class="line">name=nginx stable repo</span><br><span class="line">baseurl=http://nginx.org/packages/centos/<span class="variable">$releasever</span>/<span class="variable">$basearch</span>/gpgcheck=1</span><br><span class="line">enabled=1</span><br><span class="line">gpgkey=https: //nginx.org/keys/nginx_signing.key</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">最新开发版,但是并不稳定</span><br><span class="line"><span class="built_in">cat</span> &gt; /etc/yum.repos.d/yuchao-nginx.repo &lt;&lt; <span class="string">&#x27;EOF&quot;[nginx-mainline]</span></span><br><span class="line"><span class="string">name=nginx mainline repo</span></span><br><span class="line"><span class="string">baseurl=http://nginx.org/packages/mainline/centos/$releasever/$basearch/gpgcheck=1</span></span><br><span class="line"><span class="string">enabled=0</span></span><br><span class="line"><span class="string">gpgkey=https:/ /nginx.org/keys/nginx_signing.keyEOF</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="nginx配置文件详解"><a href="#nginx配置文件详解" class="headerlink" title="nginx配置文件详解"></a>nginx配置文件详解</h3><hr>
-<h2 id="nginx虚拟主机"><a href="#nginx虚拟主机" class="headerlink" title="nginx虚拟主机"></a>nginx虚拟主机</h2><hr>
-<h2 id="web基础协议"><a href="#web基础协议" class="headerlink" title="web基础协议"></a>web基础协议</h2><h1 id="Docker容器的部署与使用"><a href="#Docker容器的部署与使用" class="headerlink" title="Docker容器的部署与使用"></a>Docker容器的部署与使用</h1><p>同学们，在前两天我们学习了Linux操作系统的常见命令以及如何在Linux上部署一个单体项目。大家想一想自己最大的感受是什么？<br>我相信，除了个别天赋异禀的同学以外，大多数同学都会有相同的感受，那就是麻烦。核心体现在三点：</p>
+    <p>同学们，在前两天我们学习了Linux操作系统的常见命令以及如何在Linux上部署一个单体项目。大家想一想自己最大的感受是什么？<br>我相信，除了个别天赋异禀的同学以外，大多数同学都会有相同的感受，那就是麻烦。核心体现在三点：</p>
 <ul>
 <li>命令太多了，记不住</li>
 <li>软件安装包名字复杂，不知道去哪里找</li>
@@ -879,35 +356,12 @@
 <li>理解Docker数据卷的基本作用</li>
 <li>能看懂DockerCompose文件</li>
 </ul>
-<h2 id="1-快速入门"><a href="#1-快速入门" class="headerlink" title="1.快速入门"></a>1.快速入门</h2><p>要想让Docker帮我们安装和部署软件，肯定要保证你的机器上有Docker. 由于大家的操作系统各不相同，安装方式也不同。为了便于大家学习，我们统一在CentOS的虚拟机中安装Docker，统一学习环境。</p>
+<h1 id="1-快速入门"><a href="#1-快速入门" class="headerlink" title="1.快速入门"></a>1.快速入门</h1><p>要想让Docker帮我们安装和部署软件，肯定要保证你的机器上有Docker. 由于大家的操作系统各不相同，安装方式也不同。为了便于大家学习，我们统一在CentOS的虚拟机中安装Docker，统一学习环境。</p>
 <blockquote>
 <p>注意：使用MacBook的同学也请利用 VMwareFusion来安装虚拟机，并在虚拟机中学习Docker使用。</p>
 </blockquote>
 <p>安装方式参考文档：《安装Docker》</p>
-<h3 id="1-1-部署Docker容器"><a href="#1-1-部署Docker容器" class="headerlink" title="1.1.部署Docker容器"></a>1.1.部署Docker容器</h3><p><strong>安装docker</strong> :smile: :heart: :+1:</p>
-<h4 id="第一步，打开官网"><a href="#第一步，打开官网" class="headerlink" title="第一步，打开官网"></a>第一步，打开<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/centos/">官网</a></h4><blockquote>
-<p>地址：<a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/centos/">https://docs.docker.com/engine/install/centos/</a> </p>
-</blockquote>
-<h4 id="第二布-在Linux系统上卸载旧版本"><a href="#第二布-在Linux系统上卸载旧版本" class="headerlink" title="第二布 在Linux系统上卸载旧版本"></a>第二布 在Linux系统上卸载旧版本</h4><p> <img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240813151955787.png" alt="image-20240813151955787"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo yum remove docker \</span><br><span class="line">				docker-client \</span><br><span class="line">                docker-client-latest \</span><br><span class="line">                docker-common \</span><br><span class="line">                docker-latest \</span><br><span class="line">                docker-latest-logrotate \</span><br><span class="line">                docker-logrotate \</span><br><span class="line">                docker-engine </span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240813152010262.png" alt="image-20240813152010262"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h4 id="第三步-安装依赖"><a href="#第三步-安装依赖" class="headerlink" title="第三步 安装依赖"></a>第三步 安装依赖</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils</span><br></pre></td></tr></table></figure>
-
-<h4 id="第四步-下载docker"><a href="#第四步-下载docker" class="headerlink" title="第四步 下载docker"></a>第四步 下载docker</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo yum-config-manager --add-repo</span><br><span class="line">https://download.docker.com/linux/centos/docker-ce/repo</span><br><span class="line"></span><br><span class="line"><span class="comment">#官方链接，下载速度较慢</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="第五步-安装docker"><a href="#第五步-安装docker" class="headerlink" title="第五步 安装docker"></a>第五步 安装docker</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240813152258330.png" alt="image-20240813152258330"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h5 id="启动docker服务"><a href="#启动docker服务" class="headerlink" title="启动docker服务"></a>启动docker服务</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start docker</span><br></pre></td></tr></table></figure>
-
-<h5 id="运行第一个docker案例"><a href="#运行第一个docker案例" class="headerlink" title="运行第一个docker案例"></a>运行第一个docker案例</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run hello-world</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>第一个docker案例运行成功</p>
-</blockquote>
-<p><img src="/2024/08/05/%E8%BF%90%E7%BB%B4/image-20240813152407666.png" alt="image-20240813152407666"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h3 id="1-2-部署MySQL"><a href="#1-2-部署MySQL" class="headerlink" title="1.2.部署MySQL"></a>1.2.部署MySQL</h3><p>首先，我们利用Docker来安装一个MySQL软件，大家可以对比一下之前传统的安装方式，看看哪个效率更高一些。<br>如果是利用传统方式部署MySQL，大概的步骤有：</p>
+<h2 id="1-1-部署MySQL"><a href="#1-1-部署MySQL" class="headerlink" title="1.1.部署MySQL"></a>1.1.部署MySQL</h2><p>首先，我们利用Docker来安装一个MySQL软件，大家可以对比一下之前传统的安装方式，看看哪个效率更高一些。<br>如果是利用传统方式部署MySQL，大概的步骤有：</p>
 <ul>
 <li>搜索并下载MySQL安装包</li>
 <li>上传至Linux环境</li>
@@ -916,7 +370,6 @@
 </ul>
 <p>而使用Docker安装，仅仅需要一步即可，在命令行输入下面的命令（建议采用CV大法）：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name mysql2 \</span><br><span class="line">  -p 3306:3306 \</span><br><span class="line">  -e TZ=Asia/Shanghai \</span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=123 \</span><br><span class="line">  mysql</span><br></pre></td></tr></table></figure>
-
 <p>运行效果如图：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684122308592-2b35242b-29a2-4078-8e3d-d820e6e110b3.png#averageHue=%23031f33&clientId=u8d2733c0-4e82-4&from=paste&height=618&id=u0f9984e4&originHeight=773&originWidth=1402&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=104284&status=done&style=none&taskId=ubf0f58c3-d93a-4f1f-a0c5-802f3809650&title=&width=1121.6" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>MySQL安装完毕！通过任意客户端工具即可连接到MySQL.</p>
 <p>大家可以发现，当我们执行命令后，Docker做的第一件事情，是去自动搜索并下载了MySQL，然后会自动运行MySQL，我们完全不用插手，是不是非常方便。</p>
 <p>而且，这种安装方式你完全不用考虑运行的操作系统环境，它不仅仅在CentOS系统是这样，在Ubuntu系统、macOS系统、甚至是装了WSL的Windows下，都可以使用这条命令来安装MySQL。<br>要知道，<strong>不同操作系统下其安装包、运行环境是都不相同的</strong>！如果是<strong>手动安装，必须手动解决安装包不同、环境不同的、配置不同的问题</strong>！</p>
@@ -936,12 +389,10 @@
 <li>基于官方基础镜像自己制作</li>
 <li>直接去DockerRegistry下载</li>
 </ul>
-<p>::: warning<br><strong>总结一下</strong>：<br>Docker本身包含一个后台服务，我们可以利用Docker命令告诉Docker服务，帮助我们快速部署指定的应用。Docker服务部署应用时，首先要去搜索并下载应用对应的镜像，然后根据镜像创建并运行容器，应用就部署完成了。<br>:::</p>
+<p>:::warning<br><strong>总结一下</strong>：<br>Docker本身包含一个后台服务，我们可以利用Docker命令告诉Docker服务，帮助我们快速部署指定的应用。Docker服务部署应用时，首先要去搜索并下载应用对应的镜像，然后根据镜像创建并运行容器，应用就部署完成了。<br>:::</p>
 <p>用一幅图标示如下：<br><img src="https://cdn.nlark.com/yuque/0/2023/jpeg/27967491/1685175097347-8e4144ec-7899-4ff8-8c55-a712ff6bf74e.jpeg"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<p>1.2.命令解读</p>
-<p>利用Docker快速的安装了MySQL，非常的方便，不过我们执行的命令到底是什么意思呢？</p>
+<h2 id="1-2-命令解读"><a href="#1-2-命令解读" class="headerlink" title="1.2.命令解读"></a>1.2.命令解读</h2><p>利用Docker快速的安装了MySQL，非常的方便，不过我们执行的命令到底是什么意思呢？</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name mysql \</span><br><span class="line">  -p 3306:3306 \</span><br><span class="line">  -e TZ=Asia/Shanghai \</span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=123 \</span><br><span class="line">  mysql</span><br></pre></td></tr></table></figure>
-
 <p>解读：</p>
 <ul>
 <li><code>docker run -d</code> ：创建并运行一个容器，<code>-d</code>则是让容器以后台进程运行</li>
@@ -965,9 +416,9 @@
 </ul>
 <p>镜像的名称不是随意的，而是要到DockerRegistry中寻找，镜像运行时的配置也不是随意的，要参考镜像的帮助文档，这些在DockerHub网站或者软件的官方网站中都能找到。</p>
 <p>如果我们要安装其它软件，也可以到DockerRegistry中寻找对应的镜像名称和版本，阅读相关配置即可。</p>
-<h2 id="2-Docker基础"><a href="#2-Docker基础" class="headerlink" title="2.Docker基础"></a>2.Docker基础</h2><p>接下来，我们一起来学习Docker使用的一些基础知识，为将来部署项目打下基础。具体用法可以参考Docker官方文档：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/">Docker Docs: How to build, share, and run applications</a></p>
-<h3 id="2-1-常见命令"><a href="#2-1-常见命令" class="headerlink" title="2.1.常见命令"></a>2.1.常见命令</h3><p>首先我们来学习Docker中的常见命令，可以参考官方文档：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/commandline/cli/">Use the Docker command line</a></p>
-<h5 id="2-1-1-命令介绍"><a href="#2-1-1-命令介绍" class="headerlink" title="2.1.1.命令介绍"></a>2.1.1.命令介绍</h5><p>其中，比较常见的命令有：</p>
+<h1 id="2-Docker基础"><a href="#2-Docker基础" class="headerlink" title="2.Docker基础"></a>2.Docker基础</h1><p>接下来，我们一起来学习Docker使用的一些基础知识，为将来部署项目打下基础。具体用法可以参考Docker官方文档：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/">Docker Docs: How to build, share, and run applications</a></p>
+<h2 id="2-1-常见命令"><a href="#2-1-常见命令" class="headerlink" title="2.1.常见命令"></a>2.1.常见命令</h2><p>首先我们来学习Docker中的常见命令，可以参考官方文档：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/commandline/cli/">Use the Docker command line</a></p>
+<h3 id="2-1-1-命令介绍"><a href="#2-1-1-命令介绍" class="headerlink" title="2.1.1.命令介绍"></a>2.1.1.命令介绍</h3><p>其中，比较常见的命令有：</p>
 <table>
 <thead>
 <tr>
@@ -1056,22 +507,18 @@
 <p>补充：<br>默认情况下，每次重启虚拟机我们都需要手动启动Docker和Docker中的容器。通过命令可以实现开机自启：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Docker开机自启</span></span><br><span class="line">systemctl enable docker</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Docker容器开机自启</span></span><br><span class="line">docker update --restart=always [容器名/容器id]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>2.1.2.演示</p>
-<p>教学环节说明：我们以Nginx为例给大家演示上述命令。</p>
+<h3 id="2-1-2-演示"><a href="#2-1-2-演示" class="headerlink" title="2.1.2.演示"></a>2.1.2.演示</h3><p>教学环节说明：我们以Nginx为例给大家演示上述命令。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第1步，去DockerHub查看nginx镜像仓库及相关信息</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第2步，拉取Nginx镜像</span></span><br><span class="line">docker pull nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第3步，查看镜像</span></span><br><span class="line">docker images</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果如下：</span></span><br><span class="line">REPOSITORY   TAG       IMAGE ID       CREATED         SIZE</span><br><span class="line">nginx        latest    605c77e624dd   16 months ago   141MB</span><br><span class="line">mysql        latest    3218b38490ce   17 months ago   516MB</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第4步，创建并运行Nginx容器</span></span><br><span class="line">docker run -d --name nginx -p 80:80 nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第5步，查看运行中容器</span></span><br><span class="line">docker ps</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">也可以加格式化方式访问，格式会更加清爽</span></span><br><span class="line">docker ps --format &quot;table &#123;&#123;.ID&#125;&#125;\t&#123;&#123;.Image&#125;&#125;\t&#123;&#123;.Ports&#125;&#125;\t&#123;&#123;.Status&#125;&#125;\t&#123;&#123;.Names&#125;&#125;&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第6步，访问网页，地址：http://虚拟机地址</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第7步，停止容器</span></span><br><span class="line">docker stop nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第8步，查看所有容器</span></span><br><span class="line">docker ps -a --format &quot;table &#123;&#123;.ID&#125;&#125;\t&#123;&#123;.Image&#125;&#125;\t&#123;&#123;.Ports&#125;&#125;\t&#123;&#123;.Status&#125;&#125;\t&#123;&#123;.Names&#125;&#125;&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第9步，再次启动nginx容器</span></span><br><span class="line">docker start nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第10步，再次查看容器</span></span><br><span class="line">docker ps --format &quot;table &#123;&#123;.ID&#125;&#125;\t&#123;&#123;.Image&#125;&#125;\t&#123;&#123;.Ports&#125;&#125;\t&#123;&#123;.Status&#125;&#125;\t&#123;&#123;.Names&#125;&#125;&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第11步，查看容器详细信息</span></span><br><span class="line">docker inspect nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第12步，进入容器,查看容器内目录</span></span><br><span class="line">docker exec -it nginx bash</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或者，可以进入MySQL</span></span><br><span class="line">docker exec -it mysql mysql -uroot -p</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">第13步，删除容器</span></span><br><span class="line">docker rm nginx</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">发现无法删除，因为容器运行中，强制删除容器</span></span><br><span class="line">docker rm -f nginx</span><br></pre></td></tr></table></figure>
 
-<p>2.1.3.命令别名</p>
-<p>给常用Docker命令起别名，方便我们访问：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">修改/root/.bashrc文件</span></span><br><span class="line">vi /root/.bashrc</span><br></pre></td></tr></table></figure>
 
+<h3 id="2-1-3-命令别名"><a href="#2-1-3-命令别名" class="headerlink" title="2.1.3.命令别名"></a>2.1.3.命令别名</h3><p>给常用Docker命令起别名，方便我们访问：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">修改/root/.bashrc文件</span></span><br><span class="line">vi /root/.bashrc</span><br></pre></td></tr></table></figure>
 <p>内容如下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">.bashrc</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">User specific aliases and <span class="built_in">functions</span></span></span><br><span class="line"></span><br><span class="line">alias rm=&#x27;rm -i&#x27;</span><br><span class="line">alias cp=&#x27;cp -i&#x27;</span><br><span class="line">alias mv=&#x27;mv -i&#x27;</span><br><span class="line">alias dps=&#x27;docker ps --format &quot;table &#123;&#123;.ID&#125;&#125;\t&#123;&#123;.Image&#125;&#125;\t&#123;&#123;.Ports&#125;&#125;\t&#123;&#123;.Status&#125;&#125;\t&#123;&#123;.Names&#125;&#125;&quot;&#x27;</span><br><span class="line">alias dis=&#x27;docker images&#x27;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Source global definitions</span></span><br><span class="line">if [ -f /etc/bashrc ]; then</span><br><span class="line">        . /etc/bashrc</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-
 <p>然后，执行命令使别名生效</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /root/.bashrc</span><br></pre></td></tr></table></figure>
-
 <p>接下来，试试看新的命令吧。</p>
-<h3 id="2-2-数据卷"><a href="#2-2-数据卷" class="headerlink" title="2.2.数据卷"></a>2.2.数据卷</h3><p>容器是隔离环境，容器内程序的文件、配置、运行时产生的数据都在容器内部，与容器绑定。但在某些情况下这回带来一些问题，大家思考一下：</p>
+<h2 id="2-2-数据卷"><a href="#2-2-数据卷" class="headerlink" title="2.2.数据卷"></a>2.2.数据卷</h2><p>容器是隔离环境，容器内程序的文件、配置、运行时产生的数据都在容器内部，与容器绑定。但在某些情况下这回带来一些问题，大家思考一下：</p>
 <blockquote>
 <ul>
 <li>如果要升级MySQL版本，需要销毁旧容器，那么数据岂不是跟着被销毁了？</li>
@@ -1081,7 +528,7 @@
 </blockquote>
 <p>可见，配置与数据存放在容器内是非常不方便的，而且容易出现问题。</p>
 <p>因此，容器提供程序的运行环境，但是<strong>程序运行产生的数据、程序运行依赖的配置都应该与容器解耦</strong>。</p>
-<h4 id="2-2-1-什么是数据卷"><a href="#2-2-1-什么是数据卷" class="headerlink" title="2.2.1.什么是数据卷"></a>2.2.1.什么是数据卷</h4><p><strong>数据卷（volume）</strong>是一个虚拟目录，是<strong>容器内目录</strong>与<strong>宿主机目录</strong>之间映射的桥梁。<br>以Nginx为例，我们知道Nginx中有两个关键的目录：</p>
+<h3 id="2-2-1-什么是数据卷"><a href="#2-2-1-什么是数据卷" class="headerlink" title="2.2.1.什么是数据卷"></a>2.2.1.什么是数据卷</h3><p><strong>数据卷（volume）</strong>是一个虚拟目录，是<strong>容器内目录</strong>与<strong>宿主机目录</strong>之间映射的桥梁。<br>以Nginx为例，我们知道Nginx中有两个关键的目录：</p>
 <ul>
 <li><code>html</code>：放置一些静态资源</li>
 <li><code>conf</code>：放置配置文件</li>
@@ -1100,7 +547,7 @@
 <li>但是容器指向数据卷，一个逻辑名称，而数据卷再指向宿主机目录，就不存在强耦合。如果宿主机目录发生改变，只要改变数据卷与宿主机目录之间的映射关系即可。</li>
 </ul>
 <p>不过，我们通过由于数据卷目录比较深，不好寻找，通常我们也<strong>允许让容器直接与宿主机目录挂载而不使用数据卷</strong>，具体参考2.2.3小节。<br>:::</p>
-<h4 id="2-2-2-数据卷命令"><a href="#2-2-2-数据卷命令" class="headerlink" title="2.2.2.数据卷命令"></a>2.2.2.数据卷命令</h4><p>数据卷的相关命令有：</p>
+<h3 id="2-2-2-数据卷命令"><a href="#2-2-2-数据卷命令" class="headerlink" title="2.2.2.数据卷命令"></a>2.2.2.数据卷命令</h3><p>数据卷的相关命令有：</p>
 <table>
 <thead>
 <tr>
@@ -1141,13 +588,10 @@
 
 <p>教学<strong>演示环节</strong>：演示一下MySQL的匿名数据卷</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">1.查看MySQL容器详细信息</span></span><br><span class="line">docker inspect mysql</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关注其中.Config.Volumes部分和.Mounts部分</span></span><br></pre></td></tr></table></figure>
-
 <p>我们关注两部分内容，第一是<code>.Config.Volumes</code>部分：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;Config&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="comment">// ... 略</span></span><br><span class="line">    <span class="attr">&quot;Volumes&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;/var/lib/mysql&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span><span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="comment">// ... 略</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
 <p>可以发现这个容器声明了一个本地目录，需要挂载数据卷，但是<strong>数据卷未定义</strong>。这就是匿名卷。<br>然后，我们再看结果中的<code>.Mounts</code>部分：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;Mounts&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;Type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;volume&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;Name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;29524ff09715d3688eae3f99803a2796558dbd00ca584a25a4bbc193ca82459f&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;Source&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/var/lib/docker/volumes/29524ff09715d3688eae3f99803a2796558dbd00ca584a25a4bbc193ca82459f/_data&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;Destination&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/var/lib/mysql&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;Driver&quot;</span><span class="punctuation">:</span> <span class="string">&quot;local&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-
 <p>可以发现，其中有几个关键属性：</p>
 <ul>
 <li>Name：数据卷名称。由于定义容器未设置容器名，这里的就是匿名卷自动生成的名字，一串hash值。</li>
@@ -1160,7 +604,7 @@
 
 
 <p>:::warning<br>注意：每一个不同的镜像，将来创建容器后内部有哪些目录可以挂载，可以参考DockerHub对应的页面<br>:::</p>
-<h4 id="2-2-3-挂载本地目录或文件"><a href="#2-2-3-挂载本地目录或文件" class="headerlink" title="2.2.3.挂载本地目录或文件"></a>2.2.3.挂载本地目录或文件</h4><p>可以发现，数据卷的目录结构较深，如果我们去操作数据卷目录会不太方便。在很多情况下，我们会直接将容器目录与宿主机指定目录挂载。挂载语法与数据卷类似：</p>
+<h3 id="2-2-3-挂载本地目录或文件"><a href="#2-2-3-挂载本地目录或文件" class="headerlink" title="2.2.3.挂载本地目录或文件"></a>2.2.3.挂载本地目录或文件</h3><p>可以发现，数据卷的目录结构较深，如果我们去操作数据卷目录会不太方便。在很多情况下，我们会直接将容器目录与宿主机指定目录挂载。挂载语法与数据卷类似：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">挂载本地目录</span></span><br><span class="line">-v 本地目录:容器内目录</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">挂载本地文件</span></span><br><span class="line">-v 本地文件:容器内文件</span><br></pre></td></tr></table></figure>
 
 <p>:::warning<br><strong>注意</strong>：本地目录或文件必须以 <code>/</code> 或 <code>./</code>开头，如果直接以名字开头，会被识别为数据卷名而非本地目录名。<br>:::</p>
@@ -1177,9 +621,8 @@
 <p>我们直接将整个mysql目录上传至虚拟机的<code>/root</code>目录下：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684480204622-932c9cfe-82ef-4c12-b150-fdbd0f149faa.png#averageHue=%23021e31&clientId=uc8b18ebb-9c42-4&from=paste&height=223&id=ud9390208&originHeight=279&originWidth=1299&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=34568&status=done&style=none&taskId=uf8d71ce0-6899-404b-b552-bdb004c8611&title=&width=1039.2" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p>接下来，我们演示本地目录挂载：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">1.删除原来的MySQL容器</span></span><br><span class="line">docker rm -f mysql</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">2.进入root目录</span></span><br><span class="line">cd ~</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">3.创建并运行新mysql容器，挂载本地目录</span></span><br><span class="line">docker run -d \</span><br><span class="line">  --name mysql \</span><br><span class="line">  -p 3306:3306 \</span><br><span class="line">  -e TZ=Asia/Shanghai \</span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=123 \</span><br><span class="line">  -v ./mysql/data:/var/lib/mysql \</span><br><span class="line">  -v ./mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">  -v ./mysql/init:/docker-entrypoint-initdb.d \</span><br><span class="line">  mysql</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">4.查看root目录，可以发现~/mysql/data目录已经自动创建好了</span></span><br><span class="line">ls -l mysql</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果：</span></span><br><span class="line">总用量 4</span><br><span class="line">drwxr-xr-x. 2 root    root   20 5月  19 15:11 conf</span><br><span class="line">drwxr-xr-x. 7 polkitd root 4096 5月  19 15:11 data</span><br><span class="line">drwxr-xr-x. 2 root    root   23 5月  19 15:11 init</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看data目录，会发现里面有大量数据库数据，说明数据库完成了初始化</span></span><br><span class="line">ls -l data</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">5.查看MySQL容器内数据</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">5.1.进入MySQL</span></span><br><span class="line">docker exec -it mysql mysql -uroot -p123</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">5.2.查看编码表</span></span><br><span class="line">show variables like &quot;%char%&quot;;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">5.3.结果，发现编码是utf8mb4没有问题</span></span><br><span class="line">+--------------------------+--------------------------------+</span><br><span class="line">| Variable_name            | Value                          |</span><br><span class="line">+--------------------------+--------------------------------+</span><br><span class="line">| character_set_client     | utf8mb4                        |</span><br><span class="line">| character_set_connection | utf8mb4                        |</span><br><span class="line">| character_set_database   | utf8mb4                        |</span><br><span class="line">| character_set_filesystem | binary                         |</span><br><span class="line">| character_set_results    | utf8mb4                        |</span><br><span class="line">| character_set_server     | utf8mb4                        |</span><br><span class="line">| character_set_system     | utf8mb3                        |</span><br><span class="line">| character_sets_dir       | /usr/share/mysql-8.0/charsets/ |</span><br><span class="line">+--------------------------+--------------------------------+</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">6.查看数据</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">6.1.查看数据库</span></span><br><span class="line">show databases;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果，hmall是黑马商城数据库</span></span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| hmall              |</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">+--------------------+</span><br><span class="line">5 rows in set (0.00 sec)</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">6.2.切换到hmall数据库</span></span><br><span class="line">use hmall;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">6.3.查看表</span></span><br><span class="line">show tables;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果：</span></span><br><span class="line">+-----------------+</span><br><span class="line">| Tables_in_hmall |</span><br><span class="line">+-----------------+</span><br><span class="line">| address         |</span><br><span class="line">| cart            |</span><br><span class="line">| item            |</span><br><span class="line">| order           |</span><br><span class="line">| order_detail    |</span><br><span class="line">| order_logistics |</span><br><span class="line">| pay_order       |</span><br><span class="line">| user            |</span><br><span class="line">+-----------------+</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">6.4.查看address表数据</span></span><br><span class="line">+----+---------+----------+--------+----------+-------------+---------------+-----------+------------+-------+</span><br><span class="line">| id | user_id | province | city   | town     | mobile      | street        | contact   | is_default | notes |</span><br><span class="line">+----+---------+----------+--------+----------+-------------+---------------+-----------+------------+-------+</span><br><span class="line">| 59 |       1 | 北京     | 北京   | 朝阳区    | 13900112222 | 金燕龙办公楼   | 李佳诚    | 0          | NULL  |</span><br><span class="line">| 60 |       1 | 北京     | 北京   | 朝阳区    | 13700221122 | 修正大厦       | 李佳红    | 0          | NULL  |</span><br><span class="line">| 61 |       1 | 上海     | 上海   | 浦东新区  | 13301212233 | 航头镇航头路   | 李佳星    | 1          | NULL  |</span><br><span class="line">| 63 |       1 | 广东     | 佛山   | 永春      | 13301212233 | 永春武馆       | 李晓龙    | 0          | NULL  |</span><br><span class="line">+----+---------+----------+--------+----------+-------------+---------------+-----------+------------+-------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-3-自定义镜像"><a href="#2-3-自定义镜像" class="headerlink" title="2.3.自定义镜像"></a>2.3.自定义镜像</h3><p>前面我们一直在使用别人准备好的镜像，那如果我要部署一个Java项目，把它打包为一个镜像该怎么做呢？</p>
-<h4 id="2-3-1-镜像结构"><a href="#2-3-1-镜像结构" class="headerlink" title="2.3.1.镜像结构"></a>2.3.1.镜像结构</h4><p>要想自己构建镜像，必须先了解镜像的结构。<br>之前我们说过，镜像之所以能让我们快速跨操作系统部署应用而忽略其运行环境、配置，就是因为镜像中包含了程序运行需要的系统函数库、环境、配置、依赖。<br>因此，自定义镜像本质就是依次准备好程序运行的基础环境、依赖、应用本身、运行配置等文件，并且打包而成。</p>
+<h2 id="2-3-自定义镜像"><a href="#2-3-自定义镜像" class="headerlink" title="2.3.自定义镜像"></a>2.3.自定义镜像</h2><p>前面我们一直在使用别人准备好的镜像，那如果我要部署一个Java项目，把它打包为一个镜像该怎么做呢？</p>
+<h3 id="2-3-1-镜像结构"><a href="#2-3-1-镜像结构" class="headerlink" title="2.3.1.镜像结构"></a>2.3.1.镜像结构</h3><p>要想自己构建镜像，必须先了解镜像的结构。<br>之前我们说过，镜像之所以能让我们快速跨操作系统部署应用而忽略其运行环境、配置，就是因为镜像中包含了程序运行需要的系统函数库、环境、配置、依赖。<br>因此，自定义镜像本质就是依次准备好程序运行的基础环境、依赖、应用本身、运行配置等文件，并且打包而成。</p>
 <p>举个例子，我们要从0部署一个Java应用，大概流程是这样：</p>
 <ul>
 <li>准备一个Linux环境（CentOS或者Ubuntu均可）</li>
@@ -1196,7 +639,7 @@
 </ul>
 <p>上述步骤中的每一次操作其实都是在生产一些文件（系统运行环境、函数库、配置最终都是磁盘文件），所以<strong>镜像就是一堆文件的集合</strong>。<br>但需要注意的是，镜像文件不是随意堆放的，而是按照操作的步骤分层叠加而成，每一层形成的文件都会单独打包并标记一个唯一id，称为<strong>Layer</strong>（<strong>层</strong>）。这样，如果我们构建时用到的某些层其他人已经制作过，就可以直接拷贝使用这些层，而不用重复制作。</p>
 <p>例如，第一步中需要的Linux运行环境，通用性就很强，所以Docker官方就制作了这样的只包含Linux运行环境的镜像。我们在制作java镜像时，就无需重复制作，直接使用Docker官方提供的CentOS或Ubuntu镜像作为基础镜像。然后再搭建其它层即可，这样逐层搭建，最终整个Java项目的镜像结构如图所示：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684393900217-24fde04c-a9ad-4eeb-82b8-4eea7ab60916.png#averageHue=%23c4cfdc&clientId=u91cc81f5-0821-4&from=paste&height=775&id=ua503147f&originHeight=969&originWidth=1757&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=226077&status=done&style=none&taskId=u598a0194-1615-4686-8fa2-c487dc7fede&title=&width=1405.6" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h4 id="2-3-2-Dockerfile"><a href="#2-3-2-Dockerfile" class="headerlink" title="2.3.2.Dockerfile"></a>2.3.2.Dockerfile</h4><p>由于制作镜像的过程中，需要逐层处理和打包，比较复杂，所以Docker就提供了自动打包镜像的功能。我们只需要将打包的过程，每一层要做的事情用固定的语法写下来，交给Docker去执行即可。<br>而这种记录镜像结构的文件就称为<strong>Dockerfile</strong>，其对应的语法可以参考官方文档：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/builder/">Dockerfile 官方文档</a></p>
+<h3 id="2-3-2-Dockerfile"><a href="#2-3-2-Dockerfile" class="headerlink" title="2.3.2.Dockerfile"></a>2.3.2.Dockerfile</h3><p>由于制作镜像的过程中，需要逐层处理和打包，比较复杂，所以Docker就提供了自动打包镜像的功能。我们只需要将打包的过程，每一层要做的事情用固定的语法写下来，交给Docker去执行即可。<br>而这种记录镜像结构的文件就称为<strong>Dockerfile</strong>，其对应的语法可以参考官方文档：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/builder/">Dockerfile 官方文档</a></p>
 <p>其中的语法比较多，比较常用的有：</p>
 <table>
 <thead>
@@ -1243,21 +686,17 @@
 <p>同学们思考一下：以后我们会有很多很多java项目需要打包为镜像，他们都需要Linux系统环境、JDK环境这两层，只有上面的3层不同（因为jar包不同）。如果每次制作java镜像都重复制作前两层镜像，是不是很麻烦。</p>
 <p>所以，就有人提供了基础的系统加JDK环境，我们在此基础上制作java镜像，就可以省去JDK的配置了：</p>
 <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 基础镜像</span></span><br><span class="line"><span class="keyword">FROM</span> openjdk:<span class="number">11.0</span>-jre-buster</span><br><span class="line"><span class="comment"># 设定时区</span></span><br><span class="line"><span class="keyword">ENV</span> TZ=Asia/Shanghai</span><br><span class="line"><span class="keyword">RUN</span><span class="language-bash"> <span class="built_in">ln</span> -snf /usr/share/zoneinfo/<span class="variable">$TZ</span> /etc/localtime &amp;&amp; <span class="built_in">echo</span> <span class="variable">$TZ</span> &gt; /etc/timezone</span></span><br><span class="line"><span class="comment"># 拷贝jar包</span></span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> docker-demo.jar /app.jar</span></span><br><span class="line"><span class="comment"># 入口</span></span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="language-bash"> [<span class="string">&quot;java&quot;</span>, <span class="string">&quot;-jar&quot;</span>, <span class="string">&quot;/app.jar&quot;</span>]</span></span><br></pre></td></tr></table></figure>
-
 <p>是不是简单多了。</p>
-<h4 id="2-3-3-构建镜像"><a href="#2-3-3-构建镜像" class="headerlink" title="2.3.3.构建镜像"></a>2.3.3.构建镜像</h4><p>当Dockerfile文件写好以后，就可以利用命令来构建镜像了。<br>在课前资料中，我们准备好了一个demo项目及对应的Dockerfile：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1689684694215-0bafb7c3-18df-4138-bcbc-c74ab6c13c81.png#averageHue=%23f9f8f7&clientId=ua619ebe8-7deb-4&from=paste&height=161&id=u0925f43f&originHeight=180&originWidth=752&originalType=binary&ratio=1.115625023841858&rotation=0&showTitle=false&size=15845&status=done&style=none&taskId=u8bc84083-a20c-48f9-97f1-7eeb8617090&title=&width=674.0616102445883" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>首先，我们将课前资料提供的<code>docker-demo.jar</code>包以及<code>Dockerfile</code>拷贝到虚拟机的<code>/root/demo</code>目录：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684396982272-261084f1-3db0-4ade-a08d-4fe66a0e863e.png#averageHue=%23f9f8f8&clientId=u91cc81f5-0821-4&from=paste&height=161&id=uf2e1057c&originHeight=201&originWidth=938&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=13989&status=done&style=none&taskId=uee32d448-6710-414a-b949-9cedeff6505&title=&width=750.4" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="2-3-3-构建镜像"><a href="#2-3-3-构建镜像" class="headerlink" title="2.3.3.构建镜像"></a>2.3.3.构建镜像</h3><p>当Dockerfile文件写好以后，就可以利用命令来构建镜像了。<br>在课前资料中，我们准备好了一个demo项目及对应的Dockerfile：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1689684694215-0bafb7c3-18df-4138-bcbc-c74ab6c13c81.png#averageHue=%23f9f8f7&clientId=ua619ebe8-7deb-4&from=paste&height=161&id=u0925f43f&originHeight=180&originWidth=752&originalType=binary&ratio=1.115625023841858&rotation=0&showTitle=false&size=15845&status=done&style=none&taskId=u8bc84083-a20c-48f9-97f1-7eeb8617090&title=&width=674.0616102445883" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>首先，我们将课前资料提供的<code>docker-demo.jar</code>包以及<code>Dockerfile</code>拷贝到虚拟机的<code>/root/demo</code>目录：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684396982272-261084f1-3db0-4ade-a08d-4fe66a0e863e.png#averageHue=%23f9f8f8&clientId=u91cc81f5-0821-4&from=paste&height=161&id=uf2e1057c&originHeight=201&originWidth=938&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=13989&status=done&style=none&taskId=uee32d448-6710-414a-b949-9cedeff6505&title=&width=750.4" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p>然后，执行命令，构建镜像：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入镜像目录</span></span><br><span class="line">cd /root/demo</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">开始构建</span></span><br><span class="line">docker build -t docker-demo:1.0 .</span><br></pre></td></tr></table></figure>
-
 <p>命令说明：</p>
 <ul>
 <li><code>docker build </code>: 就是构建一个docker镜像</li>
 <li><code>-t docker-demo:1.0</code> ：<code>-t</code>参数是指定镜像的名称（<code>repository</code>和<code>tag</code>）</li>
-<li><code>.</code> : 最后的点是指构建时Dockerfile所在路径，由于我们进入了demo目录，所以指定的是<code>.</code>代表当前目录，也可以直接指定Dockerfile目录：</li>
+<li><code>.</code> : 最后的点是指构建时Dockerfile所在路径，由于我们进入了demo目录，所以指定的是<code>.</code>代表当前目录，也可以直接指定Dockerfile目录：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">直接指定Dockerfile目录</span></span><br><span class="line">docker build -t docker-demo:1.0 /root/demo</span><br></pre></td></tr></table></figure>
+结果：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684399572607-5dea86eb-fb65-4a91-97c2-51198d0af071.png#averageHue=%23022337&clientId=u91cc81f5-0821-4&from=paste&height=388&id=u775e7798&originHeight=485&originWidth=1567&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=87803&status=done&style=none&taskId=u0600b9e1-059d-4a72-89cf-1c632ffed68&title=&width=1253.6" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></li>
 </ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">直接指定Dockerfile目录</span></span><br><span class="line">docker build -t docker-demo:1.0 /root/demo</span><br></pre></td></tr></table></figure>
-
-<p>结果：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684399572607-5dea86eb-fb65-4a91-97c2-51198d0af071.png#averageHue=%23022337&clientId=u91cc81f5-0821-4&from=paste&height=388&id=u775e7798&originHeight=485&originWidth=1567&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=87803&status=done&style=none&taskId=u0600b9e1-059d-4a72-89cf-1c632ffed68&title=&width=1253.6" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p>查看镜像列表：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看镜像列表：</span></span><br><span class="line">docker images</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果</span></span><br><span class="line">REPOSITORY    TAG       IMAGE ID       CREATED          SIZE</span><br><span class="line">docker-demo   1.0       d6ab0b9e64b9   27 minutes ago   327MB</span><br><span class="line">nginx         latest    605c77e624dd   16 months ago    141MB</span><br><span class="line">mysql         latest    3218b38490ce   17 months ago    516MB</span><br></pre></td></tr></table></figure>
 
@@ -1265,10 +704,9 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">1.创建并运行容器</span></span><br><span class="line">docker run -d --name dd -p 8080:8080 docker-demo:1.0</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">2.查看容器</span></span><br><span class="line">dps</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果</span></span><br><span class="line">CONTAINER ID   IMAGE             PORTS                                                  STATUS         NAMES</span><br><span class="line">78a000447b49   docker-demo:1.0   0.0.0.0:8080-&gt;8080/tcp, :::8090-&gt;8090/tcp              Up 2 seconds   dd</span><br><span class="line">f63cfead8502   mysql             0.0.0.0:3306-&gt;3306/tcp, :::3306-&gt;3306/tcp, 33060/tcp   Up 2 hours     mysql</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">3.访问</span></span><br><span class="line">curl localhost:8080/hello/count</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果：</span></span><br><span class="line">&lt;h5&gt;欢迎访问黑马商城, 这是您第1次访问&lt;h5&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
-<h3 id="2-4-网络"><a href="#2-4-网络" class="headerlink" title="2.4.网络"></a>2.4.网络</h3><p>上节课我们创建了一个Java项目的容器，而Java项目往往需要访问其它各种中间件，例如MySQL、Redis等。现在，我们的容器之间能否互相访问呢？我们来测试一下</p>
+<h2 id="2-4-网络"><a href="#2-4-网络" class="headerlink" title="2.4.网络"></a>2.4.网络</h2><p>上节课我们创建了一个Java项目的容器，而Java项目往往需要访问其它各种中间件，例如MySQL、Redis等。现在，我们的容器之间能否互相访问呢？我们来测试一下</p>
 <p>首先，我们查看下MySQL容器的详细信息，重点关注其中的网络IP地址：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">1.用基本命令，寻找Networks.bridge.IPAddress属性</span></span><br><span class="line">docker inspect mysql</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">也可以使用format过滤结果</span></span><br><span class="line">docker inspect --format=&#x27;&#123;&#123;range .NetworkSettings.Networks&#125;&#125;&#123;&#123;println .IPAddress&#125;&#125;&#123;&#123;end&#125;&#125;&#x27; mysql</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">得到IP地址如下：</span></span><br><span class="line">172.17.0.2</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">2.然后通过命令进入<span class="built_in">dd</span>容器</span></span><br><span class="line">docker exec -it dd bash</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">3.在容器内，通过ping命令测试网络</span></span><br><span class="line">ping 172.17.0.2</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果</span></span><br><span class="line">PING 172.17.0.2 (172.17.0.2) 56(84) bytes of data.</span><br><span class="line">64 bytes from 172.17.0.2: icmp_seq=1 ttl=64 time=0.053 ms</span><br><span class="line">64 bytes from 172.17.0.2: icmp_seq=2 ttl=64 time=0.059 ms</span><br><span class="line">64 bytes from 172.17.0.2: icmp_seq=3 ttl=64 time=0.058 ms</span><br></pre></td></tr></table></figure>
-
 <p>发现可以互联，没有问题。</p>
 <p>但是，容器的网络IP其实是一个虚拟的IP，其值并不固定与某一个容器绑定，如果我们在开发时写死某个IP，而在部署时很可能MySQL容器的IP会发生变化，连接会失败。</p>
 <p>所以，我们必须借助于docker的网络功能来解决这个问题，官方文档：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/reference/commandline/network/">docker network</a><br>常见命令有：</p>
@@ -1325,7 +763,7 @@
 <li>在自定义网络中，可以给容器起多个别名，默认的别名是容器名本身</li>
 <li>在同一个自定义网络中的容器，可以通过别名互相访问<br>:::</li>
 </ul>
-<h2 id="3-项目部署"><a href="#3-项目部署" class="headerlink" title="3.项目部署"></a>3.项目部署</h2><p>好了，我们已经熟悉了Docker的基本用法，接下来可以尝试部署项目了。<br>在课前资料中已经提供了一个黑马商城项目给大家，如图：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1689684726970-df6739ea-af76-4ddf-aa96-7c5248ea4d12.png#averageHue=%23faf9f8&clientId=ua619ebe8-7deb-4&from=paste&height=208&id=u07cd442c&originHeight=232&originWidth=749&originalType=binary&ratio=1.115625023841858&rotation=0&showTitle=false&size=17167&status=done&style=none&taskId=u58749a22-762b-4269-a04c-3bfdd2f29b5&title=&width=671.372534671804" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1689684753443-29509e1e-792e-406e-ab58-9d7e9a674754.png#averageHue=%23f9f9f8&clientId=ua619ebe8-7deb-4&from=paste&height=165&id=u172a7451&originHeight=184&originWidth=750&originalType=binary&ratio=1.115625023841858&rotation=0&showTitle=false&size=14311&status=done&style=none&taskId=ued20f666-6121-495e-9429-c1e2c04ceb2&title=&width=672.2688931960655" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h1 id="3-项目部署"><a href="#3-项目部署" class="headerlink" title="3.项目部署"></a>3.项目部署</h1><p>好了，我们已经熟悉了Docker的基本用法，接下来可以尝试部署项目了。<br>在课前资料中已经提供了一个黑马商城项目给大家，如图：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1689684726970-df6739ea-af76-4ddf-aa96-7c5248ea4d12.png#averageHue=%23faf9f8&clientId=ua619ebe8-7deb-4&from=paste&height=208&id=u07cd442c&originHeight=232&originWidth=749&originalType=binary&ratio=1.115625023841858&rotation=0&showTitle=false&size=17167&status=done&style=none&taskId=u58749a22-762b-4269-a04c-3bfdd2f29b5&title=&width=671.372534671804" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1689684753443-29509e1e-792e-406e-ab58-9d7e9a674754.png#averageHue=%23f9f9f8&clientId=ua619ebe8-7deb-4&from=paste&height=165&id=u172a7451&originHeight=184&originWidth=750&originalType=binary&ratio=1.115625023841858&rotation=0&showTitle=false&size=14311&status=done&style=none&taskId=ued20f666-6121-495e-9429-c1e2c04ceb2&title=&width=672.2688931960655" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 <p>项目说明：</p>
 <ul>
 <li>hmall：商城的后端代码</li>
@@ -1369,15 +807,14 @@
 </tbody></table>
 <p>在正式部署前，我们先删除之前的nginx、dd两个容器：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm -f nginx dd</span><br></pre></td></tr></table></figure>
-
 <p>mysql容器中已经准备好了商城的数据，所以就不再删除了。</p>
-<h3 id="3-1-部署Java项目"><a href="#3-1-部署Java项目" class="headerlink" title="3.1.部署Java项目"></a>3.1.部署Java项目</h3><p><code>hmall</code>项目是一个maven聚合项目，使用IDEA打开<code>hmall</code>项目，查看项目结构如图：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684411800884-045d9090-3d6d-467f-ab45-52eba7b0bc9b.png#averageHue=%23f4f8f2&clientId=u91cc81f5-0821-4&from=paste&height=202&id=iAyEH&originHeight=253&originWidth=864&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=37445&status=done&style=none&taskId=uc2e19e3b-2fad-44d2-a8e2-27036a06a98&title=&width=691.2" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>我们要部署的就是其中的<code>hm-service</code>，其中的配置文件采用了多环境的方式：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684485343002-df9f5d40-4107-4f45-a9cb-5d03fd1f6aa1.png#averageHue=%23f4f8f1&clientId=uc8b18ebb-9c42-4&from=paste&height=475&id=ua286720a&originHeight=594&originWidth=898&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=71364&status=done&style=none&taskId=uef8cd7ef-e35c-4635-a900-9aade77f363&title=&width=718.4" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>其中的<code>application-dev.yaml</code>是部署到开发环境的配置，<code>application-local.yaml</code>是本地运行时的配置。</p>
+<h2 id="3-1-部署Java项目"><a href="#3-1-部署Java项目" class="headerlink" title="3.1.部署Java项目"></a>3.1.部署Java项目</h2><p><code>hmall</code>项目是一个maven聚合项目，使用IDEA打开<code>hmall</code>项目，查看项目结构如图：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684411800884-045d9090-3d6d-467f-ab45-52eba7b0bc9b.png#averageHue=%23f4f8f2&clientId=u91cc81f5-0821-4&from=paste&height=202&id=iAyEH&originHeight=253&originWidth=864&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=37445&status=done&style=none&taskId=uc2e19e3b-2fad-44d2-a8e2-27036a06a98&title=&width=691.2" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>我们要部署的就是其中的<code>hm-service</code>，其中的配置文件采用了多环境的方式：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684485343002-df9f5d40-4107-4f45-a9cb-5d03fd1f6aa1.png#averageHue=%23f4f8f1&clientId=uc8b18ebb-9c42-4&from=paste&height=475&id=ua286720a&originHeight=594&originWidth=898&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=71364&status=done&style=none&taskId=uef8cd7ef-e35c-4635-a900-9aade77f363&title=&width=718.4" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>其中的<code>application-dev.yaml</code>是部署到开发环境的配置，<code>application-local.yaml</code>是本地运行时的配置。</p>
 <p>查看application.yaml，你会发现其中的JDBC地址并未写死，而是读取变量：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684919668862-33fe4fe7-1cca-41e1-a129-1d01910b2208.png#averageHue=%23f3f7f2&clientId=ue3ab742e-13bf-4&from=paste&height=397&id=uf84fbe4f&originHeight=496&originWidth=1456&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=125417&status=done&style=none&taskId=u6e257c0e-cf50-4227-b857-12cc26d48ca&title=&width=1164.8" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>这两个变量在<code>application-dev.yaml</code>和<code>application-local.yaml</code>中并不相同：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684919728185-c21b7267-0f6b-43a5-8e64-8371a02dca4e.png#averageHue=%23f3f5ed&clientId=ue3ab742e-13bf-4&from=paste&height=218&id=ua2946422&originHeight=273&originWidth=1052&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=46303&status=done&style=none&taskId=u17e84c32-933b-4b40-9b60-32f95f74dc0&title=&width=841.6" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>在dev开发环境（也就是Docker部署时）采用了mysql作为地址，刚好是我们的mysql容器名，只要两者在一个网络，就一定能互相访问。</p>
 <p>我们将项目打包：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684485751081-8f04be5d-c93d-4ed2-9af8-009216ae942c.png#averageHue=%23f3f7f0&clientId=uc8b18ebb-9c42-4&from=paste&height=422&id=uf94f1d3f&originHeight=528&originWidth=924&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=99883&status=done&style=none&taskId=ud8f8c370-cf55-4aed-a2a7-777115b2e71&title=&width=739.2" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>结果：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684486037477-17f0a04f-5f88-47bf-8abd-8fc586456161.png#averageHue=%23f5f8e2&clientId=uc8b18ebb-9c42-4&from=paste&height=402&id=u15203153&originHeight=503&originWidth=797&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=57918&status=done&style=none&taskId=u5b5e60d7-bff2-4c3b-944e-ab2e0dd5bf1&title=&width=637.6" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>将<code>hm-service</code>目录下的<code>Dockerfile</code>和<code>hm-service/target</code>目录下的<code>hm-service.jar</code>一起上传到虚拟机的<code>root</code>目录：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684486113765-7c71f946-ac9d-4db7-b0a2-30d6eada81ad.png#averageHue=%23faf7f5&clientId=uc8b18ebb-9c42-4&from=paste&height=294&id=u83132343&originHeight=367&originWidth=1016&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=24893&status=done&style=none&taskId=u2bb47469-4f6f-42d7-8e40-40361690a08&title=&width=812.8" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>部署项目：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">1.构建项目镜像，不指定tag，则默认为latest</span></span><br><span class="line">docker build -t hmall .</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">2.查看镜像</span></span><br><span class="line">docker images</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果</span></span><br><span class="line">REPOSITORY    TAG       IMAGE ID       CREATED          SIZE</span><br><span class="line">hmall         latest    0bb07b2c34b9   43 seconds ago   362MB</span><br><span class="line">docker-demo   1.0       49743484da68   24 hours ago     327MB</span><br><span class="line">nginx         latest    605c77e624dd   16 months ago    141MB</span><br><span class="line">mysql         latest    3218b38490ce   17 months ago    516MB</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">3.创建并运行容器，并通过--network将其加入hmall网络，这样才能通过容器名访问mysql</span></span><br><span class="line">docker run -d --name hmall --network hmall -p 8080:8080 hmall</span><br></pre></td></tr></table></figure>
 
 <p>测试，通过浏览器访问：http:&#x2F;&#x2F;你的虚拟机地址:8080&#x2F;search&#x2F;list</p>
-<h3 id="3-2-部署前端"><a href="#3-2-部署前端" class="headerlink" title="3.2.部署前端"></a>3.2.部署前端</h3><p><code>hmall-portal</code>和<code>hmall-admin</code>是前端代码，需要基于nginx部署。在课前资料中已经给大家提供了nginx的部署目录：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1689684824131-ed4d4aed-22fc-45ed-9b81-3a6de05afe6a.png#averageHue=%23f9f9f8&clientId=ua619ebe8-7deb-4&from=paste&height=167&id=u80330ecb&originHeight=186&originWidth=749&originalType=binary&ratio=1.115625023841858&rotation=0&showTitle=false&size=14499&status=done&style=none&taskId=u01aaaab8-f1b1-4d8c-a9da-8fcfb7a0a12&title=&width=671.372534671804" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>其中：</p>
+<h2 id="3-2-部署前端"><a href="#3-2-部署前端" class="headerlink" title="3.2.部署前端"></a>3.2.部署前端</h2><p><code>hmall-portal</code>和<code>hmall-admin</code>是前端代码，需要基于nginx部署。在课前资料中已经给大家提供了nginx的部署目录：<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1689684824131-ed4d4aed-22fc-45ed-9b81-3a6de05afe6a.png#averageHue=%23f9f9f8&clientId=ua619ebe8-7deb-4&from=paste&height=167&id=u80330ecb&originHeight=186&originWidth=749&originalType=binary&ratio=1.115625023841858&rotation=0&showTitle=false&size=14499&status=done&style=none&taskId=u01aaaab8-f1b1-4d8c-a9da-8fcfb7a0a12&title=&width=671.372534671804" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'><br>其中：</p>
 <ul>
 <li><code>html</code>是静态资源目录，其中已经包含了<code>hmall-portal</code>以及<code>hmall-admin</code></li>
 <li><code>nginx.conf</code>是nginx的配置文件，主要是完成对<code>html</code>下的两个静态资源目录做代理</li>
@@ -1396,7 +833,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name nginx \</span><br><span class="line">  -p 18080:18080 \</span><br><span class="line">  -p 18081:18081 \</span><br><span class="line">  -v /root/nginx/html:/etc/nginx/html \</span><br><span class="line">  -v /root/nginx/nginx.conf:/etc/nginx/nginx.conf \</span><br><span class="line">  --network hmall \</span><br><span class="line">  nginx</span><br></pre></td></tr></table></figure>
 
 <p>测试，通过浏览器访问：http:&#x2F;&#x2F;你的虚拟机ip:18080<br><img src="https://cdn.nlark.com/yuque/0/2023/png/27967491/1684487276844-5337ad53-21db-4b1c-9c85-25c5437b121d.png#averageHue=%23abb2ad&clientId=uc8b18ebb-9c42-4&from=paste&height=674&id=u4a305fb1&originHeight=842&originWidth=1695&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=858048&status=done&style=none&taskId=u432b6f58-9bad-448a-b4a8-be2f1f180c6&title=&width=1356" alt="image.png"  data-tag='post-image' loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
-<h3 id="3-3-DockerCompose"><a href="#3-3-DockerCompose" class="headerlink" title="3.3.DockerCompose"></a>3.3.DockerCompose</h3><p>大家可以看到，我们部署一个简单的java项目，其中包含3个容器：</p>
+<h2 id="3-3-DockerCompose"><a href="#3-3-DockerCompose" class="headerlink" title="3.3.DockerCompose"></a>3.3.DockerCompose</h2><p>大家可以看到，我们部署一个简单的java项目，其中包含3个容器：</p>
 <ul>
 <li>MySQL</li>
 <li>Nginx</li>
@@ -1404,7 +841,7 @@
 </ul>
 <p>而稍微复杂的项目，其中还会有各种各样的其它中间件，需要部署的东西远不止3个。如果还像之前那样手动的逐一部署，就太麻烦了。</p>
 <p>而Docker Compose就可以帮助我们实现<strong>多个相互关联的Docker容器的快速部署</strong>。它允许用户通过一个单独的 docker-compose.yml 模板文件（YAML 格式）来定义一组相关联的应用容器。</p>
-<h4 id="3-3-1-基本语法"><a href="#3-3-1-基本语法" class="headerlink" title="3.3.1.基本语法"></a>3.3.1.基本语法</h4><p>docker-compose.yml文件的基本语法可以参考官方文档：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/compose/compose-file/compose-file-v3/">Compose file version 3 reference</a></p>
+<h3 id="3-3-1-基本语法"><a href="#3-3-1-基本语法" class="headerlink" title="3.3.1.基本语法"></a>3.3.1.基本语法</h3><p>docker-compose.yml文件的基本语法可以参考官方文档：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/compose/compose-file/compose-file-v3/">Compose file version 3 reference</a></p>
 <p>docker-compose文件中可以定义多个相互关联的应用容器，每一个应用容器被称为一个服务（service）。由于service就是在定义某个应用的运行时参数，因此与<code>docker run</code>参数非常相似。<br>举例来说，用docker run部署MySQL的命令如下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name mysql \</span><br><span class="line">  -p 3306:3306 \</span><br><span class="line">  -e TZ=Asia/Shanghai \</span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=123 \</span><br><span class="line">  -v ./mysql/data:/var/lib/mysql \</span><br><span class="line">  -v ./mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">  -v ./mysql/init:/docker-entrypoint-initdb.d \</span><br><span class="line">  --network hmall</span><br><span class="line">  mysql</span><br></pre></td></tr></table></figure>
 
@@ -1451,10 +888,9 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&quot;3.8&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mysql:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;3306:3306&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">TZ:</span> <span class="string">Asia/Shanghai</span></span><br><span class="line">      <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="number">123</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;./mysql/conf:/etc/mysql/conf.d&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;./mysql/data:/var/lib/mysql&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;./mysql/init:/docker-entrypoint-initdb.d&quot;</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">new</span></span><br><span class="line">  <span class="attr">hmall:</span></span><br><span class="line">    <span class="attr">build:</span> </span><br><span class="line">      <span class="attr">context:</span> <span class="string">.</span></span><br><span class="line">      <span class="attr">dockerfile:</span> <span class="string">Dockerfile</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">hmall</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;8080:8080&quot;</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">new</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">mysql</span></span><br><span class="line">  <span class="attr">nginx:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;18080:18080&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;18081:18081&quot;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;./nginx/nginx.conf:/etc/nginx/nginx.conf&quot;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;./nginx/html:/etc/nginx/html&quot;</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">hmall</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">new</span>  </span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">new:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">hmall</span></span><br></pre></td></tr></table></figure>
 
 
-<h4 id="3-3-2-基础命令"><a href="#3-3-2-基础命令" class="headerlink" title="3.3.2.基础命令"></a>3.3.2.基础命令</h4><p>编写好docker-compose.yml文件，就可以部署项目了。常见的命令：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/compose/reference/">Overview of docker compose CLI</a></p>
+<h3 id="3-3-2-基础命令"><a href="#3-3-2-基础命令" class="headerlink" title="3.3.2.基础命令"></a>3.3.2.基础命令</h3><p>编写好docker-compose.yml文件，就可以部署项目了。常见的命令：<br><a target="_blank" rel="noopener" href="https://docs.docker.com/compose/reference/">Overview of docker compose CLI</a></p>
 <p>基本语法如下：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker compose [OPTIONS] [COMMAND]</span><br></pre></td></tr></table></figure>
-
 <p>其中，OPTIONS和COMMAND都是可选参数，比较常见的有：</p>
 <table>
 <thead>
@@ -1524,7 +960,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">1.进入root目录</span></span><br><span class="line">cd /root</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">2.删除旧容器</span></span><br><span class="line">docker rm -f $(docker ps -qa)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">3.删除hmall镜像</span></span><br><span class="line">docker rmi hmall</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">4.清空MySQL数据</span></span><br><span class="line">rm -rf mysql/data</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">5.启动所有, -d 参数是后台启动</span></span><br><span class="line">docker compose up -d</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果：</span></span><br><span class="line">[+] Building 15.5s (8/8) FINISHED</span><br><span class="line"> =&gt; [internal] load build definition from Dockerfile                                    0.0s</span><br><span class="line"> =&gt; =&gt; transferring dockerfile: 358B                                                    0.0s</span><br><span class="line"> =&gt; [internal] load .dockerignore                                                       0.0s</span><br><span class="line"> =&gt; =&gt; transferring context: 2B                                                         0.0s</span><br><span class="line"> =&gt; [internal] load metadata for docker.io/library/openjdk:11.0-jre-buster             15.4s</span><br><span class="line"> =&gt; [1/3] FROM docker.io/library/openjdk:11.0-jre-buster@sha256:3546a17e6fb4ff4fa681c3  0.0s</span><br><span class="line"> =&gt; [internal] load build context                                                       0.0s</span><br><span class="line"> =&gt; =&gt; transferring context: 98B                                                        0.0s</span><br><span class="line"> =&gt; CACHED [2/3] RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &amp;&amp; echo   0.0s</span><br><span class="line"> =&gt; CACHED [3/3] COPY hm-service.jar /app.jar                                           0.0s</span><br><span class="line"> =&gt; exporting to image                                                                  0.0s</span><br><span class="line"> =&gt; =&gt; exporting layers                                                                 0.0s</span><br><span class="line"> =&gt; =&gt; writing image sha256:32eebee16acde22550232f2eb80c69d2ce813ed099640e4cfed2193f71  0.0s</span><br><span class="line"> =&gt; =&gt; naming to docker.io/library/root-hmall                                           0.0s</span><br><span class="line">[+] Running 4/4</span><br><span class="line"> ✔ Network hmall    Created                                                             0.2s</span><br><span class="line"> ✔ Container mysql  Started                                                             0.5s</span><br><span class="line"> ✔ Container hmall  Started                                                             0.9s</span><br><span class="line"> ✔ Container nginx  Started                                                             1.5s</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">6.查看镜像</span></span><br><span class="line">docker compose images</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果</span></span><br><span class="line">CONTAINER           REPOSITORY          TAG                 IMAGE ID            SIZE</span><br><span class="line">hmall               root-hmall          latest              32eebee16acd        362MB</span><br><span class="line">mysql               mysql               latest              3218b38490ce        516MB</span><br><span class="line">nginx               nginx               latest              605c77e624dd        141MB</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">7.查看容器</span></span><br><span class="line">docker compose ps</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">结果</span></span><br><span class="line">NAME                IMAGE               COMMAND                  SERVICE             CREATED             STATUS              PORTS</span><br><span class="line">hmall               root-hmall          &quot;java -jar /app.jar&quot;     hmall               54 seconds ago      Up 52 seconds       0.0.0.0:8080-&gt;8080/tcp, :::8080-&gt;8080/tcp</span><br><span class="line">mysql               mysql               &quot;docker-entrypoint.s…&quot;   mysql               54 seconds ago      Up 53 seconds       0.0.0.0:3306-&gt;3306/tcp, :::3306-&gt;3306/tcp, 33060/tcp</span><br><span class="line">nginx               nginx               &quot;/docker-entrypoint.…&quot;   nginx               54 seconds ago      Up 52 seconds       80/tcp, 0.0.0.0:18080-18081-&gt;18080-18081/tcp, :::18080-18081-&gt;18080-18081/tcp</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>打开浏览器，访问：<a target="_blank" rel="noopener" href="http://yourip:8080/">http://yourIp:8080</a></p>
-<h2 id="4-作业"><a href="#4-作业" class="headerlink" title="4.作业"></a>4.作业</h2><p>尝试用Docker的方式部署项目1</p>
+<h1 id="4-作业"><a href="#4-作业" class="headerlink" title="4.作业"></a>4.作业</h1><p>尝试用Docker的方式部署项目1</p>
 
 </article>
     
@@ -1542,7 +978,7 @@
     
         <div class="col-lg-6">
     <div class="trm-blog-card trm-scroll-animation">
-        <a href="/2024/08/06/%E5%AE%9E%E6%96%BD/" class="trm-cover-frame trm-anima-link">
+        <a href="/2024/08/12/%E7%AC%AC%E4%B8%80%E8%8A%82-Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/" class="trm-cover-frame trm-anima-link">
             
             
                 <img alt="cover" class="no-fancybox" src="/img/block.jpg">
@@ -1556,14 +992,14 @@
                 </a>
             </div>
             <h5>
-                <a href="/2024/08/06/%E5%AE%9E%E6%96%BD/" class="trm-anima-link">
-                    实施
+                <a href="/2024/08/12/%E7%AC%AC%E4%B8%80%E8%8A%82-Python%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%9B%9E%E9%A1%BE/" class="trm-anima-link">
+                    
                 </a>
             </h5>
             <div class="trm-divider trm-mb-20 trm-mt-20"></div>
             <ul class="trm-card-data trm-label">
-                <li>24/08/06</li>
-                <li>16:47</li>
+                <li>24/08/12</li>
+                <li>17:32</li>
                 
                 
             </ul>
@@ -1574,7 +1010,7 @@
     
         <div class="col-lg-6">
     <div class="trm-blog-card trm-scroll-animation">
-        <a href="/2024/07/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" class="trm-cover-frame trm-anima-link">
+        <a href="/2024/08/09/scrapy/" class="trm-cover-frame trm-anima-link">
             
             
                 <img alt="cover" class="no-fancybox" src="/img/block.jpg">
@@ -1588,14 +1024,14 @@
                 </a>
             </div>
             <h5>
-                <a href="/2024/07/18/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" class="trm-anima-link">
-                    软件测试
+                <a href="/2024/08/09/scrapy/" class="trm-anima-link">
+                    scrapy
                 </a>
             </h5>
             <div class="trm-divider trm-mb-20 trm-mt-20"></div>
             <ul class="trm-card-data trm-label">
-                <li>24/07/18</li>
-                <li>11:16</li>
+                <li>24/08/09</li>
+                <li>12:49</li>
                 
                 
             </ul>
